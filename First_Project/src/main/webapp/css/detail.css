@@ -1,1 +1,22 @@
 @charset "UTF-8";
+#movie_detail {
+	position: relative;
+	height: 1000px;
+}
+
+#movie_detail>.movie_cut {
+	position: absolute;
+	width: 500px;
+	top: 500px;
+}
+
+.title {
+	position: absolute;
+	left: 300px;
+	top: 0px;
+	font-size: 100px;
+}
+
+.review {
+	border: 1px solid;
+}
