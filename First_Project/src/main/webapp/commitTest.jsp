@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>희수형 보여요?</h1>
+	<h1>브랜치 커밋 테스트</h1>
 </body>
 </html>
