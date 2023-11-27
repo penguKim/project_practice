@@ -8,5 +8,16 @@
 </head>
 <body>
 
+<div>
+<table border="1">
+<td>
+<span>
+<input type="text" value="날짜">
+</span>
+<input type="text" placeholder="123">
+</td>
+</table>
+<!-- <input type="text" value="날짜"> -->
+</div>
 </body>
 </html>
