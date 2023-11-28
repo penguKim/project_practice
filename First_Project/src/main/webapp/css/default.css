@@ -6,31 +6,110 @@
 	justify-content: space-between;
 	padding:5px;
 }
-article>nav>a{
+
+#menu_nav {
+	background-color: #e50914;
+	padding: 10px;
+	text-align: center;
+}
+
+#menu_nav nav {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+#menu_nav nav a {
+	color: #fff;
 	text-decoration: none;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 5px;
-	font-size: 25px;
+	font-size: 13px;
+	margin: 0 70px;
+}
+
+.liked {
+	color: red;
 }
 
 .iframe-container {
-position: relative;
-  width: 100%;
-  height: 0;
-  overflow: hidden;  
-  padding-top: calc(9/16 * 100%);
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; /* 16:9 비율에 맞게 조절 (예: 9 / 16 * 100 = 56.25) */
 }
 
-iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+.iframe-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
 }
 
 
+#Sort {
+	margin: 30px auto;
+}
+
+#Sort a {
+	color: #000;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+#boxoffice {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px auto;
+}
+
+#boxoffice img {
+	width: 200px;
+	height: auto;
+	margin: 10px;
+}
+
+#like {
+	margin: 30px auto;
+}
+
+#like input {
+	background-color: transparent;
+	color: #000;
+	border: none;
+	font-size: 20px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#like input:hover {
+	color: red;
+}
+
+#exit-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	padding: 10px;
+	background-color: transparent;
+	border: none;
+	font-size: 40px;
+	color: #aaa;
+	cursor: pointer;
+}
+
+#exit-btn:hover {
+	color: #333;
+}
+
+#menu_nav nav a:hover {
+	color: #ffcc00;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #e50914;
+	margin: 20px 0;
+}
 
 #boxoffice>img{
 	position: relative;
@@ -50,20 +129,6 @@ height: 100%;
     margin: 10px;
     
 }
-
-#Sort>a{
-	font-size: 20px;
-	font-style: oblique;
-	text-decoration: none;
-	position: relative;
-	top: 30px;
-	left: 12%;
-	margin:20px;
-	
-}
-
-nav {
-text-align: center;}
 
 footer{
 	font-size: 15px;
