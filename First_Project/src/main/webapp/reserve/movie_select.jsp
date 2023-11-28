@@ -14,18 +14,32 @@
 		<jsp:include page="/inc/top.jsp"></jsp:include>
 	</header>
 	<article>
-		<table>
-			
-			<tr>
-			
-		</table>
-		
-		
-		
-		
-		
-		
-		
+		<ul id = "ov">
+			<li class="ov01">overflow:visible;(기본)보임<br>
+				<br><br><br><br><br><br><br><br><br><br>overflow:visible;(기본)보임
+				<br><br><br><br><br><br><br><br><br><br>overflow:visible;(기본)보임
+				<br><br><br><br><br><br><br><br><br><br>overflow:visible;(기본)보임
+				<br><br><br><br><br><br><br><br><br><br>overflow:visible;(기본)보임
+			</li> 
+			<li class="ov02">overflow:hidden;숨김<br>
+				<br><br><br><br><br><br><br><br><br><br>overflow:hidden;숨김
+				<br><br><br><br><br><br><br><br><br><br>overflow:hidden;숨김
+				<br><br><br><br><br><br><br><br><br><br>overflow:hidden;숨김
+				<br><br><br><br><br><br><br><br><br><br>overflow:hidden;숨김
+			</li>
+			<li class="ov03">overflow:scroll;스크롤바 생성<br>
+				<br><br><br><br><br><br><br><br><br><br>overflow:scroll;스크롤바 생성
+				<br><br><br><br><br><br><br><br><br><br>overflow:scroll;스크롤바 생성
+				<br><br><br><br><br><br><br><br><br><br>overflow:scroll;스크롤바 생성
+				<br><br><br><br><br><br><br><br><br><br>overflow:scroll;스크롤바 생성
+			</li> 
+			<li class="ov04">overflow:auto;자동. 필요시 스크롤바 생성<br> 
+				<br><br><br><br><br><br><br><br><br><br>overflow:auto;자동. 필요시 스크롤바 생성 
+				<br><br><br><br><br><br><br><br><br><br>overflow:auto;자동. 필요시 스크롤바 생성 
+				<br><br><br><br><br><br><br><br><br><br>overflow:auto;자동. 필요시 스크롤바 생성 
+				<br><br><br><br><br><br><br><br><br><br>overflow:auto;자동. 필요시 스크롤바 생성 
+			</li>
+		</ul>
 		
 		
 		<h1>영화 예매</h1>
