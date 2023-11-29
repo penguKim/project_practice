@@ -31,17 +31,20 @@
 	        // 선택된 좌석 값을 숨겨진 input 요소에 할당
 	        document.getElementById("select_seat").value = selectedSeatValues.join(",");
 	    }
+	    
 	    function back(){
 	    	history.back();
-	    	
 	    }
  	
  	</script>
 </head>
 <body>
+	<div id="wrapper"><%--CSS 요청으로 감싼 태그--%>
 	<header>
 			<jsp:include page="/inc/top.jsp"></jsp:include>
 	</header>
+	<section id="content"><%--CSS 요청으로 감싼 태그--%>
+	
 	<article>
 		<table class="table">
 			<tr>
@@ -113,11 +116,12 @@
 				</tr>
 			</table>
 	</article>
+	</section><%--CSS 요청으로 감싼 태그--%>
 	<footer>
 			<jsp:include page="/inc/bottom.jsp"></jsp:include>
 	</footer>
 
-
+	</div> <%--CSS 요청으로 감싼 태그--%>
 </body>
 </html>
 

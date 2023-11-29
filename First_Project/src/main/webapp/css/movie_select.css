@@ -14,7 +14,7 @@ button:hover { /* 버튼 가까이 갔을때 어둡 */
 }
 
 
-#reserve_parameter{
+#reserve_parameter,.print_parameter{ /*화면 가운데로 정렬 하는 코드*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,20 +22,20 @@ button:hover { /* 버튼 가까이 갔을때 어둡 */
 	margin: 20px;
 }
 
-#reserve_parameter>div{
+#reserve_parameter>div{ /* 데이터 입력받는 버튼 크기 조절*/
 	border: 1px solid;
-	width:300px;
-	height:300px;
-	float:left;
+	width:310px;
+	height:400px;
+/* 	float:left;  왜있는지 모르는 코드 이상 없으면 지울꺼임 */ 
 }
 
 
-.overflow{
+.overflow{ /* 데이터가 영역 밖으로 넘어가면 자동으로 스크롤 바 생성*/
 	overflow: auto;
 	display: inline-block;
 }
 
-.overflow b{
+.overflow b{ /* 제목에 대한 디자인 설정 (영화, 극장, 날짜, 시간)*/
 	background-color: #333;
 	display: flex;
 	align-items: center;
@@ -47,14 +47,14 @@ button:hover { /* 버튼 가까이 갔을때 어둡 */
 }
 
 
-.movie input,.theater input{
-	width: 290px;
+.movie input,.theater input{ /* 버튼을 영역에 대한 크기 설정(영화, 극장)*/
+	width: 285px;
 	height: 50px;
 	border: none;
 }
 
-.date{
-	width:150px !important;
+.date{ /* 날짜 버튼 영역크기 설정(일부러 조금 작게 함)*/
+	width:160px !important;
 }
 
 .date input{
@@ -70,8 +70,8 @@ button:hover { /* 버튼 가까이 갔을때 어둡 */
 	margin: 10px;
 }
 
-.right{
-	display: flex;
-    justify-content: flex-end;
+.selected {
+	background-color: darkgray; /*클릭되면 빨간색으로 seat배경색 바뀜*/
 }
+
 
