@@ -8,9 +8,9 @@
 <title>영화 예매 사이트</title>
 <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
 <script>
-// function pop(){
-// 	window.open("inc/popup.jsp", "pop", "width=400,height=500,history=no,resizable=no,status=no,scrollbars=yes,menubar=no")
-// }
+function pop(){
+	window.open("inc/popup.jsp", "pop", "width=400,height=500,history=no,resizable=no,status=no,scrollbars=yes,menubar=no")
+}
 
 $(document).ready(function() {
 	$('#exit-btn').click(function(){
@@ -25,128 +25,17 @@ $(document).ready(function() {
 	});
 });
 </script>
-<style>
-	.liked {
-		color: red;
-	}
 
-	.iframe-container {
-		position: relative;
-		width: 100%;
-		padding-bottom: 56.25%; /* 16:9 비율에 맞게 조절 (예: 9 / 16 * 100 = 56.25) */
-	}
-
-	.iframe-container iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%
-	}
-
-	header {
-		background-color: #e50914;
-		padding: 10px;
-		text-align: center;
-	}
-
-	header nav {
-		margin-top: 10px;
-		display: flex;
-		justify-content: center;
-	}
-
-	header nav a {
-		color: #fff;
-		text-decoration: none;
-		margin: 0 70px;
-	}
-
-	header nav a:hover {
-		color: #ffcc00;
-	}
-
-	hr {
-		border: none;
-		border-top: 1px solid #e50914;
-		margin: 20px 0;
-	}
-
-	#Sort {
-		margin: 30px auto;
-	}
-
-	#Sort a {
-		color: #000;
-		text-decoration: none;
-		margin: 0 10px;
-	}
-
-	#boxoffice {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 30px auto;
-	}
-
-	#boxoffice img {
-		width: 200px;
-		height: auto;
-		margin: 10px;
-	}
-
-	#like {
-		margin: 30px auto;
-	}
-
-	#like input {
-		background-color: transparent;
-		color: #000;
-		border: none;
-		font-size: 20px;
-		margin: 10px;
-		cursor: pointer;
-	}
-
-	#like input:hover {
-		color: red;
-	}
-
-	#exit-btn {
-		position: absolute;
-		top: 0;
-		right: 0;
-		margin: 10px;
-		padding: 10px;
-		background-color: transparent;
-		border: none;
-		font-size: 40px;
-		color: #aaa;
-		cursor: pointer;
-	}
-
-	#exit-btn:hover {
-		color: #333;
-	}
-</style>
 </head>
 <body onLoad="javascript:pop()">
-	<jsp:include page="inc/top.jsp"></jsp:include>
 	<header>
-		<nav>
-			<a href="reserve/movie_select1.jsp">예매</a>
-			<a href="movie/release.jsp">영화</a>
-			<a href="theater/movie.jsp">극장정보</a>
-			<a href="store/store.jsp">스토어</a>
-			<a href="event/event.jsp">이벤트</a>
-			<a href="cs/cs_main.jsp">고객센터</a>
-		</nav>
+		<jsp:include page="inc/top.jsp"></jsp:include>
 	</header>
 	<article>
-		<hr>
-		<div class="iframe-container">
-			<iframe src="https://www.youtube.com/embed/xUDhdCsLkjU?autoplay=1&mute=1&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-			<button id="exit-btn">X</button>
-		</div>
+<!-- 		<div class="iframe-container"> -->
+<!-- 			<iframe src="https://www.youtube.com/embed/xUDhdCsLkjU?autoplay=1&mute=1&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe> -->
+<!-- 			<button id="exit-btn">X</button> -->
+<!-- 		</div> -->
 		<div id="Sort">
 			<a href=""><b>무비차트</b></a>
 			<a href="">상영예정작</a>
