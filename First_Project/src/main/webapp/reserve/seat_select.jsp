@@ -31,6 +31,10 @@
 	        // 선택된 좌석 값을 숨겨진 input 요소에 할당
 	        document.getElementById("select_seat").value = selectedSeatValues.join(",");
 	    }
+	    function back(){
+	    	history.back();
+	    	
+	    }
  	
  	</script>
 </head>
@@ -72,7 +76,6 @@
 		    </div>
 	    </div>
 		<c:set var="x" value="${fn:split(' A,B,C,D,E,F,G,H,I,J,K', ',')}" /><!--행을결정지을 변수 x 선언-->
-		<c:set var="choose_seat"/>		<!--결정될 좌석 번호를 저장할 변수 seat_type 선언 -->
 	    <h1 class="center">Screen</h1>
 		<c:forEach var="i" begin="0" end="${fn:length(x)-1}">		<!--행을 반복할 반복문 선언-->
 	    	<div class="center">
@@ -84,7 +87,7 @@
 		</c:forEach><!-- 행반복 종료 -->
 			<table class="bottom_info">
 				<tr>
-					<td><input type="button" value="영화선택"></td>
+					<td><input type="button" value="영화선택" onclick="back()"></td>
 					<td>영화포스터 위치</td>
 					<td>
 						선택된 데이터
@@ -98,7 +101,7 @@
 						<h3 id="selected_seats">선택된 좌석: </h3>
 					</td>
 					<td>
-						<form action="money.jsp" method="post" onsubmit="setSelectedSeatValue()">
+						<form action="../money.jsp" method="post" onsubmit="setSelectedSeatValue()">
 						    <input type="hidden" name="movie" value="${movie}">		    <!-- 선택된 값을 숨겨진 input 요소에 할당 -->
 						    <input type="hidden" name="Theater" value="${Theater}">
 						    <input type="hidden" name="Date" value="${Date}">

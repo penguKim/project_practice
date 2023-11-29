@@ -8,9 +8,9 @@
 <title>영화 예매 사이트</title>
 <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
 <script>
-// function pop(){
-// 	window.open("inc/popup.jsp", "pop", "width=400,height=500,history=no,resizable=no,status=no,scrollbars=yes,menubar=no")
-// }
+function pop(){
+	window.open("inc/popup.jsp", "pop", "width=400,height=500,history=no,resizable=no,status=no,scrollbars=yes,menubar=no")
+}
 
 $(document).ready(function() {
 	$('#exit-btn').click(function(){
@@ -32,11 +32,10 @@ $(document).ready(function() {
 		<jsp:include page="inc/top.jsp"></jsp:include>
 	</header>
 	<article>
-		<hr>
-		<div class="iframe-container">
-			<iframe src="https://www.youtube.com/embed/xUDhdCsLkjU?autoplay=1&mute=1&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
-			<button id="exit-btn">X</button>
-		</div>
+<!-- 		<div class="iframe-container"> -->
+<!-- 			<iframe src="https://www.youtube.com/embed/xUDhdCsLkjU?autoplay=1&mute=1&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe> -->
+<!-- 			<button id="exit-btn">X</button> -->
+<!-- 		</div> -->
 		<div id="Sort">
 			<a href=""><b>무비차트</b></a>
 			<a href="">상영예정작</a>
