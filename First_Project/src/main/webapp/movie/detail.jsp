@@ -6,31 +6,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/detail.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath }/css/movie.css" rel="stylesheet">
 </head>
 <body>
-	<h1>상세페이지</h1>
-	<section id="movie_detail">
+	<header>
+		<jsp:include page="../inc/top.jsp"></jsp:include>
+	</header>
+	<section class="detail_container">
 		<!-- 포스터, 제목 영역 -->
-		<div class="poster">
-			<img alt="" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87596/87596_1000.jpg" width="200" height="280">
-			<h4 class="title">나폴레옹</h4>
-		</div>	
 		<div class="detail_info">
-			<ul>
-				<li><span>기 본 정 보: </span> 국가 | 상영시간 | 장르</li>
-				<li><span>개 봉 일 : 	</span> 날짜 </li>
-				<li><span>감 &nbsp; 독 : </span> 감독명</li>
-				<li><span>등 &nbsp; 급 : </span> 상영등급</li>
-			</ul>
-			<h3><a href="" class="reservBtn">예매하기</a></h3>
+			<div class="detail_poster">
+				<img alt="" src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87596/87596_1000.jpg" width="200" height="280">
+			</div>	
+			<div class="info_title">
+				<span class="detail_title">나폴레옹</span>
+				<ul>
+					<li><span>기 본 정 보: </span> 국가 | 상영시간 | 장르</li>
+					<li><span>개 봉 일 : 	</span> 날짜 </li>
+					<li><span>감 &nbsp; 독 : </span> 감독명</li>
+					<li><span>등 &nbsp; 급 : </span> 상영등급</li>
+				</ul>
+				<div class="detail_reserve clear">
+					<a href="../reserve/movie_select1.jsp"" class="detail_reservBtn">예매하기</a>
+				</div>
+			</div>
 		</div>
+		<hr class="clear">
 		<ul class="click_link">
 			<li><a href="#movie_story">줄거리</a></li>		
 			<li><a href="#movie_trailer">트레일러</a></li>		
 			<li><a href="#movie_cut">스틸컷</a></li>		
 			<li><a href="#review">리뷰</a></li>		
-		
 		</ul>
 	    <div class="movie_story" id="movie_story">
 	    	<h2>줄거리</h2>
@@ -51,7 +58,7 @@
 	    </div>
 	    <div class="movie_trailer" id="movie_trailer">
 	    	<h2>트레일러</h2>
-		    <iframe width="560" height="315" src="https://www.youtube.com/embed/ROl3dZE5rk4?si=Wl2kLOlS_0HFmtDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		    <embed width="560" height="315" src="https://www.youtube.com/embed/ROl3dZE5rk4?si=Wl2kLOlS_0HFmtDM" title="YouTube video player"></embed>
 	    </div>
 	    <div class="movie_cut" id="movie_cut">
 	    	<h2>스틸컷</h2>
@@ -78,9 +85,9 @@
 	    		</c:forEach>
 	    	</table>
 	    </div>
-	    
-	    
-	    
 	</section>
+	<footer>
+		<jsp:include page="../inc/bottom.jsp"></jsp:include>	
+	</footer>
 </body>
 </html>

@@ -133,12 +133,12 @@ $(document).ready(function() {
 	<jsp:include page="inc/top.jsp"></jsp:include>
 	<header>
 		<nav>
-			<a href="movie_select1.jsp">예매</a>
+			<a href="reserve/movie_select1.jsp">예매</a>
 			<a href="movie/release.jsp">영화</a>
-			<a href="">극장정보</a>
+			<a href="theater/movie.jsp">극장정보</a>
 			<a href="store/store.jsp">스토어</a>
-			<a href="">이벤트</a>
-			<a href="">고객센터</a>
+			<a href="event/event.jsp">이벤트</a>
+			<a href="cs/cs_main.jsp">고객센터</a>
 		</nav>
 	</header>
 	<article>
