@@ -36,10 +36,10 @@
 			<hr>		
 			<h3 id="join_top">회원가입을 위해 본인 인증을 해주세요.</h3> <!-- 소제목 -->
 			<section id="api"> <!-- API 적용할 버튼 이미지 -->
-				<a href=""><img src="${pageContext.request.contextPath}/img/카카오버튼.png" width="150px" height="40px"></a>
-				<a href=""><img src="${pageContext.request.contextPath}/img/네이버버튼.png" width="150px" height="40px"></a>
+				<a href=""><img src="${pageContext.request.contextPath}/img/카카오버튼.png" width="140px" height="40px"></a>
+				<a href=""><img src="${pageContext.request.contextPath}/img/네이버버튼.png" width="140px" height="40px"></a>
 			</section>
-			<hr id="hr_mid">
+			<hr>
 				
 			<section id="email1">
 				<span id="email2"> <!-- 이메일 아이콘 -->

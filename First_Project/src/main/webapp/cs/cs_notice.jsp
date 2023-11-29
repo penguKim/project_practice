@@ -24,22 +24,34 @@
 					<option value="">지점명B</option> <%-- 개별 지점 공지사항 보기 --%>
 				</select>
 				<input type="search" placeholder="검색어를 입력해주세요"> <%-- 검색어 입력창 --%>
-				<input type="button" value="검색"> <%-- 검색한 단어나 문장이 포함된 글 찾아주기 --%>
+				<a href="cs_notice.jsp"><input type="button" value="검색"></a>
 			</section>
 			<br>
 			<section>
-				<table id="cs_table">
+				<table id="cs_table1">
 					<tr>
-						<td id="table1">번호</td>
-						<td id="table1">지점</td>
-						<td id="table1">제목</td>
-						<td id="table1">등록일</td>
+						<th>번호</th>
+						<th>지점</th>
+						<th>제목</th>
+						<th>등록일</th>
 					</tr>
 					<tr>
-						<td id="table3">번호-내용넣기</td> <%-- 내용 넣기 --%>
-						<td id="table3">지점-이름넣기</td>
-						<td id="table3">제목-내용넣기</td>
-						<td id="table3">등록일-내용넣기</td>
+						<td>번호-내용넣기</td> <%-- 내용 넣기 --%>
+						<td>지점-이름넣기</td>
+						<td>제목-내용넣기</td>
+						<td>등록일-내용넣기</td>
+					</tr>
+					<tr>
+						<td>번호-내용넣기</td> <%-- 내용 넣기 --%>
+						<td>지점-이름넣기</td>
+						<td>제목-내용넣기</td>
+						<td>등록일-내용넣기</td>
+					</tr>
+					<tr>
+						<td>번호-내용넣기</td> <%-- 내용 넣기 --%>
+						<td>지점-이름넣기</td>
+						<td>제목-내용넣기</td>
+						<td>등록일-내용넣기</td>
 					</tr>
 				</table>
 			</section>
