@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<link href="theater.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/theater.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
 
 <style>
@@ -16,17 +16,17 @@ border: 1px solid lightgray;}
   <title>cgv</title>
  </head>
  <body>
- 	<div class="theater_">
-		<div id="wrapper">
 			<header>
 				<jsp:include page="/inc/top.jsp"></jsp:include>
 			</header>
+ 	<div class="theater_">
+		<div id="wrapper">
 			<div style="text-align: center;">
-				<img src="./image/CGV서면.png" alt="cgv" id="image">
+				<img src="../img/CGV서면.png" alt="cgv" id="image">
 			</div>
 		<section id="content">
-			<hr class="theater_hr">
-				<div class = "menu">
+			<hr>
+				<div class = "menu" >
 					<nav class="theater1">
 					  <input type="button" id="서면CGV" value="서면CGV점">
 					  <input type="button" id="삼정타워" value="삼정타워점">
@@ -58,55 +58,8 @@ border: 1px solid lightgray;}
 					  <input type="button" id="CGV대구한일" value="CGV대구한일">
 					</nav>
 				</div>
-			<hr>
-			   	<div style="float: left" class ="price">
-					<table class = "가격표">
-					<colgroup>
-							<col style="width: 100px;">
-							<col style="width: 300px;">
-							<col style="width: 80px;">
-							<col style="width: 80px;">
-					</colgroup>
-				</div>
-						<div style="float: left">
-						<tr>
-						<th colspan="4" class="일반2"><b>■ 일반 2D</b></th>
-						</tr>
-						<tr class="제목">
-							<td>요일</td>
-							<td>시간대</td>
-							<td>일반</td>
-							<td>청소년</td>
-							</tr>
-						<tr>
-						<td colspan="4"><hr></td>
-						</tr>
-						<tr>
-							<td rowspan="4">월~목</td>
-							<td>모닝(06:00~ )</td>
-							<td>10,000</td>
-							<td>8,000</td>
-						</tr>
-						<tr>
-							<td>브런치(10:01~ )</td>
-							<td>13,000</td>
-							<td>10,000</td>
-						</tr>
-						<tr>
-							<td>일반(13:01~ )</td>
-							<td>14,000</td>
-							<td>11,000</td>
-						</tr>
-						<tr>
-							<td>심야(24:00~ )</td>
-							<td>9,000</td>
-							<td>9,000</td>
-						</tr>
-						<tr>
-							<td colspan="4"><hr></td>
-						</tr>
-				</div>
-			    <div style="float: left" class ="price">
+				<hr>
+				<div class="price_table">
 					<table class = "가격표">
 					<colgroup>
 						<col style="width: 100px;">
@@ -114,7 +67,50 @@ border: 1px solid lightgray;}
 						<col style="width: 80px;">
 						<col style="width: 80px;">
 					</colgroup>
-						<div style="float: left">
+						<tr>
+							<th colspan="4" class="일반2"><b>■ 일반 2D</b></th>
+						</tr>
+							<tr class="제목">
+								<td>요일</td>
+								<td>시간대</td>
+								<td>일반</td>
+								<td>청소년</td>
+								</tr>
+							<tr>
+								<td colspan="4"><hr></td>
+							</tr>
+							<tr>
+								<td rowspan="4">월~목</td>
+								<td>모닝(06:00~ )</td>
+								<td>10,000</td>
+								<td>8,000</td>
+							</tr>
+							<tr>
+								<td>브런치(10:01~ )</td>
+								<td>13,000</td>
+								<td>10,000</td>
+							</tr>
+							<tr>
+								<td>일반(13:01~ )</td>
+								<td>14,000</td>
+								<td>11,000</td>
+							</tr>
+							<tr>
+								<td>심야(24:00~ )</td>
+								<td>9,000</td>
+								<td>9,000</td>
+							</tr>
+							<tr>
+								<td colspan="4"><hr></td>
+							</tr>
+					</table>
+					<table class = "가격표">
+					<colgroup>
+						<col style="width: 100px;">
+						<col style="width: 300px;">
+						<col style="width: 80px;">
+						<col style="width: 80px;">
+					</colgroup>
 						<tr>
 							<td rowspan="4">금~일<br>(공휴일)</td>
 							<td>모닝(06:00~)</td>
@@ -140,10 +136,9 @@ border: 1px solid lightgray;}
 							<td colspan="4"><hr></td>
 						</tr>
 						</table>
-					</div>
+				</div>
 				
-				<section>
-					<table class="Notice">
+				<table class="Notice">
 						<colgroup>
 						<col style="width: 450px;">
 					</colgroup>
@@ -172,10 +167,9 @@ border: 1px solid lightgray;}
 						<td><hr></td>
 					</tbody>
 				</table>
-			</section>
+		</section>
 				
 				
-			<section>
 				<div id="map" style="width:400px;height:300px;"></div>
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9f6c3bc1e6871394d3b26ee55215784"></script>
 					<script>
@@ -198,14 +192,12 @@ border: 1px solid lightgray;}
 					// 마커가 지도 위에 표시되도록 설정합니다
 					marker.setMap(map);
 					</script>
-			</section>
-		</section>
-			  
+			  </div>
 			  <script>
 			  // 이미지 지도로 변경 및 마커스 찍기
 			  function changeImage() {
 			    var image = document.getElementById("image");
-			    image.src = "./image/동래.JPG";
+			    image.src = "../img/동래.JPG";
 			    var maps = document.getElementById("map");
 				var container = document.getElementById('map');
 				var options = {
@@ -226,7 +218,7 @@ border: 1px solid lightgray;}
 			  
 			  function changeImage2() {
 			    var image = document.getElementById("image");
-			    image.src = "./image/삼정타워점.JPG";
+			    image.src = "../img/삼정타워점.JPG";
 				var container = document.getElementById('map');
 				var options = {
 					center: new kakao.maps.LatLng(35.15301369233767, 129.05962274791744),
@@ -249,7 +241,7 @@ border: 1px solid lightgray;}
 			  
 			  function changeImage3() {
 			    var image = document.getElementById("image");
-			    image.src = "./image/상상마당.JPG";
+			    image.src = "../img/상상마당.JPG";
 				var container = document.getElementById('map');
 				var options = {
 					center: new kakao.maps.LatLng(35.15423948976798, 129.05748931736966),
@@ -273,7 +265,7 @@ border: 1px solid lightgray;}
 			  
 			  function changeImage4() {
 			    var image = document.getElementById("image");
-			    image.src = "./image/CGV서면.png";
+			    image.src = "../img/CGV서면.png";
 				var container = document.getElementById('map');
 				var options = {
 					center: new kakao.maps.LatLng(35.149236094733254, 129.0635624238869),
@@ -296,7 +288,7 @@ border: 1px solid lightgray;}
 			  // 클릭 이벤트에 함수 연결
 			  function changeImage5() {
 			    var image = document.getElementById("image");
-			    image.src = "./image/대연점.png";
+			    image.src = "../img/대연점.png";
 			    var maps = document.getElementById("map");
 				var container = document.getElementById('map');
 				var options = {
@@ -317,7 +309,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage6() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/아시아드점.png";
+		    image.src = "../img/아시아드점.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.19154582406568, 129.06328187601284 ),
@@ -340,7 +332,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage7() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/센텀점.png";
+		    image.src = "../img/센텀점.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.1691119842877, 129.13038331260668 ),
@@ -364,7 +356,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage8() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/동구점.png";
+		    image.src = "../img/동구점.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.489848332547005, 129.43101483150292  ),
@@ -387,7 +379,7 @@ border: 1px solid lightgray;}
 		  // 클릭 이벤트에 함수 연결
 		  function changeImage9() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/정관점.png";
+		    image.src = "../img/정관점.png";
 		    var maps = document.getElementById("map");
 			var container = document.getElementById('map');
 			var options = {
@@ -408,7 +400,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage10() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/울산신천.png";
+		    image.src = "../img/울산신천.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.63497085947518, 129.3557985601116 ),
@@ -431,7 +423,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage11() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/울산삼산.png";
+		    image.src = "../img/울산삼산.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.54124734903711, 129.33896396513606 ),
@@ -455,7 +447,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage12() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/명지점.png";
+		    image.src = "../img/명지점.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.09440141296223, 128.90351489468253 ),
@@ -478,7 +470,7 @@ border: 1px solid lightgray;}
 		  // 클릭 이벤트에 함수 연결
 		  function changeImage13() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/화명점.png";
+		    image.src = "../img/화명점.png";
 		    var maps = document.getElementById("map");
 			var container = document.getElementById('map');
 			var options = {
@@ -499,7 +491,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage14() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/해운대점.png";
+		    image.src = "../img/해운대점.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.1628435626128, 129.1584244156929 ),
@@ -522,7 +514,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage15() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/CGV대구.png";
+		    image.src = "../img/CGV대구.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.8699247159092, 128.59426921010606 ),
@@ -546,7 +538,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage16() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/대구수성.png";
+		    image.src = "../img/대구수성.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.831384441489035, 128.6868725440225 ),
@@ -569,7 +561,7 @@ border: 1px solid lightgray;}
 		  // 클릭 이벤트에 함수 연결
 		  function changeImage17() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/대구아카데미.png";
+		    image.src = "../img/대구아카데미.png";
 		    var maps = document.getElementById("map");
 			var container = document.getElementById('map');
 			var options = {
@@ -590,7 +582,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage18() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/대구스타디움.png";
+		    image.src = "../img/대구스타디움.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.83141651543073, 128.6868344923691 ),
@@ -613,7 +605,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage19() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/대구연경.png";
+		    image.src = "../img/대구연경.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.94146987572242, 128.62289343513828),
@@ -637,7 +629,7 @@ border: 1px solid lightgray;}
 		  
 		  function changeImage20() {
 		    var image = document.getElementById("image");
-		    image.src = "./image/대구한일.png";
+		    image.src = "../img/대구한일.png";
 			var container = document.getElementById('map');
 			var options = {
 				center: new kakao.maps.LatLng(35.87062755958917, 128.59529080175332 ),
@@ -701,11 +693,10 @@ border: 1px solid lightgray;}
 		  var container = document.getElementById("CGV대구한일");
 		  container.onclick = changeImage20;
 		 </script>
+	 </div>
 	<footer>
 		<jsp:include page="/inc/bottom.jsp"></jsp:include>
 	</footer>
-	 </div>
- </div>
 	 
  </body>
 </html>

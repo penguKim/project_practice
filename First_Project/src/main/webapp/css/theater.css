@@ -1,6 +1,17 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
-.menu{text-align: center;} /*  nav 메뉴바 센터 */
+#wrapper{
+	width:1300px;/* 전체영역 크기 조정*/
+/* 	max-width: 500px; */
+	margin: auto; /* 못움직이게 고정*/
+	}
+
+.menu{text-align: center; /*  nav 영역 글자 센터 */
+display: inline-block; /* 메뉴들을 나란히 */
+position:relative; /* 포지션 지정 */
+left: 34%; /*  nav 메뉴바 센터 */
+margin: auto;
+ } 
 
 nav li {background-color:#FF3636;
 display: inline-block /* 메뉴들을 나란히 */;
@@ -14,8 +25,11 @@ nav li:hover {background-color:#0a0;
  transition:1.2s;} /* 마우스 오버시 색깔 변화 */
  
  
- .price{margin-left: 30em; /* price 위치 조정 */
-text-align: center;}  /* price 글자 가운데로 */
+ .price{margin: 10em; /* price 위치 조정 */
+text-align: center;/* price 글자 가운데로 */
+display: inline-block;
+position: absolute;
+}
 
  .theater1 ,.theater2,.theater3,.theater4,.theater5{ 
 margin-top: 5px; /* 영화관끼리 위에랑 사이 띄움*/
@@ -23,8 +37,9 @@ margin-top: 5px; /* 영화관끼리 위에랑 사이 띄움*/
 
  #map{
   display: inline-block;
-  position: sticky;
-  right: 39em;
+  position: relative;
+  left: 48em;
+  bottom:5em;
  } /* 지도 위치 */
 
 .theater1>input,.theater2>input,.theater3>input,.theater4>input,.theater5>input {
@@ -39,8 +54,8 @@ margin-right: 15px;}
  
  .Notice{
  display: inline-block;
- position: sticky;
- right: 36em;
+ position: absolute;
+ left: 60em;
  /* 공지사항 위치 조정 */
  }
  
@@ -53,3 +68,24 @@ ul>li>a{text-decoration-line: none;
 color: white;}  /* nav - li - a태그 글자색 변경*/
 
 footer{text-align: center;} /* 글자를 가운데로 */
+
+.theater_Notice{
+	display: inline-block;
+	position: absolute;
+	left: 50em;
+}
+
+.price_table{
+	display: inline-block;
+	position: relative;
+	left: 20em;
+}
+/* #content{ */
+/* 	display: inline-block; */
+/* 	position: relative; */
+/* 	left: 50em; */
+/* } */
+#content {
+	position: relative;
+	right: 10em;
+}
