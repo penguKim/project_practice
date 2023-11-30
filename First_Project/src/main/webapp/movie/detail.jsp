@@ -29,7 +29,7 @@
 							<li><span>등 &nbsp; 급 : </span> 상영등급</li>
 						</ul>
 						<div class="detail_reserve clear">
-							<a href="../reserve/movie_select1.jsp"">
+							<a href="../reserve/movie_select.jsp"">
 								<input type="button" value="예매하기"></a>
 						</div>
 					</div>

@@ -40,7 +40,7 @@
 							</div>
 							</a>
 							<div class="reserve_area">
-								<a href="../reserve/movie_select1.jsp"" class="rel_reservBtn">
+								<a href="../reserve/movie_select.jsp"" class="rel_reservBtn">
 									<input type="button" value="예매하기"></a>
 							</div>
 						</div>
