@@ -92,9 +92,17 @@
 				alert("이름 입력은 필수입니다");
 				document.joinForm.name.focus();
 				return false; // submit 동작 취소
-			} else if(document.joinForm.tel.value == "") {
+			} else if(document.joinForm.phone.value == "") {
 				alert("휴대폰번호 입력은 필수입니다");
-				document.joinForm.tel.focus();
+				document.joinForm.phone.focus();
+				return false; // submit 동작 취소
+			} else if(document.joinForm.email.value == "") {
+				alert("이메일주소 입력은 필수입니다");
+				document.joinForm.email.focus();
+				return false; // submit 동작 취소
+			} else if(document.joinForm.birth.value == "") {
+				alert("생년월일 입력은 필수입니다");
+				document.joinForm.birth.focus();
 				return false; // submit 동작 취소
 			}
 			
@@ -129,9 +137,9 @@
 				<input type="text" id="passwd2" name="passwd2" placeholder="*비밀번호확인"> <br>
 				<span id="checkPasswd2Result"></span> <br>
 				<input type="text" id="name" name="name" placeholder="*이름"> <br>
-				<input type="tel" id="tel" name="tel" placeholder="*휴대폰번호"  maxlength="11"> <br>
-				<input type="text" id="email" name="email" placeholder="이메일주소"> <br>
-				<input type="text" id="bday" name="bday" placeholder="생년월일" maxlength="8"> <br>
+				<input type="phone" id="phone" name="phone" placeholder="*휴대폰번호"  maxlength="11"> <br>
+				<input type="text" id="email" name="email" placeholder="*이메일주소"> <br>
+				<input type="text" id="birth" name="birth" placeholder="*생년월일" maxlength="8"> <br>
 				<div id="join_button">
 					<input type="button" value="취소"> <%-- 취소하시겠습니까? 메세지 출력 후 메인 페이지로 바로 이동 --%>
 					<input type="submit" value="가입완료"> <%-- 가입이 완료되고 가입완료 메세지 페이지로 이동 --%>

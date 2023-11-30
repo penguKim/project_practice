@@ -8,9 +8,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-    <link href="${pageContext.request.contextPath }/css/seat_select.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
-
+ 	<style>
+ 		.seat {
+		    width: 30px;
+		    height: 30px;
+ 		    background-color: #ccc; 
+ 		    margin: 5px; 
+		    display: inline-block;
+		    cursor: pointer;
+	    }
+	    .selected {
+	    	background-color: red;
+	    }
+ 	</style>
  	<script>
 	    function toggleSeat(seat) {
 	        seat.classList.toggle("selected");
@@ -36,6 +46,23 @@
 	    	history.back();
 	    }
  	
+ 	
+ 	// ----------------------
+// 	    function toggleSeat(seat) {
+// 	      seat.classList.toggle("selected");
+// 	      seat.setAttribute("value", seat.getAttribute("value") +"선택됨");
+// 	      displaySelectedSeats(); // 좌석 선택 시 선택된 좌석을 출력하는 함수 호출
+// 	    }
+// 	    function displaySelectedSeats() {
+// 	        var selectedSeats = document.getElementsByClassName("selected");
+// 	        var selectedSeatValues = "";
+// 	        for (var i = 0; i < selectedSeats.length; i++) {
+// 	          selectedSeatValues += selectedSeats[i].getAttribute("value") + " ";
+// 	        }
+// 	        var selectedSeatsElement = document.getElementById("selected_seats");
+// 	        selectedSeatsElement.textContent = "선택된 좌석: " + selectedSeatValues;
+// 	      }
+	    
  	</script>
 </head>
 <body>

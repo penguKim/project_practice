@@ -36,7 +36,7 @@
 			<hr>
 			<h3 id="join_top">약관 및 정보활용 동의</h3> <!-- 소제목 -->
 			<label><input type="checkbox" id="agreeAll">전체동의</label> <br>
-			<hr id="hr_mid">
+			<hr>
 			<section id="agree" name="agree">
 				<label id="required"><input type="checkbox" name="agree" value="서비스 이용 약관 동의(필수)" required>
 				서비스 이용 약관 동의(필수)</label> <br>
