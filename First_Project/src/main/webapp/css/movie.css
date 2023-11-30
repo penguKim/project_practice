@@ -53,20 +53,19 @@ header {
 }
 
 .movie-menu input {
-	border: 1px solid;
-	background-color: #e50914; /* 버튼 색상 */
-	color: #fff; /* 글자 색상 */
-	text-decoration: none; /* 링크의 밑줄 제거 */
-	border-radius: 5px; /* 모서리 라운드처리 */
+	border: none;
+	border-bottom: 2px solid #e50914;
+	height: 50px;
+	color: #000000; /* 글자 색상 */
+	padding: 10px 50px; /* 영역의 상하 좌우 크기 */
+	margin-top: 10px;
+	background-color: #ffffff;
 	cursor: pointer; /* 커서 변경 */
-	margin: 10px 10px 0;  /* 위20 좌우10 아래0 px */
-	padding: 10px; /* 안쪽여백 지정 */
-	width: 120px; /* 너비지정 */
-	height: 70px;
 }
 
 .movie-menu input:hover {
-	background-color: #ce0912;
+	background-color: #eeeeee;
+	border-bottom: 2px solid #000000;
 }
 
 .movie-menu a {
@@ -184,13 +183,18 @@ header {
 	position: absolute;
 	left: 100px;
 	padding: 10px;
-	width:300px;
+	width: 200px;
+	height: 280px;
+	display: inline-block;
 }
 /* 제목과 기본 정보 */
 .info_title {
 	text-align: justify; /* 양쪽 정렬 */
 	position: relative;
-	left: 350px;
+	left: 70px;
+	width: 500px;
+	height: 300px;
+	display: inline-block;
 }
 /* 제목 크기 지정 */
 .detail_title {
@@ -210,13 +214,15 @@ header {
 	list-style: none;
 }
 
-detail_reserve clear {
+.detail_reserve_clear {
 	position: relative;
+	top: 100px;
+	width: 100px;
 }
 
 
 /* 예매 버튼 */
-.detail_reserve input {
+.detail_reserve_clear input {
 	border: 1px solid;
 	background-color: #e50914; /* 버튼 색상 */
 	color: #fff; /* 글자 색상 */
@@ -242,8 +248,7 @@ detail_reserve clear {
 
 /* 숏컷 버튼 */
 .click_link {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin: 40px auto;
 }
 .click_link a {
 	text-decoration: none;
@@ -251,34 +256,101 @@ detail_reserve clear {
 }
 
 .click_link>li {
-	background-color: #08d;
 	display: inline-block;
 	width: 150px;
-	height: 30px;
+	height: 50px;
 	text-align: center;
 	line-height: 30px;
 }
 
+.click_link input {
+	border: none;
+	border-bottom: 2px solid #e50914;
+	color: #000000; /* 글자 색상 */
+	padding: 10px 50px; /* 영역의 상하 좌우 크기 */
+	margin-top: 10px;
+	background-color: #ffffff;
+	cursor: pointer; /* 커서 변경 */
+}
+
+.click_link input:hover {
+	background-color: #eeeeee;
+	border-bottom: 2px solid #000000;
+}
+
 /* 줄거리 */
-#movie_detail>.movie_story {
-	margin-bottom: 100px;
+.movie_story {
+	width: 600px;
+	height: 400px;
+	text-align: center;
+	margin: 20px auto;
+	padding: 10px;
 }
 
 /* 트레일러 */
-#movie_detail>.movie_trailer {
-	margin-bottom: 100px;
+.movie_trailer {
+	width: 600px;
+	height: 400px;
+	text-align: center;
+	margin: 20px auto;
+	padding: 10px;
 }
 
 /* 스틸컷 */
-#movie_detail>.movie_cut {
-	margin-bottom: 100px;
+.movie_cut {
+	width: 800px;
+	height: 400px;
+	text-align: center;
+	margin: 20px auto;
+	padding: 10px;
 }
 
 /* 리뷰 */
-#movie_detail>.review {
+.review {
+	width: 600px;
+	height: 300px;
 	text-align: center;
-	vertical-align:middle; /* 수직 가운데 정렬 */
-	margin-bottom: 100px;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+.review>table {
+	border-collapse: collapse; /* 칸 사이 간격 없애기 */
+	border-top: 2px solid #9d9d9d; /* 표상단줄 */
+	border-bottom: 2px solid #9d9d9d; /* 표하단줄 */ 
+	width: 600px;
+	margin: 0 auto;
+}
+
+.review>table th {
+	color: #000000;
+	background-color: #f2f2f2; /* 제목 배경색 지정 */
+	padding: 5px 10px; /* 안쪽 여백 지정 */
+	border-bottom: 2px solid #9d9d9d; /* 하단줄 */
+}
+
+.review>table td {
+	padding: 5px 10px; /* 안쪽 여백 지정 */
+	border: none;
+	border-bottom: 2px solid #9d9d9d; /* 하단줄 */
+}
+
+.review input[type="text"] {
+	margin: 10px; /* 여백 */
+	height: 30px; /* 높이지정 */
+	width: 150px; /* 넓이지정 */
+}
+
+.review input[type="button"] { /* 모든 버튼에 */
+	padding: 6px 15px; /* 안쪽 여백 */
+    background-color: #e50914; /* 배경색 빨간색 */
+    color: white; /* 글씨색 흰색*/
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 커서 변경 */
+}
+
+.review input[type="button"]:hover {  /* 모든 버튼에 마우스오버 시 */
+	background-color: #ce0912;
 }
 
 

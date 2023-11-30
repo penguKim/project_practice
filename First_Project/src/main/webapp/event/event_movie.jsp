@@ -18,10 +18,10 @@
 		<section id="content">
 			<nav class="event-menu">
 				<ul>
-			        <li class="active"><a href="event_movie.jsp">영화</a></li>
-			        <li><a href="event_theater.jsp">극장</a></li>
-			        <li><a href="event_partnership.jsp">제휴</a></li>
-			        <li><a href="event_preview.jsp">시사회</a></li>
+			        <li class="active"><a href="event_movie.jsp"><input type="button" value="영화"></a></li>
+			        <li><a href="event_theater.jsp"><input type="button" value="극장"></a></li>
+			        <li><a href="event_partnership.jsp"><input type="button" value="제휴"></a></li>
+			        <li><a href="event_preview.jsp"><input type="button" value="시사회"></a></li>
 				</ul>
 			</nav>
 		    <section class="event-section">

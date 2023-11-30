@@ -23,23 +23,23 @@
 					<div class="info_title">
 						<span class="detail_title">나폴레옹</span>
 						<ul>
-							<li><span>기 본 정 보: </span> 국가 | 상영시간 | 장르</li>
-							<li><span>개 봉 일 : 	</span> 날짜 </li>
-							<li><span>감 &nbsp; 독 : </span> 감독명</li>
-							<li><span>등 &nbsp; 급 : </span> 상영등급</li>
+							<li><span>기본 정보 : </span> 국가 | 상영시간 | 장르</li>
+							<li><span>개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;봉 : 	</span> 날짜 </li>
+							<li><span>감&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;독 : </span> 감독명</li>
+							<li><span>등&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;급 : </span> 상영등급</li>
 						</ul>
-						<div class="detail_reserve clear">
-							<a href="../reserve/movie_select.jsp"">
+						<div class="detail_reserve_clear">
+							<a href="../reserve/movie_select1.jsp"">
 								<input type="button" value="예매하기"></a>
 						</div>
 					</div>
 				</div>
 				<hr class="clear">
 				<ul class="click_link">
-					<li><a href="#movie_story">줄거리</a></li>		
-					<li><a href="#movie_trailer">트레일러</a></li>		
-					<li><a href="#movie_cut">스틸컷</a></li>		
-					<li><a href="#review">리뷰</a></li>		
+					<li><a href="#movie_story"><input type="button" value="줄거리"></a></li>	
+					<li><a href="#movie_trailer"><input type="button" value="트레일러"></a></li>	
+					<li><a href="#movie_cut"><input type="button" value="스틸컷"></a></li>	
+					<li><a href="#movie_cut"><input type="button" value="리뷰"></a></li>	
 				</ul>
 			    <div class="movie_story" id="movie_story">
 			    	<h2>줄거리</h2>
@@ -64,24 +64,25 @@
 			    </div>
 			    <div class="movie_cut" id="movie_cut">
 			    	<h2>스틸컷</h2>
-			    	<img alt="" src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87596/87596220582_727.jpg">
+			    	<img alt="" src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87596/87596220582_727.jpg" width="600px" height="350px">
 			    </div>
 			    <div class="review" id="review">
 			    	<h2>리뷰</h2>
 			    	<input type="text" placeholder="리뷰 입력" size="50">
 			    	<input type="button" value="등록">
-			    	<table border="1">
+			    	<br>
+			    	<table>
 			    		<tr>
 			    			<td rowspan="6" width="200">
 			    				평점이 들어간다면<br>
 			    				넣을 자리
 			    			</td>
-			    			<td>아이디</td>
+			    			<th>아이디</h>
 			    			<td>내용(한두줄 정도로 글자수 제한?)</td>
 			    		</tr>
 			    		<c:forEach begin="1" end="5">
 						   	<tr>
-				    			<td>xxxx</td>
+				    			<th>xxxx</th>
 				    			<td>재밌어요~~~~~~~~~~~~~~</td>
 				    		</tr>
 			    		</c:forEach>
