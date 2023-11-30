@@ -9,7 +9,7 @@
     <title>영화 예매</title>
     <link href="${pageContext.request.contextPath }/css/movie_select.css" rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
-    
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script type="text/javascript">
     //영화 선택시 1개만 선택 가능하게 하는 기능
 	function toggleMovie(button) {
@@ -51,25 +51,38 @@
 		param();
 	}
 
+
 	function param() {
-        var selectedMovies = document.querySelector('.overflow.movie input.selected');
-        var selectedTheater = document.querySelector('.overflow.theater input.selected');
-        var selectedDate = document.querySelector('.overflow.date input.selected');
-        var selectedTime = document.querySelector('.overflow.time input.selected');
-        
-        var movieValue = selectedMovies ? selectedMovies.value : '';
-        var theaterValue = selectedTheater ? selectedTheater.value : '';
-        var dateValue = selectedDate ? selectedDate.value : '';
-        var timeValue = selectedTime ? selectedTime.value : '';
-        
-        var selectedValues = [movieValue, theaterValue, dateValue, timeValue];
-        
-        var selectedParamsElement = document.getElementById("selected_params");
-        selectedParamsElement.textContent = "선택된 데이터: " + selectedValues.join(", ");
-        
-        // 선택된 데이터 값을 숨겨진 input 요소에 할당
-        document.getElementById("select_params").value = selectedValues.join(",");
-    }
+	    var selectedMovie = document.querySelector('.overflow.movie input.selected');
+	    var selectedTheater = document.querySelector('.overflow.theater input.selected');
+	    var selectedDate = document.querySelector('.overflow.date input.selected');
+	    var selectedTime = document.querySelector('.overflow.time input.selected');
+
+	    var selectedValues = {
+	        movie: selectedMovie ? selectedMovie.value : null,
+	        theater: selectedTheater ? selectedTheater.value : null,
+	        date: selectedDate ? selectedDate.value : null,
+	        time: selectedTime ? selectedTime.value : null
+	    };
+	    
+	  	
+
+	    // 선택된 데이터를 표시
+	    var tableCells = document.querySelectorAll('#end_param td');
+	    tableCells[0].textContent = selectedValues.movie || '';
+	    tableCells[1].textContent = selectedValues.theater || '';
+	    tableCells[2].textContent = selectedValues.date || '';
+	    tableCells[3].textContent = selectedValues.time || '';
+	    
+		// selectedValues의 각 속성을 각각의 hidden input 태그에 설정
+	    document.querySelector('input[name="movie"]').value = selectedValues.movie || '';
+	    document.querySelector('input[name="theater"]').value = selectedValues.theater || '';
+	    document.querySelector('input[name="date"]').value = selectedValues.date || '';
+	    document.querySelector('input[name="time"]').value = selectedValues.time || '';
+	}
+
+
+
 </script>
 </head>
 <body>
@@ -80,7 +93,6 @@
 	
 	<section id="content"><%--CSS 요청으로 감싼 태그--%>
 		<article>
-			<form action="seat_select.jsp" method="post">
 			<div id = "reserve_parameter">
 					<div class="overflow movie"><b>영화</b><br>
 						<input type ="button" value="서울의 봄" onclick="toggleMovie(this)"><br>
@@ -153,37 +165,24 @@
 					</div>
 			</div>
 			<div class="print_parameter">
-			    <table>
-			        <tr>
-			            <td>영화 : </td>
-			            <td id="selected_movie"></td>
-			        </tr>
-			        <tr>
-			            <td>극장 : </td>
-			            <td id="selected_theater"></td>
-			        </tr>
-			        <tr>
-			            <td>날짜 : </td>
-			            <td id="selected_date"></td>
-			        </tr>
-			        <tr>
-			            <td>시간 : </td>
-			            <td id="selected_time"></td>
-			        </tr>
-			        <tr>
-			            <td>
-			                <input type="hidden" id="select_params" name="select_params" value="">
-			            </td>
-			        </tr>
-			        <tr>
-			            <td colspan="2">
-			                <button type="submit" class="right">좌석 선택</button>
-			            </td>
-			        </tr>
-			    </table>
+				<table id="end_param">
+					<tr>
+						<td>영화선택</td>
+						<td>극장선택</td>
+						<td>&#xf105;날짜선택</td>
+						<td>&#xf105;시간선택</td>
+						<td>
+							<form action="seat_select.jsp" method="post">
+							    <input type="hidden" name="movie" value="">
+							    <input type="hidden" name="theater" value="">
+							    <input type="hidden" name="date" value="">
+							    <input type="hidden" name="time" value="">
+							    <input type="submit" class="btnsubmit" value="좌석선택">
+							</form>
+						</td>
+					</tr>
+				</table>
 			</div>
-			
-	        </form>
 		</article>
 	</section><%--CSS 요청으로 감싼 태그--%>
 	<footer>
