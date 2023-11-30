@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>영화 예매</title>
     <link href="${pageContext.request.contextPath }/css/movie_select.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
+<%--     <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css"> --%>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script type="text/javascript">
     //영화 선택시 1개만 선택 가능하게 하는 기능
