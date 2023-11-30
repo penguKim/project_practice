@@ -21,10 +21,10 @@
 		</div>
 		<div id="menu_nav">
 			<nav>
-				<a href="reserve/movie_select.jsp">예매</a>
-				<a href="movie/release.jsp">영화</a>
+				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
+				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
 				<a href="">극장정보</a>
-				<a href="store/store.jsp">스토어</a>
+				<a href="${pageContext.request.contextPath}/store/store.jsp">스토어</a>
 				<a href="">이벤트</a>
 				<a href="">고객센터</a>
 			</nav>

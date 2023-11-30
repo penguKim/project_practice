@@ -8,6 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+    <link href="${pageContext.request.contextPath }/css/seat_select.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
  	<style>
  		.seat {
 		    width: 30px;
@@ -107,7 +109,7 @@
 					시간 : ${param.time} <br>
 		    </div>
 	    </div>
-		<c:set var="x" value="${fn:split(' A,B,C,D,E,F,G,H,I,J,K', ',')}" /><!--행을결정지을 변수 x 선언-->
+		<c:set var="x" value="${fn:split('A,B,C,D,E,F,G,H,I,J,K', ',')}" /><!--행을결정지을 변수 x 선언-->
 	    <h1 class="center">Screen</h1>
 		<c:forEach var="i" begin="0" end="${fn:length(x)-1}">		<!--행을 반복할 반복문 선언-->
 	    	<div class="center">
