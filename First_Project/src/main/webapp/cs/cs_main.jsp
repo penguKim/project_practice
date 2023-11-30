@@ -17,7 +17,7 @@
 			
 			<h1>고객센터 홈</h1>
 			
-			<nav> <%-- 사이드 메뉴바 --%>
+			<nav id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
 			</nav>
 			
@@ -70,6 +70,7 @@
 				</section>
 			</form>
 		</section>
+		
 		<footer>
 			<jsp:include page="../inc/bottom.jsp"></jsp:include>	
 		</footer>

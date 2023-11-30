@@ -7,18 +7,45 @@
 <title>회원가입</title>
 <!-- 외부 CSS 파일(css/default.css) 연결하기 -->
 <link href="${pageContext.request.contextPath }/css/join.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-3.7.1.js"></script>
 <script type="text/javascript">
-	window.onload = function() {
+	$(function() {
+		
+		$("#agreeAll").on("change", function() {
+			
+			if($("#agreeAll").prop("checked")) {
+				$(":checkbox").prop("checked", true);
+			} else {
+				$(":checkbox").prop("checked", false);
+			}
+		});
+		
+		$("form").on("submit", function() {
+			if(!$("input:checkbox[name=agree]").eq(0).prop("checked") ) {
+				alert("서비스 이용 약관 동의 필수!");
+				return false;
+			}
+		
+			if(!$("input:checkbox[name=agree]").eq(1).prop("checked") ) {
+				alert("개인정보 수입 및 이용 약관 동의 필수!");
+				return false;
+			}
+			return true;
+		});
+		
+		
+	});
+// 	window.onload = function() {
 		<%-- "전체동의" 체크박스 체크 시 취미 항목 모두 체크, 
 			 "전체동의" 해제 시 취미 항목 모두 체크 해제하기 --%>
-		document.querySelector("#agreeAll").onclick = function() {
+// 		document.querySelector("#agreeAll").onclick = function() {
 		
-			for(let i = 0; i < document.joinAgree.agree.length; i++) {
-				document.joinAgree.agree[i].checked = document.querySelector("#agreeAll").checked;
-			}
-		};
+// 			for(let i = 0; i < document.joinAgree.agree.length; i++) {
+// 				document.joinAgree.agree[i].checked = document.querySelector("#agreeAll").checked;
+// 			}
+// 		};
 		
-	}; // window.onload 이벤트 끝
+// 	}; // window.onload 이벤트 끝
 </script>
 </head>
 <body>
@@ -38,10 +65,10 @@
 			<label><input type="checkbox" id="agreeAll">전체동의</label> <br>
 			<hr>
 			<section id="agree" name="agree">
-				<label id="required"><input type="checkbox" name="agree" value="서비스 이용 약관 동의(필수)" required>
+				<label id="required"><input type="checkbox" name="agree" value="서비스 이용 약관 동의(필수)">
 				서비스 이용 약관 동의(필수)</label> <br>
 				<textarea readonly>약관</textarea> <br> <br> <!-- 수정불가 -->
-				<label id="required"><input type="checkbox" name="agree" value="개인정보 수집 및 이용 동의(필수)" required>
+				<label id="required"><input type="checkbox" name="agree" value="개인정보 수집 및 이용 동의(필수)">
 				개인정보 수집 및 이용 동의(필수)</label> <br>
 				<textarea readonly>약관</textarea> <br> <br> <!-- 수정불가 -->
 				<label><input type="checkbox" name="agree" value="마케팅 활용을 위한 개인정보 수집 및 이용 안내(선택)">

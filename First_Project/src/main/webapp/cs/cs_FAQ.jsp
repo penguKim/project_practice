@@ -9,14 +9,14 @@
 <link href="${pageContext.request.contextPath}/css/cs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<header>
-		<jsp:include page="../inc/top.jsp"></jsp:include>
-	</header>
-	<article>
-		<div id="wrapper">
+	<div id="wrapper">
+		<header>
+			<jsp:include page="../inc/top.jsp"></jsp:include>
+		</header>
+		<section id="content">
 			<h1>자주 묻는 질문</h1>
 			
-			<nav> <%-- 사이드 메뉴바 --%>
+			<nav id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
 			</nav>
 			
@@ -73,10 +73,10 @@
 					<input type="button" value=">">
 				</section>
 			</form>
-		</div>
-	</article>
-	<footer>
-		<jsp:include page="../inc/bottom.jsp"></jsp:include>
-	</footer>
+		</section>
+		<footer>
+			<jsp:include page="../inc/bottom.jsp"></jsp:include>
+		</footer>
+	</div>	
 </body>
 </html>

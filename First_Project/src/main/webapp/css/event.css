@@ -1,97 +1,154 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
-/* ---------------- ÀÌº¥Æ® ÆäÀÌÁö ----------------  */
+/* ======== ì „ì²´ ì˜ì—­ì— ì ìš©í•  css ======== */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+header {
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%;
+	z-index:1;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	width: 100%
+}
+
+
+
+#content {
+	padding: 100px 0;
+	width: 1024px;
+	margin: 100px auto;	
+}
+
+/* ---------------- ì´ë²¤íŠ¸ í˜ì´ì§€ ----------------  */
+
+/* ë¶„ë¥˜ ëª©ë¡ */
+.event-menu {
+	text-align: center;
+}
+
+.event-menu a {
+/*     color: #fff; */
+    text-decoration: none; /* ë§í¬ì˜ ë°‘ì¤„ ì œê±° */
+    color: inherit; /* ë§í¬ì˜ ìƒ‰ìƒ ì œê±° */
+}
+
+/* ë¶„ë¥˜ í•­ëª© ì„¤ì • */
+/* .event-menu ul li { */
+/*     display: inline-block; */
+/*     text-decoration: none; ë§í¬ì˜ ë°‘ì¤„ ì œê±° */
+/*     margin: 10px; */
+/* } */
+
+/* í˜„ì¬ ì„ íƒí•œ í•­ëª© êµµê¸° ì¡°ì ˆ */
+/* .event-menu ul li.active a { */
+/*     font-weight: bold; */
+/*     background: #f32; */
+/* } */
+
+.event-menu input[type="button"] {
+    background-color: #e50914; /* ë°°ê²½ìƒ‰ ë¹¨ê°„ìƒ‰ */
+	margin: 20px 10px 0;  /* ìœ„20 ì¢Œìš°10 ì•„ë˜0 px */
+	padding: 10px; /* ì•ˆìª½ì—¬ë°± ì§€ì • */
+/* 	width: 90px; ë„ˆë¹„ì§€ì • */
+/* 	padding: 6px 15px; ì•ˆìª½ ì—¬ë°± */
+/*     color: white; ê¸€ì”¨ìƒ‰ í°ìƒ‰ */
+/*     border: none; í…Œë‘ë¦¬ ì—†ìŒ */
+/*     cursor: pointer; ì»¤ì„œ ë³€ê²½ */
+}
+
+.event-menu input[type="button"]:hover {  /* ëª¨ë“  ë²„íŠ¼ì— ë§ˆìš°ìŠ¤ì˜¤ë²„ ì‹œ */
+	background-color: #ce0912;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
-/* ºĞ·ù ¸ñ·Ï */
-.event-menu {
-	text-align: center;
 }
 .event-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-/* ºĞ·ù Ç×¸ñ ¼³Á¤ */
-.event-menu ul li {
-	border: 1px solid;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px 40px;
-    text-decoration: none; /* ¸µÅ©ÀÇ ¹ØÁÙ Á¦°Å */
-}
 
-.event-menu a {
-/*     color: #fff; */
-    text-decoration: none; /* ¸µÅ©ÀÇ ¹ØÁÙ Á¦°Å */
-    color: inherit; /* ¸µÅ©ÀÇ »ö»ó Á¦°Å */
-}
-/* ÇöÀç ¼±ÅÃÇÑ Ç×¸ñ ±½±â Á¶Àı */
-.event-menu ul li.active a {
-    font-weight: bold;
-    
-    background: #f32;
-}
-
-/* ------- ±×¸®µå ½ºÅ¸ÀÏ ¸ñ·Ï -------  */
+/* ------- ê·¸ë¦¬ë“œ ìŠ¤íƒ€ì¼ ëª©ë¡ -------  */
 .event-section {
     padding: 20px;
 }
 
 .event-grid {
-    display: grid; /* ±×¸®µå ¹æ½Ä Á¤·Ä */
-    grid-template-columns: repeat(4, 1fr); /* ÇÑÁÙ¿¡ 4°³¾¿ ¹İº¹ */
-    grid-gap: 20px; /* ±×¸®µå °£°İ */
+    display: grid; /* ê·¸ë¦¬ë“œ ë°©ì‹ ì •ë ¬ */
+    grid-template-columns: repeat(4, 1fr); /* í•œì¤„ì— 4ê°œì”© ë°˜ë³µ */
+    grid-gap: 20px; /* ê·¸ë¦¬ë“œ ê°„ê²© */
 }
 
-/* ÀÌº¥Æ® Ç×¸ñ */
+/* ì´ë²¤íŠ¸ í•­ëª© */
 .event {
 	border: 1px solid;
 	width: 200px;
 	height: 300px;
     background-color: #fff;
 /*     padding: 20px; */
-    border-radius: 5px; /* ¸ğ¼­¸® ¶ó¿îµå Ã³¸® */
-    text-align: center; /* °¡¿îµ¥ Á¤·Ä */
+    border-radius: 5px; /* ëª¨ì„œë¦¬ ë¼ìš´ë“œ ì²˜ë¦¬ */
+    text-align: center; /* ê°€ìš´ë° ì •ë ¬ */
     overflow: hidden;
-    display: table; /* Å×ÀÌºíÇü½Ä */
+    display: table; /* í…Œì´ë¸”í˜•ì‹ */
 }
 
 .event a {
-    text-decoration: none; /* ¸µÅ©ÀÇ ¹ØÁÙ Á¦°Å */
-    color: inherit; /* ¸µÅ©ÀÇ »ö»ó Á¦°Å */
+    text-decoration: none; /* ë§í¬ì˜ ë°‘ì¤„ ì œê±° */
+    color: inherit; /* ë§í¬ì˜ ìƒ‰ìƒ ì œê±° */
 	
 }
 
-/* ÀÌº¥Æ® Ç×¸ñÀÇ ½æ³×ÀÏ */
+/* ì´ë²¤íŠ¸ í•­ëª©ì˜ ì¸ë„¤ì¼ */
 .event-image {
     width: 100%;
     height: 100%;
-    display: table-cell; /* Å×ÀÌºíÀÇ ¼¿ Çü½Ä */
-    vertical-align:middle; /* ¼öÁ÷ °¡¿îµ¥ Á¤·Ä */
+    display: table-cell; /* í…Œì´ë¸”ì˜ ì…€ í˜•ì‹ */
+    vertical-align:middle; /* ìˆ˜ì§ ê°€ìš´ë° ì •ë ¬ */
 }
 
-/* ÀÌº¥Æ® Ç×¸ñÀÇ Á¦¸ñ */
+/* ì´ë²¤íŠ¸ í•­ëª©ì˜ ì œëª© */
 .event-title {
-    color: inherit; /* ¸µÅ©ÀÇ »ö»ó Á¦°Å */
+    color: inherit; /* ë§í¬ì˜ ìƒ‰ìƒ ì œê±° */
     font-weight: 800;
     font-size: 20px;
     margin: 0 auto;
 }
 
-/* ÀÌº¥Æ® Ç×¸ñÀÇ ³¯Â¥ */
+/* ì´ë²¤íŠ¸ í•­ëª©ì˜ ë‚ ì§œ */
 .event-date {
     color: #999;
     font-size: 14px;
 }
 
 
-/* ---------------- ÀÌº¥Æ® »ó¼¼ ÆäÀÌÁö ----------------  */
+/* ---------------- ì´ë²¤íŠ¸ ìƒì„¸ í˜ì´ì§€ ----------------  */
 .detail_img {
 	text-align: center;
 	
 }
 
+
+/* ================ footerì— ì ìš©í•  css =============== */
+
+footer {
+	position: absolute;
+	left: 0; bottom: 0;
+	width: 100%;
+	padding-top: 10px;
+}

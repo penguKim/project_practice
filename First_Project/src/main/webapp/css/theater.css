@@ -1,0 +1,55 @@
+@charset "EUC-KR";
+
+.menu{text-align: center;} /*  nav 메뉴바 센터 */
+
+nav li {background-color:#FF3636;
+display: inline-block /* 메뉴들을 나란히 */;
+width: 150px; height: 30px; /* 가로 세로 크기 */
+border-radius:0 0 0 0 ; /* 둥글이? */
+text-align: center;  /* 글자를 가운데로 */
+line-height: 30px /* 행간=영역의 높이값
+수직정렬 가운데 */; }
+
+nav li:hover {background-color:#0a0;
+ transition:1.2s;} /* 마우스 오버시 색깔 변화 */
+ 
+ 
+ .price{margin-left: 30em; /* price 위치 조정 */
+text-align: center;}  /* price 글자 가운데로 */
+
+ .theater1 ,.theater2,.theater3,.theater4,.theater5{ 
+margin-top: 5px; /* 영화관끼리 위에랑 사이 띄움*/
+}
+
+ #map{
+  display: inline-block;
+  position: sticky;
+  right: 39em;
+ } /* 지도 위치 */
+
+.theater1>input,.theater2>input,.theater3>input,.theater4>input,.theater5>input {
+background-color:#FF3636; /* 메뉴바 색깔 변경 */
+color : white; /* 글자색을 흰색으로 */
+width: 150px; height: 30px; /* 가로 세로 크기 */ 
+border-radius:10px 10px 10px 10px ; /* 둥글이? */
+text-align: center;  /* 글자를 가운데로 */
+line-height: 30px /* 행간=영역의 높이값
+수직정렬 가운데 */;
+margin-right: 15px;}
+ 
+ .Notice{
+ display: inline-block;
+ position: sticky;
+ right: 36em;
+ /* 공지사항 위치 조정 */
+ }
+ 
+ td>a{text-decoration-line: none; /* 공지사항에 a 태그 밑줄 없앰 */
+color: black;} /* 공지사항 a태그 글자색 변경*/
+
+th>a{color: blue;} /* 공지사항 옆 더보기 글자색*/
+
+ul>li>a{text-decoration-line: none;
+color: white;}  /* nav - li - a태그 글자색 변경*/
+
+footer{text-align: center;} /* 글자를 가운데로 */
