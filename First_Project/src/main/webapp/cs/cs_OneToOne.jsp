@@ -112,11 +112,11 @@ $(function() {
 		</header>
 		
 		<section id="content">
-			<h1>1 : 1 문의</h1>
-			
-			<nav id="cs_nav"> <%-- 사이드 메뉴바 --%>
+			<h1 id="h01">1 : 1 문의</h1>
+			<hr>
+			<div id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
-			</nav>
+			</div>
 			
 			<form action="cs_main.jsp" method=""  name="csForm">
 				<p>고객님의 문의에 답변하는 직원은 고객 여러분의 가족 중 한 사람일 수 있습니다.<br>

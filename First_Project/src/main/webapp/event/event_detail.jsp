@@ -16,6 +16,8 @@
 		</header>
 		
 		<section id="content">
+			<h1 id="h01">이벤트</h1>
+			<hr>
 			<section id="event_detail">
 				<div class="detail_tit">
 					<h1>&lt;나폴레옹&gt; 돌비 포스터 증정 이벤트</h1>

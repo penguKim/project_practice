@@ -14,6 +14,8 @@
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
 		<section id="content">
+			<h1 id="h01">영화정보</h1>
+			<hr>
 			<section class="detail_container">
 				<!-- 포스터, 제목 영역 -->
 				<div class="detail_info">
@@ -34,12 +36,12 @@
 						</div>
 					</div>
 				</div>
-				<hr class="clear">
+				<hr>
 				<ul class="click_link">
 					<li><a href="#movie_story"><input type="button" value="줄거리"></a></li>	
 					<li><a href="#movie_trailer"><input type="button" value="트레일러"></a></li>	
 					<li><a href="#movie_cut"><input type="button" value="스틸컷"></a></li>	
-					<li><a href="#movie_cut"><input type="button" value="리뷰"></a></li>	
+					<li><a href="#review"><input type="button" value="리뷰"></a></li>	
 				</ul>
 			    <div class="movie_story" id="movie_story">
 			    	<h2>줄거리</h2>
@@ -59,14 +61,17 @@
 					&lsquo;나폴레옹&rsquo;의 대서사가 펼쳐진다!
 			    </div>
 			    <div class="movie_trailer" id="movie_trailer">
+			    	<hr>
 			    	<h2>트레일러</h2>
 				    <embed width="560" height="315" src="https://www.youtube.com/embed/ROl3dZE5rk4?si=Wl2kLOlS_0HFmtDM" title="YouTube video player"></embed>
 			    </div>
 			    <div class="movie_cut" id="movie_cut">
+			    	<hr>
 			    	<h2>스틸컷</h2>
 			    	<img alt="" src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000087/87596/87596220582_727.jpg" width="600px" height="350px">
 			    </div>
 			    <div class="review" id="review">
+			    	<hr>
 			    	<h2>리뷰</h2>
 			    	<input type="text" placeholder="리뷰 입력" size="50">
 			    	<input type="button" value="등록">

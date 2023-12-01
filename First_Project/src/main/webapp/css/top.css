@@ -69,9 +69,19 @@ body {
 	text-align: center;
 }
 
-hr {
+#top_hr {
 	border: 1px solid #e50914;
 }
 
+#toplink {
+	text-decoration: none;
+	border: 1px solid black;
+	border-radius: 50%;
+	padding: 5px 15px;
+	position: fixed;
+	right: 0; bottom: 10px;
+	color: #fff;
+	background-color: #e50914;
+}
 
 /* ================= 여기까지 top/bottom영역에 적용되는 영역 =================== */

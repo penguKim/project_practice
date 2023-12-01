@@ -15,6 +15,8 @@
 		</header>
 		
 		<section id="content">
+			<h1 id="h01">상영예정작</h1>
+			<hr>
 			<nav class="movie-menu">
 				<ul>
 					<li class="active"><a href="release.jsp">
@@ -22,12 +24,11 @@
 					<li><a href="comming.jsp">
 						<input type="button" value="상영예정작"></a></li>
 				</ul>
-				<hr>
 			</nav>
 			<section class="movie-section">
 				<div class="container">
 					<div class="movie-grid">
-					<c:forEach begin="1" end="20">
+					<c:forEach begin="1" end="16">
 						<div class="movie">
 							<a href="detail.jsp">
 							<div class="movie-poster">
@@ -40,7 +41,7 @@
 							</div>
 							</a>
 							<div class="reserve_area">
-								<a href="../reserve/movie_select.jsp"" class="rel_reservBtn">
+								<a href="../reserve/movie_select1.jsp"" class="rel_reservBtn">
 									<input type="button" value="예매하기"></a>
 							</div>
 						</div>

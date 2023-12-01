@@ -33,21 +33,27 @@ padding: 1em;
 	box-sizing: border-box;
 }
 
+
 tr, td{
 	padding: 5px;
 	text-align: center;
 	border: 1px solid;
 }
 
+
 div>table {
 	border-collapse: collapse;
     width: 100%;
 }
 
-#cancle{
-	float:right;
-	margin-top: 10px;
-}
-
 /* -----------------바디부분 상단 끝----------------------------- */
 
+
+/* 바디부분 하단 */
+.container_bottom{
+	float:left;
+	width: 800px;
+	height: 300px;
+	margin-top:auto;
+	box-sizing: border-box;
+}

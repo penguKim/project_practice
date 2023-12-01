@@ -83,11 +83,11 @@
 		</header>
 		
 		<section id="content">
-			<h1>분실물 문의</h1>
-			
-			<nav id="cs_nav"> <%-- 사이드 메뉴바 --%>
+			<h1 id="h01">분실물 문의</h1>
+			<hr>
+			<div id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
-			</nav>
+			</div>
 			<form action="cs_main.jsp" method=""  name="csForm">
 				<p>분실물에 관련하여 문의가 있으시면 아래의 정보를 입력해주세요.
 				담당자 확인 후 신속히 답변을 드리겠습니다.</p>

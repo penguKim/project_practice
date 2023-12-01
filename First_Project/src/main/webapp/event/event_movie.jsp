@@ -16,6 +16,8 @@
 		</header>
 		
 		<section id="content">
+			<h1 id="h01">영화이벤트</h1>
+			<hr>
 			<nav class="event-menu">
 				<ul>
 			        <li class="active"><a href="event_movie.jsp"><input type="button" value="영화"></a></li>
@@ -28,7 +30,7 @@
 		         <div class="container">
 			        <h1>진행 중인 이벤트</h1>
 			        <div class="event-grid">
-			        <c:forEach begin="1" end="4">
+			        <c:forEach begin="1" end="8">
 			            <div class="event">
 			            	<a href="event_detail.jsp" class="event_link">
 				            	<div class="event-image">

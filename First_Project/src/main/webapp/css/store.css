@@ -3,6 +3,7 @@
 
 html {
 	height: 100%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -24,16 +25,15 @@ header {
 	width: 100%;
 }
 
-
-/* -----------------------------스토어 메인페이지 css */
-
-/* 스토어 메인페이지 중앙 정렬 */
 #content {
 	padding: 100px 0;
 	width: 1024px;
 	margin: 100px auto;	
 	padding: 100px 0 150px 0;
 }
+
+/* -----------------------------스토어 메인페이지 css */
+
 /* 스토어 제목 */
 #h01{
 	font-size: 35px; /* 폰트 크기 조정  */
@@ -44,40 +44,64 @@ header {
 #div01 {
 	text-align: center; /* 각 카테고리별 중앙 정렬 */
 	margin: 0 auto; /* 각 카테고리내 메뉴 사이 간격 */
-	border-top: 3px solid #ce0912;
+	padding-top: 150px;
+	z-index: -1;
+	position: relative;
+	top: -150px;
 }
 
-.menu {
+#div02, #div03 {
+	position: relative;
+	top: -150px;
+	padding-top: 150px;
 	text-align: center; /* 각 카테고리별 중앙 정렬 */
-	border-top: 3px solid #ce0912;
 }
 
-.menu img {
+#div02 img, #div03 img {
 	border: 1px solid #000000;
 	box-shadow: 1px 1px 1px 1px;
 	text-decoration: none;
 	color: #000000;
 }
 
+.div_store_01 {
+	position: relative;
+}
+
 
 /* 버튼 메뉴 설정 */
-.menubtn {
-	margin: 0 auto;
+
+.div_store_01 ul {
 	text-align: center;
 }
 
-/* 메뉴 버튼 설정 */
-.menubtn input {
-	padding: 5px;
-	margin: 10px; /* 버튼 주변 간격 */
-	width: 150px; /* 버튼 가로 길이 조정 */
-	height: 30px; /* 버튼 세로 길이 조정 */
-	background-color: #ff8040; /* 버튼색 주황색 */
-	display: inline-block;
+.menubtn {
+	text-align: center;
 }
 
+.menubtn li {
+	display: inline-block;
+	width: 160px;
+	height: 50px;
+	text-align: center;
+	line-height: 30px;
+	margin: 10px;
+}
 
+.menubtn input {
+	border: none;
+	border-bottom: 3px solid #e50914;
+	color: #000000; /* 글자 색상 */
+	padding: 10px 50px; /* 영역의 상하 좌우 크기 */
+	margin-top: 10px;
+	background-color: #ffffff;
+	cursor: pointer; /* 커서 변경 */
+}
 
+.menubtn input:hover {
+	background-color: #eeeeee;
+	border-bottom: 3px solid #000000;
+}
 
 
 /* 영화관 고객센터 공지 */
@@ -177,129 +201,7 @@ header {
 	background-color: #ce0912;
 }
 
-
-/* 상세페이지 내부 표 */
-/* .store_view .box_store_view .left .img { */
-/* 	display: table;			내용물 만큼너비가 맞춰짐 widh100% 필수 */
-/* 	table-layout: fixed;	표 크기 고정 */
-/* 	width: 100%			display: table 사용을 위한 내용 */
-/* } */
-
-/* 이미지가 들어있는 p 태그 속성 */
-/* .store_view .box_store_view .left .img p { */
-/* 	display: table-cell; 부모속성 display: table 의 자식속성 정렬을 해줌  */
-/* 	height: 400px;			p태그 높이 설정 */
-/* 	text-align: center;		이미지 중앙 정렬 */
-/* 	vertical-align: middle;	이미지 상하 가운데 정렬 */
-/* } */
-
-/* 상세페이지 박스 내부 오른쪽 설정 */
-/* .store_view .box_store_view .right { */
-/* 	float: left;				상세페이지 내부 오른쪽 섹션 왼쪽 정렬 */
-/* 	width: calc(100% - 480px);	상세페이지 내부 오른쪽 가로 길이 조정 */
-/* 	padding: 15px 0 30px 40px;  상세페이지 내부 오른쪽 범위 조정 */
-/* } */
-
-/* 상세페이지 박스 내부 오른쪽 제목 설정 */
-/* .store_view .box_store_view .right .goods_info .line .title { */
-/* 	display: table-cell;	부모속성 display: table 의 자식속성 정렬을 해줌  */
-/* 	width: 100px;			가로길이 조정 */
-/* 	padding-top: 15px;		제목간의 간격 설정 */
-/* 	color: #222;			폰트 색상 설정 */
-/* 	vertical-align: top;	폰트 상하 위치 설정 */
-/* 	font-size: 18px;		폰트 크기 설정 */
-/* 	font-weight: 5px;		폰트 굵기 설정 적용되는지 모르겠음 */
-/* } */
-
-/* 상세페이지 박스 내부 오른쪽 내용 설정 */
-/* .store_view .box_store_view .right .goods_info .line .contents { */
-/* 	display: table-cell;		부모속성 display: table 의 자식속성 정렬을 해줌  */
-/* 	width: calc(100% - 100px);	텍스트 가로 길이 조정 */
-/* 	padding-top: 20px;			내용 간의 간격 설정 */
-/* 	vertical-align: top;		폰트 상하 위치 설정 */
-/* 	font-weight: 5px;			폰트 굵기 설정 적용되는지 모르겠음 */
-/* } */
-
-/* 결제할 상품 설정 */
-/* .store_view .box_store_view .right .pay { */
-/* 	margin: 15px 0 0 0;					상품 상새 내용 과 결제할 상품 란 간격 */
-/* 	border-top: 1px solid #ebebeb;	상품 상새 내용 과 결제할 상품 란 사이 선 */
-/* } */
-
-/* 결제할 상품 내역(수량 금액) */
-/* .store_view .box_store_view .right .pay .title { */
-/* 	display: table-cell; 	부모속성 display: table 의 자식속성 정렬을 해줌  */
-/* 	width: 100px;			결제할 상품 내역 길이 조절 */
-/* 	padding-top: 20px;		텍스트와 상세내용 과의 간격 */
-/* 	color: #222;			폰트 색상 */
-/* } */
-
-/* 결제할 상품 내역(수량 조절 및 금액 섹션) */
-/* .store_view .box_store_view .right .pay .receipt  { */
-/* 	display: table;			내용물 만큼너비가 맞춰짐 widh100% 필수 */
-/* 	table-layout: fixed;	표 크기 고정 */
-/* 	width: 100%				display: table 사용을 위한 내용 */
-/* } */
-/* 결제할 상품 내역 내용(수량 및 금액) */
-/* .store_view .box_store_view .right .pay .receipt .contents { */
-/* 	overflow: hidden;			div의 크기에 맞게 데이터가 숨겨짐 */
-/* 	display: table-cell;		부모속성 display: table 의 자식속성 정렬을 해줌  */
-/* 	width: calc(100% - 100px);	텍스트 가로 길이 조정 */
-/* 	padding-top: 20px;			텍스트와 상세내용 과의 간격 */
-/* } */
-
-/* 결제할 상품 수량 조절의 텍스트 칸 */
-/* .store_view .box_store_view .right .pay .receipt .input-text { */
-/* 	width: 30px;				가로길이 조정 */
-/* 	border: 1px solid #ccc;	테두리 조정 */
-/* 	border-width: 1px 0;		사용시 테두리 좌우선 사라짐 */
-/* } */
-
-/* 금액 표시 위치 */
-/* .store_view .box_store_view .right .pay .money { */
-/* 	float: right;	오른쪽으로 설정 */
-/* }  */
-
-/* 구매하기 버튼 위치 설정 */
-/* .store_view .box_store_view .right .btn_buy { */
-/* 	overflow: hidden;				div의 크기에 맞게 데이터가 숨겨짐 */
-/* 	margin: 20px 0 0 0;				결제 설정 섹션과의 간격 설정 */
-/* 	padding: 20px 0 0 0;			결제 설정 섹션과의 간격 설정 */
-/* 	border-top: 1px solid #ebebeb;	결제 설정 섹션과 사이 간격 줄 */
-/* } */
-
-/* 구매하기 버튼 */
-/* .store_view .box_store_view .right .btn_buy button { */
-/* 	display: block; 한줄 고정 */
-/* 	float: right;  */
-/* 	width: 150px; 가로 조정 */
-/* 	height: 30px; 세로 조정 */
-/* 	margin: 0;	마진 초기화 */
-/* 	background-color: #8000ff; 버튼 색상 보라색 */
-/* 	border: 1px; 테두리 굵기 조정 */
-/* 	font-size: 14px; 폰트 크기 조정 */
-/* 	font-weight: 2px; 폰트 굵기 조정 */
-/* } */
-
-/* 사용 방법 및 이용안내 정렬 */
-/* .store_exap { */
-/* margin-left: 25em; 중앙정렬을 위한 왼쪽으로부터 정렬 */
-/* width: 1000px; 사용 방법 가로 크기 조정 */
-/* } */
-
-/* 설명안내 */
-/* #store_expl01 { */
-/* 	margin-top: 20px; 상세페이지와의 간격 조정 */
-/* } */
-
 /* -----------------------------스토어 결제 페이지--------------------------------- */
-/* 스토어 전체페이지 정렬 */
-/* .store_all { */
-/* 	margin-left: 25em; 전체 왼쪽에서 중앙정렬 */
-/* 	width: 50%;	전체 가로 조절 */
-/* 	text-align: center; 전체 기본값 중앙 지정 */
-/* 	margin-bottom: 20px; bottom 과 body 사이 간격 조정 */
-/* } */
 
 /* 상단 진행도 상태창 조절 */
 .store_progress {
@@ -481,23 +383,22 @@ header {
 	margin-left: 10px; /* 결제 대행 서비스 약관 내역 왼쪽 간격 조정 */
 }
 
-
-#button1 {
-	display: inline-block;
-	margin: 30px;
-	position: absolute;
-	left: 40%;
-	top: 87%;
+.paybtn {
+	margin: 20px;
+	text-align: center;
 }
 
-#button2 {
-	display: inline-block;
-	margin: 30px;
-	position: absolute;
-	left: 50%;
-	top: 87%;
+.paybtn input {
+	padding: 6px 15px; /* 안쪽 여백 */
+    background-color: #e50914; /* 배경색 빨간색 */
+    color: white; /* 글씨색 흰색*/
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 커서 변경 */
 }
 
+.paybtn input:hover {
+	background-color: #ce0912;
+}
 
 
 /* ------------------------------------------------------------- */

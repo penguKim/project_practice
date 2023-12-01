@@ -31,7 +31,11 @@ header {
 	margin: 100px auto;	
 }
 
-
+/* 제목 */
+#h01{
+	font-size: 35px; /* 폰트 크기 조정  */
+	text-align: center; /* 스토어 제목 중앙 정렬  */
+}
 
 /* ---------------- 현재상영작, 상영예정작 ----------------  */
 
@@ -54,7 +58,7 @@ header {
 
 .movie-menu input {
 	border: none;
-	border-bottom: 2px solid #e50914;
+	border-bottom: 3px solid #e50914;
 	height: 50px;
 	color: #000000; /* 글자 색상 */
 	padding: 10px 50px; /* 영역의 상하 좌우 크기 */
@@ -65,7 +69,7 @@ header {
 
 .movie-menu input:hover {
 	background-color: #eeeeee;
-	border-bottom: 2px solid #000000;
+	border-bottom: 3px solid #000000;
 }
 
 .movie-menu a {
@@ -176,6 +180,7 @@ header {
 	margin: 10px auto;
 	height: 300px;
 	position: relative;
+	padding-bottom: 20px;
 }
 
 /* 포스터의 위치 지정 */
@@ -255,7 +260,7 @@ header {
 	color: #fff;
 }
 
-.click_link>li {
+.click_link li {
 	display: inline-block;
 	width: 150px;
 	height: 50px;
@@ -265,7 +270,7 @@ header {
 
 .click_link input {
 	border: none;
-	border-bottom: 2px solid #e50914;
+	border-bottom: 3px solid #e50914;
 	color: #000000; /* 글자 색상 */
 	padding: 10px 50px; /* 영역의 상하 좌우 크기 */
 	margin-top: 10px;
@@ -275,7 +280,7 @@ header {
 
 .click_link input:hover {
 	background-color: #eeeeee;
-	border-bottom: 2px solid #000000;
+	border-bottom: 3px solid #000000;
 }
 
 /* 줄거리 */
@@ -351,6 +356,13 @@ header {
 
 .review input[type="button"]:hover {  /* 모든 버튼에 마우스오버 시 */
 	background-color: #ce0912;
+}
+
+#movie_story, #movie_trailer, #movie_cut, #review {
+	padding-top: 150px;
+	z-index: -1;
+	position: relative;
+	top: -150px;
 }
 
 

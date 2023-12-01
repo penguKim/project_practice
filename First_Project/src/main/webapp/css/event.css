@@ -32,6 +32,14 @@ header {
 	margin: 100px auto;	
 }
 
+
+/* 제목 */
+#h01{
+	font-size: 35px; /* 폰트 크기 조정  */
+	text-align: center; /* 스토어 제목 중앙 정렬  */
+}
+
+
 /* ---------------- 이벤트 페이지 ----------------  */
 
 /* 분류 목록 */
@@ -46,17 +54,6 @@ header {
 }
 
 /* 분류 항목 설정 */
-/* .event-menu ul li { */
-/*     display: inline-block; */
-/*     text-decoration: none; 링크의 밑줄 제거 */
-/*     margin: 10px; */
-/* } */
-
-/* 현재 선택한 항목 굵기 조절 */
-/* .event-menu ul li.active a { */
-/*     font-weight: bold; */
-/*     background: #f32; */
-/* } */
 
 .event-menu li {
 	display: inline-block;
@@ -98,7 +95,7 @@ header {
 
 .event-grid {
     display: grid; /* 그리드 방식 정렬 */
-    grid-template-columns: repeat(4, 1fr); /* 한줄에 4개씩 반복 */
+    grid-template-columns: repeat(4, 2fr); /* 한줄에 4개씩 반복 */
     grid-gap: 20px; /* 그리드 간격 */
 }
 
