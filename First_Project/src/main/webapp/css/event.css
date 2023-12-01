@@ -1,45 +1,5 @@
 @charset "UTF-8";
 
-/* ======== 전체 영역에 적용할 css ======== */
-
-html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-}
-
-
-header {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%;
-	z-index:1;
-}
-
-#wrapper {
-	min-height: 100%;
-	position: relative;
-	width: 100%
-}
-
-
-
-#content {
-	padding: 100px 0;
-	width: 1024px;
-	margin: 100px auto;	
-}
-
-
-/* 제목 */
-#h01{
-	font-size: 35px; /* 폰트 크기 조정  */
-	text-align: center; /* 스토어 제목 중앙 정렬  */
-}
-
-
 /* ---------------- 이벤트 페이지 ----------------  */
 
 /* 분류 목록 */
@@ -80,6 +40,7 @@ header {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 40px;
     padding: 20px;
 }
 .event-menu ul {
@@ -169,12 +130,3 @@ header {
 	padding: 10px;
 }
 
-
-/* ================ footer에 적용할 css =============== */
-
-footer {
-	position: absolute;
-	left: 0; bottom: 0;
-	width: 100%;
-	padding-top: 10px;
-}

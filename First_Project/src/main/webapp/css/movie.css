@@ -1,42 +1,5 @@
 @charset "UTF-8";
 
-/* ======== 전체 영역에 적용할 css ======== */
-
-html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-}
-
-
-header {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%;
-	z-index:1;
-}
-
-#wrapper {
-	min-height: 100%;
-	position: relative;
-	width: 100%
-}
-
-
-#content {
-	padding: 100px 0;
-	width: 1024px;
-	margin: 100px auto;	
-}
-
-/* 제목 */
-#h01{
-	font-size: 35px; /* 폰트 크기 조정  */
-	text-align: center; /* 스토어 제목 중앙 정렬  */
-}
-
 /* ---------------- 현재상영작, 상영예정작 ----------------  */
 
 /* 현재상영작, 상영예정작 분류 목록 */
@@ -85,18 +48,18 @@ header {
 .container {
     max-width: 1200px; /* 그리드 전체 넓이 */
     margin: 0 auto; /* 가운데 맞춤 */
-    padding: 20px;
-    text-align: center;
 }
 
 .movie-section {
     padding: 20px;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .movie-grid {
     display: grid; /* 목록의 그리드 방식 정렬 */
     grid-template-columns: repeat(4, 1fr); /* 한줄에 5개씩 동일 비율로 반복 */
-    grid-gap: 20px; /* 그리드 간격 */
+    grid-gap: 40px; /* 그리드 간격 */
 }
 
 /* 그리드 1칸의 영화 항목 */
@@ -358,19 +321,15 @@ header {
 	background-color: #ce0912;
 }
 
-#movie_story, #movie_trailer, #movie_cut, #review {
-	padding-top: 150px;
+#movie_story, #movie_trailer, #movie_cut {
+	padding-top: 50px;
 	z-index: -1;
 	position: relative;
-	top: -150px;
 }
 
-
-/* ================ footer에 적용할 css =============== */
-
-footer {
-	position: absolute;
-	left: 0; bottom: 0;
-	width: 100%;
-	padding-top: 10px;
+#review {
+	padding-top: 50px;
+	z-index: -1;
+	position: relative;
+	margin-bottom: 100px;
 }

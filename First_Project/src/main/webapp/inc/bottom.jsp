@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link href="${pageContext.request.contextPath}/css/top.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <a href="#" id="toplink"><img src="${pageContext.request.contextPath}/img/top.png"><br>top</a>
 <hr id="top_hr">
 <p id="main_p">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)<br>

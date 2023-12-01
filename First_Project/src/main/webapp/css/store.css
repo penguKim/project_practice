@@ -1,59 +1,19 @@
 @charset "UTF-8";
 
 
-html {
-	height: 100%;
-	scroll-behavior: smooth;
-}
-
-body {
-	height: 100%;
-}
-
-
-header {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%;
-	z-index:1;
-	margin: 0;
-}
-
-#wrapper {
-	min-height: 100%;
-	position: relative;
-	width: 100%;
-}
-
-#content {
-	padding: 100px 0;
-	width: 1024px;
-	margin: 100px auto;	
-	padding: 100px 0 150px 0;
-}
-
-/* -----------------------------스토어 메인페이지 css */
-
-/* 스토어 제목 */
-#h01{
-	font-size: 35px; /* 폰트 크기 조정  */
-	text-align: center; /* 스토어 제목 중앙 정렬  */
-}
-
 /* 각 카테고리별(베스트, 영화관람권, 스낵)중앙 정렬  */
 #div01 {
 	text-align: center; /* 각 카테고리별 중앙 정렬 */
 	margin: 0 auto; /* 각 카테고리내 메뉴 사이 간격 */
-	padding-top: 150px;
+	padding-top: 50px;
 	z-index: -1;
 	position: relative;
-	top: -150px;
+	top: -50px;
 }
 
 #div02, #div03 {
 	position: relative;
-	top: -150px;
-	padding-top: 150px;
+	padding-top: 50px;
 	text-align: center; /* 각 카테고리별 중앙 정렬 */
 }
 
@@ -107,6 +67,7 @@ header {
 /* 영화관 고객센터 공지 */
 #store_notice {
 	text-align: center; /* 알림 중앙정렬 */
+	margin-bottom: 100px;
 }
 
 /* ----------------------------------------스토어 상세 페이지 css  */
@@ -400,14 +361,3 @@ header {
 	background-color: #ce0912;
 }
 
-
-/* ------------------------------------------------------------- */
-
-footer {
-	position: absolute;
-	left: 0; bottom: 0;
-	width: 100%;
-	padding-top: 10px;
-	margin-top: 50px;
-}
-	

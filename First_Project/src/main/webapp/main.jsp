@@ -15,28 +15,46 @@
 			<jsp:include page="inc/top.jsp"></jsp:include>
 		</header>
 		
-		<section id="content">
-<!-- 			<div id="iframe-container"> -->
-<!-- 				<iframe src="https://www.youtube.com/embed/xUDhdCsLkjU?autoplay=1&mute=1&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe> -->
-<!-- 				<button id="exit-btn">X</button> -->
-<!-- 			</div> -->
-			<div id="Sort">
-				<a href=""><input type="button" value="무비차트"></a>
-				<a href=""><input type="button" value="상영예정작"></a>
-				<a href=""><input type="button" value="관람객순"></a>
-			</div>
-			<div id="boxoffice">
-				<div>
-					<img src="img/어벤져스인피니티워.jpeg"><br>
-					<input type="button" value="👍 좋아요">
+		<div id="menu_nav">
+			<nav>
+				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
+				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
+				<a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
+				<a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
+				<a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
+				<a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
+			</nav>
+		</div>
+		<hr id="top_hr">
+		
+		<div class="img_slide">
+			<div class="slideshow-container">
+			
+				<div class="mySlides fade">
+				  <img src="img/img1.jpg" width="900" height="400">
 				</div>
 				
-				<div style="text-align:center">
-				  <span class="dot" onclick="currentSlide(1)"></span> 
-				  <span class="dot" onclick="currentSlide(2)"></span> 
-				  <span class="dot" onclick="currentSlide(3)"></span> 
+				<div class="mySlides fade">
+				  <img src="img/img2.jpg" width="900" height="400">
 				</div>
+				
+				<div class="mySlides fade">
+				  <img src="img/img3.jpg" width="900" height="400">
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+			
 			</div>
+			
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
+		</div>
+		
+		<section id="content">
 			
 			<div id="main_page">
 				<div id="Sort">

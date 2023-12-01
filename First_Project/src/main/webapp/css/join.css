@@ -1,43 +1,5 @@
 @charset "UTF-8";
 
-/* ======== 전체 영역에 적용할 css ======== */
-
-html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-}
-
-
-header {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%;
-	z-index:1;
-}
-
-#wrapper {
-	min-height: 100%;
-	position: relative;
-	width: 100%
-}
-
-
-#content {
-	padding: 100px 0;
-	width: 1024px;
-	margin: 100px auto;	
-}
-
-
-/* 제목 */
-#h01{
-	font-size: 35px; /* 폰트 크기 조정  */
-	text-align: center; /* 스토어 제목 중앙 정렬  */
-}
-
 /* ============= 본문에 적용할 ============== css */
 
 
@@ -199,14 +161,5 @@ textarea { /* 텍스트박스 */
 #completion_msg { /* 가입 완료 메세지 */
 	text-align: center; /* 글자 가운데정렬 */
 	margin: 0 auto; /* 배치 가운데정렬 */
-}
-
-/* ================ footer에 적용할 css =============== */
-
-footer {
-	position: absolute;
-	left: 0; bottom: 0;
-	width: 100%;
-	padding-top: 10px;
 }
 

@@ -1,43 +1,5 @@
 @charset "UTF-8";
 
-/* ======== 전체 영역에 적용할 css ======== */
-
-html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-}
-
-
-header {
-	position: fixed;
-	left: 0; top: 0;
-	width: 100%;
-	z-index:1;
-}
-
-#wrapper {
-	min-height: 100%;
-	position: relative;
-	width: 100%
-}
-
-
-#content {
-	padding: 100px 0;
-	width: 1024px;
-	margin: 100px auto;	
-}
-
-/* 제목 */
-#h01{
-	font-size: 35px; /* 폰트 크기 조정  */
-	text-align: center; /* 스토어 제목 중앙 정렬  */
-}
-
-
 /* ============= 본문에 적용할 ============== css */
 
 /* a { 하이퍼링크에 */
@@ -202,6 +164,7 @@ th {
 
 #main_faq { /* 자주묻는질문 미리보기 */
 	margin-top: 20px; /* 상단여백 */
+	margin-bottom: 50px;
 	float: left; /* 왼쪽에 배치 */
 	width: 46%; /* 45%차지 */
 	padding: 10px;
@@ -211,6 +174,7 @@ th {
 
 #main_notice { /* 공지사항 미리보기 */
 	margin-top: 20px; /* 상단여백 */
+	margin-bottom: 50px;
 	float: right; /* 오른쪽에 배치 */
 	width: 46%; /* 45%차지 */
 	padding: 10px;
@@ -397,11 +361,3 @@ select, input[type="datetime-local"] { /* 셀렉트박스와 날짜선택창에 
 	padding: 10px;
 }
 
-/* ================ footer에 적용할 css =============== */
-
-footer {
-	position: absolute;
-	left: 0; bottom: 0;
-	width: 100%;
-	padding-top: 10px;
-}
