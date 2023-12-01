@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+table, th, td{border:1px solid;}
+
+/* 1. stripe table */
+#tab01{
+	width: 600px;
+	height: 500px;
+}
+
+#tab01 th{
+	background-color: green;
+	color:#FFF;
+	padding: 12px 10px;
+	text-align: left;
+}
+
+#tab01 tr:nth-of-type(2n-1) {
+	background-color: #ccc;
+}
+
+#tab01 tr:hover{
+	background-color: #0fc;
+	cursor: pointer;
+}
+
+#tab01 tr:nth-of-type(6)>td:nth-of-type(3) {
+	color: #f00;
+	font-weight: bold;
+}
+
+/* 2. 셀의 입력 데이터 위치 조정 기본은상하 가운데 */
+#tab02{
+	width: 900px;
+	height: 600px;
+	table-layout: fixed;
+}
+
+#tab02 tr:nth-of-type(3){
+	height: 80px;
+	color: #900;
+	vertical-align: top;	/* 수직 정렬 : 위쪽으로  */
+}
+
+/*3. 셀의 바깥 여백 조정 */
+#tab03{border-spacing: 10px 20px;}
+
+/*4. 한방에 들러붙어서 테두리 한개만 남음 */
+#tab04{border-collapse: collapse;}
+#tab04 tr:nth-of-type(2n) {
+	background-color: #4cf;
+}

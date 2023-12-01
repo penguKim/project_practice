@@ -16,24 +16,19 @@
 		</header>
 		
 		<section id="content">
-			<div class="img_slide">
-				<div class="slideshow-container">
-				
-					<div class="mySlides fade">
-					  <img src="img/img1.jpg" width="900" height="400">
-					</div>
-					
-					<div class="mySlides fade">
-					  <img src="img/img2.jpg" width="900" height="400">
-					</div>
-					
-					<div class="mySlides fade">
-					  <img src="img/img3.jpg" width="900" height="400">
-					</div>
-					
-					<a class="prev" onclick="plusSlides(-1)">❮</a>
-					<a class="next" onclick="plusSlides(1)">❯</a>
-				
+<!-- 			<div id="iframe-container"> -->
+<!-- 				<iframe src="https://www.youtube.com/embed/xUDhdCsLkjU?autoplay=1&mute=1&autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe> -->
+<!-- 				<button id="exit-btn">X</button> -->
+<!-- 			</div> -->
+			<div id="Sort">
+				<a href=""><input type="button" value="무비차트"></a>
+				<a href=""><input type="button" value="상영예정작"></a>
+				<a href=""><input type="button" value="관람객순"></a>
+			</div>
+			<div id="boxoffice">
+				<div>
+					<img src="img/어벤져스인피니티워.jpeg"><br>
+					<input type="button" value="👍 좋아요">
 				</div>
 				
 				<div style="text-align:center">

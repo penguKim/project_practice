@@ -132,7 +132,7 @@
 							<c:set var="day" value="${(i + startDay - 1) % 7}" /><!-- 요일 판별하는 변수 -->
 							<c:set var="dayOfWeek" value="" />
 							<c:set var="dayOfWeek" value="${Day_of_the_week[day]}" />
-							<input type="button" value="${dayOfWeek} ${i}" onclick="toggleDate(this)"><br>
+							<input type="button" value="${i}일 ${dayOfWeek}요일" onclick="toggleDate(this)"><br>
 						</c:forEach>
 					</div> 
 					<div class="overflow time"><b>시간</b><br> 
@@ -171,8 +171,8 @@
 					<tr>
 						<td>영화선택</td>
 						<td>극장선택</td>
-						<td>&#xf105;날짜선택</td>
-						<td>&#xf105;시간선택</td>
+						<td>날짜선택</td>
+						<td>시간선택</td>
 						<td>
 							<form action="seat_select.jsp" method="post">
 							    <input type="hidden" name="movie" value="">
