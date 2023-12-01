@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>스토어 결제 페이지</title>
-<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath }/css/store.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -104,9 +103,9 @@
 					</div>
 				</div>
 			</div>
-			<div>
-				<a href=""><input type="button" value="이전화면" id="button1"></a>
-				<a href="" ><input type="button" value="결제하기" id="button2"></a>
+			<div class="paybtn">
+				<a href="store_main.jsp"><input type="button" value="이전화면"></a>
+				<a href="" ><input type="button" value="결제하기"></a>
 			</div>
 		</section>
 		<footer>

@@ -15,11 +15,11 @@
 		</header>
 		<section id="content">
 			
-			<h1>고객센터 홈</h1>
-			
-			<nav> <%-- 사이드 메뉴바 --%>
+			<h1 id="h01">고객센터 홈</h1>
+			<hr>
+			<div id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
-			</nav>
+			</div>
 			
 			<form action="" method="" name="">
 				<section id="search">
@@ -30,15 +30,15 @@
 				
 				<section id="main_shortcuts"><%-- 바로가기 --%>
 					<a href="cs_lost.jsp">
-						<img src="" alt="분실물 이미지"> <br>
+						<img src="../img/lost.png" alt="분실물 이미지"> <br>
 						분실물 문의 <br>
 					</a>
 					<a href="cs_OneToOne.jsp">
-						<img src="" alt="1:1 이미지"> <br>
+						<img src="../img/1to1.png" alt="1:1 이미지"> <br>
 						1 : 1 문의 <br>
 					</a>
 					<a href="cs_FAQ.jsp">
-						<img src="" alt="FQA 이미지"> <br>
+						<img src="../img/fqa.png" alt="FQA 이미지"> <br>
 						자주 묻는 질문 <br>
 					</a>
 				</section>
@@ -70,6 +70,7 @@
 				</section>
 			</form>
 		</section>
+		
 		<footer>
 			<jsp:include page="../inc/bottom.jsp"></jsp:include>	
 		</footer>

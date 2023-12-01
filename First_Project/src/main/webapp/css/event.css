@@ -1,97 +1,180 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
-/* ---------------- ÀÌº¥Æ® ÆäÀÌÁö ----------------  */
+/* ======== ì „ì²´ ì˜ì—­ì— ì ìš©í•  css ======== */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+header {
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%;
+	z-index:1;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	width: 100%
+}
+
+
+
+#content {
+	padding: 100px 0;
+	width: 1024px;
+	margin: 100px auto;	
+}
+
+
+/* ì œëª© */
+#h01{
+	font-size: 35px; /* í°íŠ¸ í¬ê¸° ì¡°ì •  */
+	text-align: center; /* ìŠ¤í† ì–´ ì œëª© ì¤‘ì•™ ì •ë ¬  */
+}
+
+
+/* ---------------- ì´ë²¤íŠ¸ í˜ì´ì§€ ----------------  */
+
+/* ë¶„ë¥˜ ëª©ë¡ */
+.event-menu {
+	text-align: center;
+}
+
+.event-menu a {
+/*     color: #fff; */
+    text-decoration: none; /* ë§í¬ì˜ ë°‘ì¤„ ì œê±° */
+    color: inherit; /* ë§í¬ì˜ ìƒ‰ìƒ ì œê±° */
+}
+
+/* ë¶„ë¥˜ í•­ëª© ì„¤ì • */
+
+.event-menu li {
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.event-menu input {
+	border: none;
+	border-bottom: 3px solid #e50914;
+	color: #000000; /* ê¸€ì ìƒ‰ìƒ */
+	padding: 10px 50px; /* ì˜ì—­ì˜ ìƒí•˜ ì¢Œìš° í¬ê¸° */
+	margin-top: 10px;
+	background-color: #ffffff;
+	cursor: pointer; /* ì»¤ì„œ ë³€ê²½ */
+}
+
+.event-menu input:hover {
+	background-color: #eeeeee;
+	border-bottom: 3px solid #000000;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
-/* ºĞ·ù ¸ñ·Ï */
-.event-menu {
-	text-align: center;
 }
 .event-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-/* ºĞ·ù Ç×¸ñ ¼³Á¤ */
-.event-menu ul li {
-	border: 1px solid;
-    display: inline-block;
-    margin-right: 10px;
-    padding: 10px 40px;
-    text-decoration: none; /* ¸µÅ©ÀÇ ¹ØÁÙ Á¦°Å */
-}
 
-.event-menu a {
-/*     color: #fff; */
-    text-decoration: none; /* ¸µÅ©ÀÇ ¹ØÁÙ Á¦°Å */
-    color: inherit; /* ¸µÅ©ÀÇ »ö»ó Á¦°Å */
-}
-/* ÇöÀç ¼±ÅÃÇÑ Ç×¸ñ ±½±â Á¶Àı */
-.event-menu ul li.active a {
-    font-weight: bold;
-    
-    background: #f32;
-}
-
-/* ------- ±×¸®µå ½ºÅ¸ÀÏ ¸ñ·Ï -------  */
+/* ------- ê·¸ë¦¬ë“œ ìŠ¤íƒ€ì¼ ëª©ë¡ -------  */
 .event-section {
     padding: 20px;
 }
 
 .event-grid {
-    display: grid; /* ±×¸®µå ¹æ½Ä Á¤·Ä */
-    grid-template-columns: repeat(4, 1fr); /* ÇÑÁÙ¿¡ 4°³¾¿ ¹İº¹ */
-    grid-gap: 20px; /* ±×¸®µå °£°İ */
+    display: grid; /* ê·¸ë¦¬ë“œ ë°©ì‹ ì •ë ¬ */
+    grid-template-columns: repeat(4, 2fr); /* í•œì¤„ì— 4ê°œì”© ë°˜ë³µ */
+    grid-gap: 20px; /* ê·¸ë¦¬ë“œ ê°„ê²© */
 }
 
-/* ÀÌº¥Æ® Ç×¸ñ */
+/* ì´ë²¤íŠ¸ í•­ëª© */
 .event {
 	border: 1px solid;
 	width: 200px;
 	height: 300px;
     background-color: #fff;
 /*     padding: 20px; */
-    border-radius: 5px; /* ¸ğ¼­¸® ¶ó¿îµå Ã³¸® */
-    text-align: center; /* °¡¿îµ¥ Á¤·Ä */
+    border-radius: 5px; /* ëª¨ì„œë¦¬ ë¼ìš´ë“œ ì²˜ë¦¬ */
+    text-align: center; /* ê°€ìš´ë° ì •ë ¬ */
     overflow: hidden;
-    display: table; /* Å×ÀÌºíÇü½Ä */
+    display: table; /* í…Œì´ë¸”í˜•ì‹ */
 }
 
 .event a {
-    text-decoration: none; /* ¸µÅ©ÀÇ ¹ØÁÙ Á¦°Å */
-    color: inherit; /* ¸µÅ©ÀÇ »ö»ó Á¦°Å */
+    text-decoration: none; /* ë§í¬ì˜ ë°‘ì¤„ ì œê±° */
+    color: inherit; /* ë§í¬ì˜ ìƒ‰ìƒ ì œê±° */
 	
 }
 
-/* ÀÌº¥Æ® Ç×¸ñÀÇ ½æ³×ÀÏ */
+/* ì´ë²¤íŠ¸ í•­ëª©ì˜ ì¸ë„¤ì¼ */
 .event-image {
     width: 100%;
     height: 100%;
-    display: table-cell; /* Å×ÀÌºíÀÇ ¼¿ Çü½Ä */
-    vertical-align:middle; /* ¼öÁ÷ °¡¿îµ¥ Á¤·Ä */
+    display: table-cell; /* í…Œì´ë¸”ì˜ ì…€ í˜•ì‹ */
+    vertical-align:middle; /* ìˆ˜ì§ ê°€ìš´ë° ì •ë ¬ */
 }
 
-/* ÀÌº¥Æ® Ç×¸ñÀÇ Á¦¸ñ */
+.event-image img {
+	width: 220px;
+	height: 240px;
+}
+
+/* ì´ë²¤íŠ¸ í•­ëª©ì˜ ì œëª© */
 .event-title {
-    color: inherit; /* ¸µÅ©ÀÇ »ö»ó Á¦°Å */
+    color: inherit; /* ë§í¬ì˜ ìƒ‰ìƒ ì œê±° */
     font-weight: 800;
     font-size: 20px;
     margin: 0 auto;
 }
 
-/* ÀÌº¥Æ® Ç×¸ñÀÇ ³¯Â¥ */
+/* ì´ë²¤íŠ¸ í•­ëª©ì˜ ë‚ ì§œ */
 .event-date {
     color: #999;
     font-size: 14px;
 }
 
 
-/* ---------------- ÀÌº¥Æ® »ó¼¼ ÆäÀÌÁö ----------------  */
-.detail_img {
-	text-align: center;
-	
+/* ---------------- ì´ë²¤íŠ¸ ìƒì„¸ í˜ì´ì§€ ----------------  */
+
+.detail_tit h1 {
+	font-size: 30px;
 }
 
+.detail_date p {
+	font-size: 20px;
+}
+
+.detail_img {
+	margin: 0 auto;
+	height: 1300px;
+	text-align: center;
+}
+
+.detail_img img {
+	margin: 10px auto;
+	width: 900px;
+	height: 1200px;
+	padding: 10px;
+}
+
+
+/* ================ footerì— ì ìš©í•  css =============== */
+
+footer {
+	position: absolute;
+	left: 0; bottom: 0;
+	width: 100%;
+	padding-top: 10px;
+}

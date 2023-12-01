@@ -92,6 +92,8 @@
 	</header>
 	
 	<section id="content"><%--CSS 요청으로 감싼 태그--%>
+		<h1 id="h01">영화 예매</h1>
+			<hr>
 		<article>
 			<div id = "reserve_parameter">
 					<div class="overflow movie"><b>영화</b><br>

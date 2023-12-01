@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* ======== 전체 영역에 적용할 css ======== */
 
 html {
 	height: 100%;
@@ -24,35 +25,39 @@ header {
 }
 
 
-/* ======== 전체 영역에 적용할 css ======== */
-
 #content {
 	padding: 100px 0;
 	width: 1024px;
 	margin: 100px auto;	
 }
 
-h1 { /* 제목영역 */
-	margin-top: 20px; /* 위 띄우기 */
-	margin-bottom: 20px; /* 아래 띄우기 */
-	text-align: center; /* 가운데정렬 */
-	position: relative; /* 포지션 기준 잡기 */
+/* 제목 */
+#h01{
+	font-size: 35px; /* 폰트 크기 조정  */
+	text-align: center; /* 스토어 제목 중앙 정렬  */
 }
+
+
+/* ============= 본문에 적용할 ============== css */
 
 /* a { 하이퍼링크에 */
 /* 	text-decoration: none; 밑줄 없애기	 */
 /* 	color: #292929; 글씨 색깔 변경 */
 /* } */
 
-nav { /* 내비게이션바에 */
-	position: absolute; /* 상대위치지정 */
-	left: 10%; /* 제목에서부터 왼쪽 10% */
+#cs_nav { /* 내비게이션바에 */
+	display: inline-block;
+	top: 170px;
+	width: 160px;
+	margin: 10px;
+	vertical-align: top;
 }
 
 form { /* 폼태그에 */
-	position: absolute; /* 상대위치지정 */
-	left: 25%; /* 제목에서부터 왼쪽 25% */
+	vertical-align: top;
+	display: inline-block;
 	width: 800px; /* 너비 800지정 */
+	margin: 10px;
 }
 
 textarea { /* 텍스트박스 */
@@ -61,11 +66,6 @@ textarea { /* 텍스트박스 */
 	height: 300px; /* 높이지정 */
 	border: 1.5px solid #AFAFB2; /* 테두리 */
 	margin: 5px;
-}
-
-hr { /* 위아래선 */
-	border: 1px solid #9d9d9d; /* 1.5px 회색 */
-	margin: 10px -5px; /* 위아래 띄우고 양옆 줄임 */
 }
 
 input[type="button"], input[type="submit"] { /* 모든 버튼에 */
@@ -142,7 +142,7 @@ th {
 #menubar { /* 메뉴바 전체에 */
 	text-align: center; /* 가운데정렬 */
 	width: 160px; /* 넓이지정 */
-	height: 340px; /* 높이지정 */
+	height: 350px; /* 높이지정 */
  	border-radius: 3px; /* 모서리 둥글게 */
  	background-color: #ffffff; /* 배경색 */
 	border: 2px solid #9d9d9d; /* 테두리 */
@@ -190,6 +190,14 @@ th {
 	border: 1px solid #9d9d9d;
 	color: #000000;
 	text-decoration: none;
+	width: 200px;
+	height: 200px;
+}
+
+#main_shortcuts img {
+	width: 140px;
+	height: 140px;
+	margin: 10px;
 }
 
 #main_faq { /* 자주묻는질문 미리보기 */
@@ -254,6 +262,18 @@ input[type="search"] {
 	width: 350px; /* 넓이지정 */
 }
 
+#search button {
+	padding: 6px 7px 2px 7px; /* 안쪽 여백 */
+    background-color: #e50914; /* 배경색 빨간색 */
+    color: white; /* 글씨색 흰색*/
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 커서 변경 */
+}
+
+#search button:hover {  /* 모든 버튼에 마우스오버 시 */
+	background-color: #ce0912;
+}
+
 #search>select { /* 검색창 셀렉트박스에 */
 	border: none; /* 테두리 없애기 */
 	margin: 10px; /* 여백 */
@@ -261,34 +281,65 @@ input[type="search"] {
 	width: 150px; /* 넓이지정 */
 }
 
-#fqa_button { /* 분류 버튼 영역 */
-	text-align: center;	/* 가운데정렬 */
+#fqa_button {
+	position: relative;
+}
+
+
+#fqa_button ul {
+	text-align: center;
+}
+
+#fqa_button {
+	text-align: center;
+}
+
+#fqa_button li {
+	display: inline-block;
+	height: 50px;
+	text-align: center;
+	line-height: 30px;
 	margin: 10px;
 }
 
-#fqa_button>input { /* 분류 버튼 개별로 */
-	margin: 20px 10px 0;  /* 위20 좌우10 아래0 px */
-	padding: 10px; /* 안쪽여백 지정 */
-	width: 90px; /* 너비지정 */
+#fqa_button input {
+	border: none;
+	border-bottom: 3px solid #e50914;
+	color: #000000; /* 글자 색상 */
+	padding: 10px 40px; /* 영역의 상하 좌우 크기 */
+	margin-top: 10px;
+	background-color: #ffffff;
+	cursor: pointer; /* 커서 변경 */
+}
+
+#fqa_button input:hover {
+	background-color: #eeeeee;
+	border-bottom: 3px solid #000000;
+}
+
+/* Pagination links */
+.pagination {
+	padding:30px 0 0 250px;
+	text-align: center;
 }
 
 
-#pageNum { /* 페이지번호 전체 영역 */
-	 text-align: center; /* 가운데정렬 */
-	 margin: 5px auto; /* 여백 */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
 }
 
-#pageNum>input[type="button"] { /* 공지사항과 자주묻는 페이지번호 */
-	 width: 20px; /* 버튼 너비 지정 */
-	 padding: 5px 0;
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
 }
 
-#pageNum>a {
-	color: #000000;
-	text-decoration: none;
-	font-size: 18px;
-	margin: 5px 8px;
-}
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
 
 
 /* ======== 1 : 1 문의와 분실물 문의에 적용할 css ======== */
@@ -343,9 +394,10 @@ select, input[type="datetime-local"] { /* 셀렉트박스와 날짜선택창에 
 #cs_button { /* 모든 버튼 */
 	margin: 30px; /* 주변 띄우고 */
 	text-align: center; /* 가운데정렬 */
+	padding: 10px;
 }
 
-/* ------------------------------------------------------------- */
+/* ================ footer에 적용할 css =============== */
 
 footer {
 	position: absolute;

@@ -9,16 +9,16 @@
 <link href="${pageContext.request.contextPath}/css/cs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<header>
-		<jsp:include page="../inc/top.jsp"></jsp:include>
-	</header>
-	<article>
-		<div id="wrapper">
-			<h1>자주 묻는 질문</h1>
-			
-			<nav> <%-- 사이드 메뉴바 --%>
+	<div id="wrapper">
+		<header>
+			<jsp:include page="../inc/top.jsp"></jsp:include>
+		</header>
+		<section id="content">
+			<h1 id="h01">자주 묻는 질문</h1>
+			<hr>
+			<div id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
-			</nav>
+			</div>
 			
 			<form action="" method="" name="" >
 				<section id="search">
@@ -26,14 +26,16 @@
 					<input type="search" placeholder="검색어를 입력해주세요"> <%-- 검색어 입력창 --%>
 					<a href="cs_FAQ.jsp"><input type="button" value="검색"></a>
 				</section>
-				
-				<section id="fqa_button">
-					<input type="button" value="전체"> <%-- 전체 질문 보기 --%>
-					<input type="button" value="예매"> <%-- 예매 관련 질문 모아보기 --%>
-					<input type="button" value="관람권"> <%-- 관람권 관련 질문 모아보기 --%>
-					<input type="button" value="할인혜택"> <%-- 할인 관련 질문 모아보기 --%>
-					<input type="button" value="영화관이용"> <%-- 영화관 관련 질문 모아보기 --%>
-				</section>
+			
+				<nav id="fqa_button">
+					<ul>
+						<li><a href="#div01"><input type="button" value="전체"></a></li> <%-- 전체 질문 보기 --%>
+						<li><a href="#div02"><input type="button" value="예매"></a></li> <%-- 예매 관련 질문 모아보기 --%>
+						<li><a href="#div03"><input type="button" value="관람권"></a></li> <%-- 관람권 관련 질문 모아보기 --%>
+						<li><a href="#div03"><input type="button" value="할인혜택"></a></li> <%-- 할인 관련 질문 모아보기 --%>
+						<li><a href="#div03"><input type="button" value="영화관이용"></a></li> <%-- 영화관 관련 질문 모아보기 --%>
+					</ul>
+				</nav>
 				
 				<section>
 					<table id="cs_table1">
@@ -63,20 +65,21 @@
 						</tr>
 					</table>
 				</section>
-				<section id="pageNum">
-					<input type="button" value="<">
-					<a href="">1</a>
-					<a href="">2</a>
-					<a href="">3</a>
-					<a href="">4</a>
-					<a href="">5</a>
-					<input type="button" value=">">
-				</section>
+
+				<div class="pagination">
+					<a href="#">&laquo;</a>
+					<a href="#">1</a>
+					<a class="active" href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">&raquo;</a>
+				</div>
 			</form>
-		</div>
-	</article>
-	<footer>
-		<jsp:include page="../inc/bottom.jsp"></jsp:include>
-	</footer>
+		</section>
+		<footer>
+			<jsp:include page="../inc/bottom.jsp"></jsp:include>
+		</footer>
+	</div>	
 </body>
 </html>

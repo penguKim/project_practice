@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>스토어 상세페이지</title>
-<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath }/css/store.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -66,8 +65,8 @@
 					</div>	
 					<br>
 					<div id="btn_buy">
-	                       <button type="button">취소</button>
-	                       <button type="button">구매</button>
+	                	<a href="store_main.jsp"><button type="button">취소</button></a>
+	                	<a><button type="button">구매</button></a>
 	               	</div>
 				</div>	
 				<!-- right -->	

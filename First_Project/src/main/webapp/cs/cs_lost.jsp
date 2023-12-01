@@ -78,73 +78,83 @@
 </head>
 <body>
 	<div id="wrapper">
-		<h1>분실물 문의</h1>
+		<header>
+			<jsp:include page="../inc/top.jsp"></jsp:include>
+		</header>
 		
-		<nav> <%-- 사이드 메뉴바 --%>
-			<jsp:include page="cs_menubar.jsp"></jsp:include>
-		</nav>
-		<form action="cs_main.jsp" method=""  name="csForm">
-			<p>분실물에 관련하여 문의가 있으시면 아래의 정보를 입력해주세요.
-			담당자 확인 후 신속히 답변을 드리겠습니다.</p>
-			<section id="agree_msg"> <%-- 개인정보 수집 동의 영역 --%>
-				<input type="checkbox" id="checkbox">
-				<label for="checkbox">개인정보 수집에 대한 동의</label>
-				<hr>
-				<p>귀하께서 문의하신 다음의 내역은 법률에 의거 개인정보 수집·이용에 대한 본인동의가 필요한 항목입니다. <br>
+		<section id="content">
+			<h1 id="h01">분실물 문의</h1>
+			<hr>
+			<div id="cs_nav"> <%-- 사이드 메뉴바 --%>
+				<jsp:include page="cs_menubar.jsp"></jsp:include>
+			</div>
+			<form action="cs_main.jsp" method=""  name="csForm">
+				<p>분실물에 관련하여 문의가 있으시면 아래의 정보를 입력해주세요.
+				담당자 확인 후 신속히 답변을 드리겠습니다.</p>
+				<section id="agree_msg"> <%-- 개인정보 수집 동의 영역 --%>
+					<input type="checkbox" id="checkbox">
+					<label for="checkbox">개인정보 수집에 대한 동의</label>
+					<hr>
+					<p>귀하께서 문의하신 다음의 내역은 법률에 의거 개인정보 수집·이용에 대한 본인동의가 필요한 항목입니다. <br>
+					<br>
+					<b>[개인정보의 수집 및 이용목적]</b> <br>
+					회사는 분실물 문의 내역의 확인, 요청사항 처리 또는 완료 시 원활한 의사소통 경로 확보를 위해 수집하고 있습니다. <br>
+					<br>
+					<b>[필수 수집하는 개인정보의 항목]</b> <br>
+					이름, 연락처, 이메일, 문의내용, 비밀번호(게시글 열람용) <br>
+					<br>
+					<b>[개인정보의 보유기간 및 이용기간]</b> <br>
+					문의 접수 ~ 처리 완료 후 3년 <br>
+					(단, 관계법령의 규정에 의하여 보존 할 필요성이 있는 경우에는 관계 법령에 따라 보존) <br>
+					자세한 내용은 '개인정보 처리방침'을 확인하시기 바랍니다.</p>
+				</section>
+				<b class="warning">* 원활한 서비스 이용을 위한 최소한의 개인정보이므로 동의하지 않을 경우 서비스를 이용하실 수 없습니다.</b>
 				<br>
-				<b>[개인정보의 수집 및 이용목적]</b> <br>
-				회사는 분실물 문의 내역의 확인, 요청사항 처리 또는 완료 시 원활한 의사소통 경로 확보를 위해 수집하고 있습니다. <br>
-				<br>
-				<b>[필수 수집하는 개인정보의 항목]</b> <br>
-				이름, 연락처, 이메일, 문의내용, 비밀번호(게시글 열람용) <br>
-				<br>
-				<b>[개인정보의 보유기간 및 이용기간]</b> <br>
-				문의 접수 ~ 처리 완료 후 3년 <br>
-				(단, 관계법령의 규정에 의하여 보존 할 필요성이 있는 경우에는 관계 법령에 따라 보존) <br>
-				자세한 내용은 '개인정보 처리방침'을 확인하시기 바랍니다.</p>
-			</section>
-			<b class="warning">* 원활한 서비스 이용을 위한 최소한의 개인정보이므로 동의하지 않을 경우 서비스를 이용하실 수 없습니다.</b>
-			<br>
-			<section id="input_table"> <%-- 분실물 문의 입력창 --%>
-				<b class="warning">* 필수입력항목</b> <br>
-				<table id="cs_table2">
-					<tr>
-						<th>분실장소<b>*</b></th>
-						<td>
-							<select name="place" >
-								<option value="">전체검색</option>
-								<option value="지점명">지점명A</option> <%-- 지점명 정해지면 수정 --%>
-								<option value="지점명">지점명B</option>
-							</select>
-						</td>
-						<th>분실일시<b>*</b></th>
-						<td>
-							<input type="datetime-local" name="time">
-						</td>
-					</tr>
-					<tr>
-						<th>아이디<b>*</b></th>
-						<td colspan="3"><input type="text" id="id"></td> <%-- 세션아이디 받아오기 --%>
-					</tr>
-					<tr>
-						<th>제목<b>*</b></th>
-						<td colspan="3"><input type="text" id="title" name="title"></td>
-					</tr>
-					<tr>
-						<th>내용<b>*</b></th>
-						<td colspan="3"><textarea rows="15" cols="90" name="content"></textarea></td>
-					</tr>
-					<tr>
-						<th>첨부파일</th>
-						<td colspan="3"><input type="file" id="file"></td>
-					</tr>
-				</table>
-				<div id="cs_button">
-					<input type="button" value="취소"> <%-- 취소하시겠습니까? 메세지 출력 후 고객센터 메인 페이지로 바로 이동 --%>
-					<input type="submit" value="등록"> <%-- 문의가 접수되고 고객센터 메인 페이지로 이동 --%>
-				</div>
-			</section>
-		</form>
+				<section id="input_table"> <%-- 분실물 문의 입력창 --%>
+					<b class="warning">* 필수입력항목</b> <br>
+					<table id="cs_table2">
+						<tr>
+							<th>분실장소<b>*</b></th>
+							<td>
+								<select name="place" >
+									<option value="">전체검색</option>
+									<option value="지점명">지점명A</option> <%-- 지점명 정해지면 수정 --%>
+									<option value="지점명">지점명B</option>
+								</select>
+							</td>
+							<th>분실일시<b>*</b></th>
+							<td>
+								<input type="datetime-local" name="time">
+							</td>
+						</tr>
+						<tr>
+							<th>아이디<b>*</b></th>
+							<td colspan="3"><input type="text" id="id"></td> <%-- 세션아이디 받아오기 --%>
+						</tr>
+						<tr>
+							<th>제목<b>*</b></th>
+							<td colspan="3"><input type="text" id="title" name="title"></td>
+						</tr>
+						<tr>
+							<th>내용<b>*</b></th>
+							<td colspan="3"><textarea rows="15" cols="90" name="content"></textarea></td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td colspan="3"><input type="file" id="file"></td>
+						</tr>
+					</table>
+					<div id="cs_button">
+						<input type="button" value="취소"> <%-- 취소하시겠습니까? 메세지 출력 후 고객센터 메인 페이지로 바로 이동 --%>
+						<input type="submit" value="등록"> <%-- 문의가 접수되고 고객센터 메인 페이지로 이동 --%>
+					</div>
+				</section>
+			</form>
+		</section>
+		
+		<footer>
+			<jsp:include page="../inc/bottom.jsp"></jsp:include>	
+		</footer>
 	</div>
 </body>
 </html>
