@@ -203,6 +203,7 @@
 		</section><%--CSS 요청으로 감싼 태그--%>
 		<footer>
 				<jsp:include page="../inc/bottom.jsp"></jsp:include>
-		</footer>	</div><%--CSS 요청으로 감싼 태그--%>
+		</footer>
+	</div><%--CSS 요청으로 감싼 태그--%>
 </body>
 </html>

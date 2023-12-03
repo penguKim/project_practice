@@ -1,4 +1,38 @@
 @charset "UTF-8";
+
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+header {
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%;
+	z-index:1;
+	margin: 0;
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+/* 페이지 메인 중앙 정렬 */
+#content {
+	padding: 100px 0;
+	width: 1024px;
+	margin: 100px auto;	
+	padding: 100px 0 150px 0;
+}
+/* 통일된 css 양식------------------------------------------------------- */
+
 .seat { /* 좌석에 대한 디자인 */
     width: 30px;
     height: 30px;
@@ -6,34 +40,108 @@
     margin: 5px; 
     display: inline-block;
     cursor: pointer; /* 커서를 가져다 대면 클릭할 수 있는 표시로 바뀜 */
+	align-items: center;
+	line-height: 30px;
 }
-.selected {
+.selected { /* 선택된 영역에 대한 배경색상변경 클래*/
 	background-color: red; /*클릭되면 빨간색으로 seat배경색 바뀜*/
 }
 .seat:nth-of-type(4), .seat:nth-of-type(12) {
 	margin-right: 60px/*좌석의 4번째열과 12번째 열 옆으로 통로만드는 css*/
 }
+
+.NumOfPeo{ /*인원 선택 영역에 대한 배경과 크기 텍스트 위치 설*/
+	background: #ccc;
+	width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px; /* 텍스트 상하 정렬*/
+}
+
+
+
 .center{
 	text-align: center;
 }
 
-.right{
-	text-align: right;
-}
 
-
-.bottom_info{
-	border: 1px solid;
-}
-
-
-table, th, td { 
-	border: 2px solid orange; 
-	width: 1000px; 
-	margin: auto;
-	margin-top: 5%;
+#end_param{
+	width:auto;
 	text-align: center;
-	
-	
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border:3px solid;
+	background-color: #1D1D1C;
+	color:#fff;
+	height: 100px;
 }
+
+
+#end_param td{
+	text-align: center;
+	width: 200px;
+	border-right: 2px solid;
+	height: 50px;
+}
+
+
+/* 상하 테이블 설정에 대한 */
+table.header_box/* , th, td */,td { 
+/* 	border: 2px solid orange;  영역에대한 수정사항이 있을때 살릴수도 있을 영역 일단 삭제 하지마세요!*/
+	width: 1000px; 
+/* 	margin: 0 auto; */
+	text-align: center;
+}
+
+table.hbt td {
+    width: 35px;
+	font-size: 12px;
+}
+
+.hbt{
+	border-spacing: 10px !important;
+}
+
+#height50{
+	height: 70px;
+}
+
+.header_box_Runtime{
+	width: 45%;
+	text-align: left;
+}
+
 table { border-collapse: collapse; }
+
+.text_left{
+	text-align: left;
+}
+
+.header_box_Runtime b{
+	font-size: 20px;
+}
+
+.button{
+	width:80px;
+	height: 80px;
+	border-radius: 10px;
+}
+
+.button_area{
+	width: 80px;
+}
+
+
+
+
+/* ------------------------------------------------------------- */
+
+footer {
+	position: absolute;
+	left: 0; bottom: 0;
+	width: 100%;
+	padding-top: 10px;
+	margin-top: 50px;
+}
+	
