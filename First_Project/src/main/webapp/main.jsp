@@ -8,53 +8,28 @@
 <title>영화관</title>
 <%-- 외부 CSS 파일 연결하기 --%>
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-3.7.1.js"></script>
 </head>
 <body>
 	<div id="wrapper">
 		<header>
 			<jsp:include page="inc/top.jsp"></jsp:include>
 		</header>
-		
+	
 		<div id="menu_nav">
-			<nav>
-				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
-				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
-				<a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
-				<a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
-				<a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
-				<a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
-			</nav>
-		</div>
-		<hr id="top_hr">
+	            <nav>
+	                <a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
+	                <a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
+	                <a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
+	                <a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
+	                <a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
+	                <a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
+	            </nav>
+	        </div>
+	    <hr id="top_hr">
+		<!-- 오토슬라이드 인클루드 -->
+		<jsp:include page="inc/autoSlide.jsp"></jsp:include>
 		
-		<div class="img_slide">
-			<div class="slideshow-container">
-			
-				<div class="mySlides fade">
-				  <img src="img/img1.jpg" width="900" height="400">
-				</div>
-				
-				<div class="mySlides fade">
-				  <img src="img/img2.jpg" width="900" height="400">
-				</div>
-				
-				<div class="mySlides fade">
-				  <img src="img/img3.jpg" width="900" height="400">
-				</div>
-				
-				<a class="prev" onclick="plusSlides(-1)">❮</a>
-				<a class="next" onclick="plusSlides(1)">❯</a>
-			
-			</div>
-			
-			<div style="text-align:center">
-			  <span class="dot" onclick="currentSlide(1)"></span> 
-			  <span class="dot" onclick="currentSlide(2)"></span> 
-			  <span class="dot" onclick="currentSlide(3)"></span> 
-			</div>
-		</div>
-		
-		<section id="content">
 			
 			<div id="main_page">
 				<div id="Sort">
@@ -67,11 +42,11 @@
 				
 				<div id="boxoffice">
 					<div>
-						<a href=""><img src="img/어벤져스인피니티워.jpeg"></a><br>
+						<a href=""><img src="img/비투비게임.jpeg"></a><br>
 						<input type="button" value="👍 좋아요">
 					</div>
 					<div>
-						<a href=""><img src="img/스파이더맨노웨이홈.jpeg"></a><br>
+						<a href=""><img src="img/비투비게임.jpeg"></a><br>
 						<input type="button" value="👍 좋아요">
 					</div>
 					<div>
@@ -83,7 +58,7 @@
 						<input type="button" value="👍 좋아요">
 					</div>
 					<div>
-						<a href=""><img src="img/어벤져스엔드게임.jpeg"></a><br>
+						<a href=""><img src="img/비투비게임.jpeg"></a><br>
 						<input type="button" value="👍 좋아요">
 					</div>
 				</div>
@@ -101,7 +76,6 @@
 					 <hr>
 			        <h1>진행 중인 이벤트</h1>
 			        <div class="event-grid">
-			        <c:forEach begin="1" end="4">
 			            <div class="event">
 			            	<a href="event_detail.jsp" class="event_link">
 				            	<div class="event-image">
@@ -113,48 +87,15 @@
 					            </div>    
 			                </a>
 			            </div>
-		            </c:forEach>
 			            <!-- 이벤트 항목을 추가로 작성 -->
 			     	 </div>
 		     	</div>
-			
-			
-			
-			<script>
-			let slideIndex = 1;
-			showSlides(slideIndex);
-			
-			function plusSlides(n) {
-			  showSlides(slideIndex += n);
-			}
-			
-			function currentSlide(n) {
-			  showSlides(slideIndex = n);
-			}
-			
-			function showSlides(n) {
-			  let i;
-			  let slides = document.getElementsByClassName("mySlides");
-			  let dots = document.getElementsByClassName("dot");
-			  if (n > slides.length) {slideIndex = 1}    
-			  if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-			    slides[i].style.display = "none";  
-			  }
-			  for (i = 0; i < dots.length; i++) {
-			    dots[i].className = dots[i].className.replace(" active", "");
-			  }
-			  slides[slideIndex-1].style.display = "block";  
-			  dots[slideIndex-1].className += " active";
-			}
-			</script>
-					
-					
+		     </div>
 		</section>
 		
-		<footer>
-			<jsp:include page="inc/bottom.jsp"></jsp:include>	
-		</footer>
+	<footer>
+		<jsp:include page="inc/bottom.jsp"></jsp:include>
+	</footer>
 	</div>
 </body>
 </html>
