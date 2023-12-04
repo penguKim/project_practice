@@ -31,71 +31,72 @@
 		<jsp:include page="inc/autoSlide.jsp"></jsp:include>
 		
 			
-			<div id="main_page">
-				<div id="Sort">
-					<ul>
-						<li><a href=""><input type="button" value="무비차트"></a></li>
-						<li><a href=""><input type="button" value="상영예정작"></a></li>
-						<li><a href=""><input type="button" value="관람객순"></a></li>
-					</ul>
-				</div>
-				
-				<div id="boxoffice">
-					<div>
-						<a href=""><img src="img/비투비게임.jpeg"></a><br>
-						<input type="button" value="👍 좋아요">
-					</div>
-					<div>
-						<a href=""><img src="img/비투비게임.jpeg"></a><br>
-						<input type="button" value="👍 좋아요">
-					</div>
-					<div>
-						<a href=""><img src="img/싱글 인 서울.jpeg"></a><br>
-						<input type="button" value="👍 좋아요">
-					</div>
-					<div>
-						<a href=""><img src="img/프레디의 피자가게.jpeg"></a><br>
-						<input type="button" value="👍 좋아요">
-					</div>
-					<div>
-						<a href=""><img src="img/비투비게임.jpeg"></a><br>
-						<input type="button" value="👍 좋아요">
-					</div>
-				</div>
+		<div id="main_page">
+			<div id="Sort">
+				<ul>
+					<li><a href=""><input type="button" value="무비차트"></a></li>
+					<li><a href=""><input type="button" value="상영예정작"></a></li>
+					<li><a href=""><input type="button" value="관람객순"></a></li>
+				</ul>
+			</div>
 			
-				<div id="main_store">
-					<hr>
-					<h2>스토어 베스트 상품</h2>
-					<img alt="" src="img/짜파게티팝콘패키지.jpg" width="250" height="200">
-					<img alt="" src="img/팝콘패키지.jpg" width="250" height="200">
-					<img alt="" src="img/맥주패키지.jpg" width="250" height="200">
+			<div id="boxoffice">
+				<div>
+					<a href=""><img src="img/비투비게임.jpeg"></a><br>
+					<input type="button" value="👍 좋아요">
 				</div>
-				
-				
-				 <div class="container">
-					 <hr>
-			        <h1>진행 중인 이벤트</h1>
-			        <div class="event-grid">
-			            <div class="event">
-			            	<a href="event_detail.jsp" class="event_link">
-				            	<div class="event-image">
-					                <img src="https://img.megabox.co.kr/SharedImg/event/2023/11/21/GuvlkLZPAUjb8uk2ikaFSmI6C4E6GRtg.jpg" alt="이벤트 썸네일">
-					            </div>
-					            <div>
-					                <p class="event-title">이벤트 제목</p>
-					                <p class="event-date">2023. 11. 1 ~ 2023. 11. 30</p>
-					            </div>    
-			                </a>
-			            </div>
-			            <!-- 이벤트 항목을 추가로 작성 -->
-			     	 </div>
-		     	</div>
-		     </div>
-		</section>
+				<div>
+					<a href=""><img src="img/비투비게임.jpeg"></a><br>
+					<input type="button" value="👍 좋아요">
+				</div>
+				<div>
+					<a href=""><img src="img/싱글 인 서울.jpeg"></a><br>
+					<input type="button" value="👍 좋아요">
+				</div>
+				<div>
+					<a href=""><img src="img/프레디의 피자가게.jpeg"></a><br>
+					<input type="button" value="👍 좋아요">
+				</div>
+				<div>
+					<a href=""><img src="img/비투비게임.jpeg"></a><br>
+					<input type="button" value="👍 좋아요">
+				</div>
+			</div>
 		
-	<footer>
-		<jsp:include page="inc/bottom.jsp"></jsp:include>
-	</footer>
+			<div id="main_store">
+				<hr>
+				<h2>스토어 베스트 상품</h2>
+				<img alt="" src="img/짜파게티팝콘패키지.jpg" width="250" height="200">
+				<img alt="" src="img/팝콘패키지.jpg" width="250" height="200">
+				<img alt="" src="img/맥주패키지.jpg" width="250" height="200">
+			</div>
+			
+			
+			 <div class="container">
+				 <hr>
+		        <h1>진행 중인 이벤트</h1>
+		        <div class="event-grid">
+		        <c:forEach begin="1" end="4">
+		            <div class="event">
+		            	<a href="event_detail.jsp" class="event_link">
+			            	<div class="event-image">
+				                <img src="https://img.megabox.co.kr/SharedImg/event/2023/11/21/GuvlkLZPAUjb8uk2ikaFSmI6C4E6GRtg.jpg" alt="이벤트 썸네일">
+				            </div>
+				            <div>
+				                <p class="event-title">이벤트 제목</p>
+				                <p class="event-date">2023. 11. 1 ~ 2023. 11. 30</p>
+				            </div>    
+		                </a>
+		            </div>
+	            </c:forEach>
+		            <!-- 이벤트 항목을 추가로 작성 -->
+		        </div>
+	     	</div>
+		</div>
+	
+		<footer>
+			<jsp:include page="inc/bottom.jsp"></jsp:include>
+		</footer>
 	</div>
 </body>
 </html>

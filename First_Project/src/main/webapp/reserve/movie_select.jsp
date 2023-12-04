@@ -180,29 +180,32 @@
 							<input type="button" value="20:00" onclick="toggleTime(this)"><br>
 						</div>
 				</div>
-				<div class="print_parameter">
-					<table id="end_param">
-						<tr>
-							<td>영화선택</td>
-							<td>극장선택</td>
-							<td>날짜선택</td>
-							<td>시간선택</td>
-							<td>
-								<form action="seat_select.jsp" method="post">
-								    <input type="hidden" name="movie" value="">
-								    <input type="hidden" name="theater" value="">
-								    <input type="hidden" name="date" value="">
-								    <input type="hidden" name="time" value="">
-								    <input type="submit" class="btnsubmit" value="좌석선택">
-								</form>
-							</td>
-						</tr>
-					</table>
-				</div>
 			</article>
 		</section><%--CSS 요청으로 감싼 태그--%>
+		<article id="select_info">
+			<div class="print_parameter">
+				<table id="end_param">
+					<tr>
+						<td>영화선택</td>
+						<td>극장선택</td>
+						<td>날짜선택</td>
+						<td>시간선택</td>
+						<td>
+							<form action="seat_select.jsp" method="post">
+							    <input type="hidden" name="movie" value="">
+							    <input type="hidden" name="theater" value="">
+							    <input type="hidden" name="date" value="">
+							    <input type="hidden" name="time" value="">
+							    <input type="submit" class="btnsubmit" value="좌석선택">
+							</form>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</article>
 		<footer>
 				<jsp:include page="../inc/bottom.jsp"></jsp:include>
-		</footer>	</div><%--CSS 요청으로 감싼 태그--%>
+		</footer>
+	</div><%--CSS 요청으로 감싼 태그--%>
 </body>
 </html>

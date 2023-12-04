@@ -108,14 +108,16 @@ body {
 }
 
 #toplink {
+	padding: 10px;
 	text-decoration: none;
 	border: 1px solid black;
 	border-radius: 50%;
-	padding: 5px 15px;
 	position: fixed;
 	right: 0; bottom: 10px;
-	color: #fff;
-	background-color: #e50914;
+	text-align: center;
+	width: 48px;
+    height: 48px;
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 #menu_nav {

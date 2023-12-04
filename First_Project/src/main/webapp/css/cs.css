@@ -2,10 +2,6 @@
 
 /* ============= 본문에 적용할 ============== css */
 
-/* a { 하이퍼링크에 */
-/* 	text-decoration: none; 밑줄 없애기	 */
-/* 	color: #292929; 글씨 색깔 변경 */
-/* } */
 
 #cs_nav { /* 내비게이션바에 */
 	display: inline-block;
@@ -21,6 +17,7 @@ form { /* 폼태그에 */
 	width: 800px; /* 너비 800지정 */
 	margin: 10px;
 }
+
 
 textarea { /* 텍스트박스 */
 	resize: none; /* 크기고정 */

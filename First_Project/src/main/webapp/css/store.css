@@ -67,21 +67,10 @@
 /* 영화관 고객센터 공지 */
 #store_notice {
 	text-align: center; /* 알림 중앙정렬 */
-	margin-bottom: 100px;
+	margin: 50px 0;
 }
 
 /* ----------------------------------------스토어 상세 페이지 css  */
-/* 스토어 상세페이지 박스화 */
-/* * { */
-/* 	box-sizing: border-box; 스토어 상세페이지 박스화 */
-/* 	margin: 0; 모든 마진 초기화 */
-/* } */
-
-/* 스토어 상세페이지 전체 정렬 */
-/* .store_view { */
-/* margin-left: 25em; 상세페이지 왼쪽으로부터 중앙 정렬 */
-/* width: 1000px; 스토어 상세페이지 가로 길이 조정  */
-/* } */
 
 /* 상세페이지 상품 명 */
 .store_subject {
@@ -113,12 +102,6 @@
 
 /* -----------------------------------------------------------------------  */
 
-/* 상세페이지 박스 내부 왼쪽 설정 */
-/* .store_view .box_store_view .left { */
-/* 	float: left;			이미지 왼쪽 정렬 */
-/* 	width: 480px;			박스 공간 가로 설정 */
-/* 	padding: 0 0 30px 0;	박스내부 공간 아래쪽 조정 */
-/* } */
 
 #item_name {
 	text-align: center;
@@ -189,8 +172,10 @@
 
 /* 구매 상품 정보 테이블 윗 간격 */
 .store_pay {
+	margin: 0 auto;
 	margin-top: 50px; /* 상단 진행도 상태창과 테이블 사이 간격   */
-	width: 1000px;	/* 화면 가로 길이 조정 */
+	width: 800px;	/* 화면 가로 길이 조정 */
+	padding-bottom: 50px;
 }
 
 /* 구매상품 정보 */
@@ -199,7 +184,7 @@
 .store_pay_table {
 	border-top: 2px solid #9d9d9d; /* 표상단줄 */
 	border-bottom: 2px solid #9d9d9d; /* 표하단줄 */ 
-	width: 1000px;
+	width: 800px;
 	margin: 0px auto 20px auto;
 	border-collapse: collapse; /* 칸 사이 간격 없애기 */
 }

@@ -1,11 +1,56 @@
-/* @charset "EUC-KR"; */
 @charset "UTF-8";
 
 /* ================================================= */
 
-form { /* 정보 입력창 */
-	margin: 40px auto; /* 가운데정렬 */
+#content {
+	text-align: center;
 }
+
+#mypage_nav {
+	display: inline-block;
+	top: 170px;
+	width: 160px;
+	margin: 10px;
+	vertical-align: top;
+}
+
+
+#my_list, #buy_list, #refund_list {
+	width: 800px;
+	margin: 10px auto;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+
+h1:not(#popup1_wrapper>h1) { /* 제목영역 */
+	margin-top: 20px; /* 위 띄우기 */
+	margin-bottom: 20px; /* 아래 띄우기 */
+	text-align: center; /* 가운데정렬 */
+	position: relative; /* 포지션 기준 잡기 */
+}
+
+h2 {
+	margin-top: 20px; /* 위 띄우기 */
+	margin-bottom: 20px; /* 아래 띄우기 */
+	text-align: left; /* 가운데정렬 */
+}
+
+form:not(#popup1_form) { /* 정보 입력창 */
+	vertical-align: top;
+	display: inline-block;
+	width: 800px; /* 너비 800지정 */
+	margin: 10px;
+}
+
+table:not(#popup1_table) {
+	border-collapse: collapse; /* 칸 사이 간격 없애기 */
+	border-top: 2px solid #9d9d9d; /* 표상단줄 */
+	border-bottom: 2px solid #9d9d9d; /* 표하단줄 */ 
+	width: 800px;
+	margin: 0 auto;
+}
+
 
 input[type="button"], input[type="submit"] { /* 모든 버튼에 */
 	padding: 5px 15px;
@@ -37,7 +82,7 @@ th {
 
 #my_table1 {
 	table-layout: fixed;
-	width: 900px;
+	width: 800px;
 }
 
 #my_table1 tr:nth-child(odd) { /* 홀수줄에만 */
@@ -189,7 +234,7 @@ th {
 
 #login_button1{
 	width: 330px;
-	height: 45px;
+	height: 50px;
 	font-size: 20px;
 	margin: 10px;
 }
@@ -210,8 +255,71 @@ th {
 /* ----------------- reservation.jsp css 시작----------------------------- */
 
 .cancle {
-  float: right;
-  margin-right: 10px;
+	position: absolute;
+	margin-right: 10px;
+	padding: 0;
+	width: 120px;
+	left: 670px;
 }
+
+
+/* ----------------- popup.jsp css 시작----------------------------- */
+
+#popup1_table{
+	width: 500px;
+	margin: auto;
+}
+
+#popup1_table tr{
+	height: 50px;
+}
+
+#payX{
+	margin-left: 45%;
+}
+
+h1{
+	margin: auto;
+	text-align: center;
+}
+
+#popup1_wrapper{
+	margin:auto;
+	width: 500px;
+	height: 500px;
+}
+
+
+/* ----------------- popup.jsp css 끝----------------------------- */
+#edite{
+	float: right;
+}
+
+
+
+/* ------------------- 마이페이지 ----------------------------- */
+/* 페이지번호 */
+.pagination {
+	padding: 0px 0 0 250px;
+	text-align: center;
+}
+
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
 
 

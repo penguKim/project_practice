@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 수정</title>
-<link href="${pageContext.request.contextPath }/login/login.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/login.css" rel="stylesheet" type="text/css">
 <script src="../js/jquery-3.7.1.js"></script>
 <script type="text/javascript">
 
@@ -76,55 +76,70 @@
 <body>
 	<div id="wrapper">
 	
-	<header>
-		<jsp:include page="/inc/top.jsp"></jsp:include>
-	</header>
-	
-		<h1>회원 수정</h1>
-		<hr>
-		<form action="join_result.html" method="post" name="joinForm">
-			<h2 id="login_top">회원정보입력</h2>
+		<header>
+			<jsp:include page="/inc/top.jsp"></jsp:include>
+		</header>
+		
+				
+		<div id="menu_nav">
+			<nav>
+				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
+				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
+				<a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
+				<a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
+				<a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
+				<a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
+			</nav>
+		</div>
+		<hr id="top_hr">
 			
-			<div class="login_center">
-				<!-- 이름 변경 불가능 아이디 데이터에 있는 이름값 받아서 적용 -->
-				<!-- readonly 에서 disabled 로 변경 -->
-				<input type="text" name="name" id="name" placeholder="이름을 입력하세요" disabled="disabled"><br>
-				<!-- 아이디 변경 불가능 session 값에서 받아와 입력란에 적용 시킬예정 -->
-				<input type="text" name="id" id="id" placeholder="아이디를 입력하세요" disabled="disabled"><br>
-<!-- 						<span id="checkIdResult"></span> -->
-				<!-- 기존 비밀번호 입력 창 추가 -->
-<!-- 				<input type="password" name="passwd" id="passwd" placeholder="기존 비밀번호를 입력하세요"><br> -->
-				<!-- ajax 이용해서 db에서 비밀번호 비교  -->
-				<!-- 비밀번호 입력 방식 db에서 비교해서 맞으면 수정할수 있도록 설정 -->
-				<!-- 기존 비밀번호랑 새 비밀번호랑 다르도록 비교 처리   -->
-				<input type="password" name="passwd" id="passwd" placeholder="새 비밀번호를 입력하세요">
-					<span id="passwdResult"></span> <br>
-			
-				<!-- 새 비밀번호와 같도록 비교 처리 (추가적으로 문장 등장하도록) -->
-				<!-- 비밀번호만 입력됬을 경우 "비밀번호 재입력하세요!" 알람 출력 -->
-				<input type="password" name="passwd2" id="passwd2" placeholder="새 비밀번호를 재입력하세요">
-				<span id="passwdResult2"></span><br>
-				<!-- readonly 에서 disabled 로 변경 -->
-				<!-- 생년월일 변경 불가능 아이디 데이터에 있는 생년월일값 받아서 적용 -->
-				<!-- 변경 불가 에서 생년월일로 변경 -->
-				<input type="text" name="member_birth" id="member_birth" placeholder="생년월일" disabled="disabled"><br>
-				<!-- 이메일 변경을 위한 인증 버튼 추가 -->
-				<!-- 이메일 변경은 인증은 API 작업, 회원가입 시 작업과 동일 할 예정 -->
-				<input type="text" name="email" size="8" id="email" placeholder="이메일주소를 입력하세요"><br>
-	
-				<div id="login_button">
-					<input type="button" value="회원탈퇴" onclick="confirm('탈퇴하시겠습니까?')">
-					<input type="button" value="돌아가기" onclick="Back()">
-					<input type="submit" value="정보수정">
-				</div>	
-			</div>
-			<hr>
-		</form>
+		
+		<section id="content">	
+			<form action="join_result.html" method="post" name="joinForm">
+				<h1 id="h01">회원 수정</h1>
+				<hr>
+				<h2 id="login_top">회원정보입력</h2>
+				
+				<div class="login_center">
+					<!-- 이름 변경 불가능 아이디 데이터에 있는 이름값 받아서 적용 -->
+					<!-- readonly 에서 disabled 로 변경 -->
+					<input type="text" name="name" id="name" placeholder="이름을 입력하세요" disabled="disabled"><br>
+					<!-- 아이디 변경 불가능 session 값에서 받아와 입력란에 적용 시킬예정 -->
+					<input type="text" name="id" id="id" placeholder="아이디를 입력하세요" disabled="disabled"><br>
+	<!-- 						<span id="checkIdResult"></span> -->
+					<!-- 기존 비밀번호 입력 창 추가 -->
+	<!-- 				<input type="password" name="passwd" id="passwd" placeholder="기존 비밀번호를 입력하세요"><br> -->
+					<!-- ajax 이용해서 db에서 비밀번호 비교  -->
+					<!-- 비밀번호 입력 방식 db에서 비교해서 맞으면 수정할수 있도록 설정 -->
+					<!-- 기존 비밀번호랑 새 비밀번호랑 다르도록 비교 처리   -->
+					<input type="password" name="passwd" id="passwd" placeholder="새 비밀번호를 입력하세요">
+						<span id="passwdResult"></span> <br>
+				
+					<!-- 새 비밀번호와 같도록 비교 처리 (추가적으로 문장 등장하도록) -->
+					<!-- 비밀번호만 입력됬을 경우 "비밀번호 재입력하세요!" 알람 출력 -->
+					<input type="password" name="passwd2" id="passwd2" placeholder="새 비밀번호를 재입력하세요">
+					<span id="passwdResult2"></span><br>
+					<!-- readonly 에서 disabled 로 변경 -->
+					<!-- 생년월일 변경 불가능 아이디 데이터에 있는 생년월일값 받아서 적용 -->
+					<!-- 변경 불가 에서 생년월일로 변경 -->
+					<input type="text" name="member_birth" id="member_birth" placeholder="생년월일" disabled="disabled"><br>
+					<!-- 이메일 변경을 위한 인증 버튼 추가 -->
+					<!-- 이메일 변경은 인증은 API 작업, 회원가입 시 작업과 동일 할 예정 -->
+					<input type="text" name="email" size="8" id="email" placeholder="이메일주소를 입력하세요"><br>
+		
+					<div id="login_button">
+						<input type="button" value="회원탈퇴" onclick="confirm('탈퇴하시겠습니까?')">
+						<input type="button" value="돌아가기" onclick="Back()">
+						<input type="submit" value="정보수정">
+					</div>	
+				</div>
+				<hr>
+			</form>
+		</section>
+				
+		<footer>
+			<jsp:include page="/inc/bottom.jsp"></jsp:include>
+		</footer>
 	</div>
-			
-	<footer>
-		<jsp:include page="/inc/bottom.jsp"></jsp:include>
-	</footer>
-	
 </body>
 </html>

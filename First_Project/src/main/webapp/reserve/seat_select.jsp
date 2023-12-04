@@ -20,7 +20,7 @@
 		    cursor: pointer;
 	    }
 	    .selected {
-	    	background-color: red;
+	    	background-color: #de1010;
 	    }
  	</style>
  	<script>
@@ -139,33 +139,35 @@
 					</c:forEach><!-- 행반복 종료 -->
 				</div>
 			</article>
-			<article2>				
-				<table id="end_param">
-					<tr>
-						<td class="button_area"><input type="button" value="영화선택" onclick="back()" class="button"></td>
-						<td class="text_left">${param.movie}</td>
-						<td class="text_left">
-							극장 : ${param.theater}<br>
-							날짜 : ${param.date} <br>
-							시간 : ${param.time} <br>
-						</td>
-						<td class="text_left">
-							<h3 id="selected_seats">인원 좌석 선택</h3>
-						</td>
-						<td class="button_area">
-							<form action="../money.jsp" method="post" onsubmit="setSelectedSeatValue()">
-							    <input type="hidden" name="movie" value="${param.movie}">		    <!-- 선택된 값을 숨겨진 input 요소에 할당 -->
-							    <input type="hidden" name="Theater" value="${param.theater}">
-							    <input type="hidden" name="Date" value="${param.date}">
-							    <input type="hidden" name="Time" value="${param.time}">
-							    <input type="hidden" id="select_seat" name="select_seat" value="">			<!--  선택된 좌석 값 전달 -->	    
-							    <input type="submit" value="결제하기" class="button">
-							</form>
-						</td>
-					</tr>
-				</table>
-			</article2>		
 		</section><%--CSS 요청으로 감싼 태그--%>
+		
+		<article id="select_info">				
+			<table id="end_param">
+				<tr>
+					<td class="button_area"><input type="button" value="영화선택" onclick="back()" class="button"></td>
+					<td class="text_left">${param.movie}</td>
+					<td class="text_left">
+						극장 : ${param.theater}<br>
+						날짜 : ${param.date} <br>
+						시간 : ${param.time} <br>
+					</td>
+					<td class="text_left">
+						<h3 id="selected_seats">인원 좌석 선택</h3>
+					</td>
+					<td class="button_area">
+						<form action="../money.jsp" method="post" onsubmit="setSelectedSeatValue()">
+						    <input type="hidden" name="movie" value="${param.movie}">		    <!-- 선택된 값을 숨겨진 input 요소에 할당 -->
+						    <input type="hidden" name="Theater" value="${param.theater}">
+						    <input type="hidden" name="Date" value="${param.date}">
+						    <input type="hidden" name="Time" value="${param.time}">
+						    <input type="hidden" id="select_seat" name="select_seat" value="">			<!--  선택된 좌석 값 전달 -->	    
+						    <input type="submit" value="결제하기" class="button">
+						</form>
+					</td>
+				</tr>
+			</table>
+		</article>		
+		
 		<footer>
 				<jsp:include page="../inc/bottom.jsp"></jsp:include>
 		</footer>

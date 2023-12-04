@@ -53,7 +53,7 @@
 		<section id="content">
 		<h1 id="h01">회원로그인</h1>
 		<hr>
-			<form action="popup.jsp" method="post">
+			<form action="../main.jsp" method="post">
 		
 	<%-- 		<div align="right"> login.css 사용해서 정렬 --%>
 	<%-- 			<a href="">비회원로그인</a> href 링크, 비회원로그인 부기능 --%>
