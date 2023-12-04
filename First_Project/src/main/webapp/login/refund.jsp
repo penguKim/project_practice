@@ -6,49 +6,59 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="${pageContext.request.contextPath }/login/login.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+window.onload = function() {//페이지 로딩이 끝난뒤 함수 실행
+		document.querySelector("#checkbox3").onclick = function() { // id가 checkbox1 클릭시 실행할 함수
+
+			for(let i = 0; i < document.checkform.checkbox3.length; i++) { 
+				document.checkform.checkbox3[i].checked = document.querySelector("#checkbox3").checked;
+			}
+		}
+	};
+		//checkbox 체크박스를 클릭할 때 전체선택기능. checkform 폼 안에 있는 모든 checkbox1 체크박스)
+
+</script>
 </head>
 <body>
-<div id="wrapper">
-		
 	<header>
 		<jsp:include page="/inc/top.jsp"></jsp:include>
 	</header>
+<div id="wrapper">
+		
 	
 	<h1>환불내역 페이지</h1><%--XXX <-회원가입후 로그인된 이름 또는 아이디 출력(db데이터 가지고오기  --%>
 	<hr>
 	
 <!-- --------- 사이드메뉴창 ---------- -->
 	<div id="my_menu">	
-		<p><a href="login_main.jsp">마이페이지</a></p> <!-- 고객센터 홈으로 이동 -->
+		<p><a href="${pageContext.request.contextPath }/mypage.jsp">마이페이지</a></p> <!-- 고객센터 홈으로 이동 -->
 		<ul>
-			<li><a href="">예매내역</a></li>
-			<li><a href="">취소내역</a></li>
-		
-			<li><a href="">나의 문의 내역</a></li>
-			<li><a href="">회원정보수정</a></li>
+			<li><a href="${pageContext.request.contextPath }/editmember.jsp">나의정보수정</a></li>
+			<li><a href="${pageContext.request.contextPath }/refund.jsp">취소내역</a></li>
+			<li><a href="">나의 문의내역</a></li>
 		</ul>
 	</div>
-<!-- 사이드메뉴창 끝 -->
 
 <!-- 바디부분 상단 -->
 
-		<form action="" method="" name="">
+		<form action="" method="" name="checkform">
 		<h2>예매 취소내역</h2>
 			<table id="my_table1">
 				<tr>
-					<th width="50px"><input type="checkbox"></th><th>No.</th>
+					<th width="50px"><input type="checkbox" id="checkbox3"></th><th>No.</th>
 					<th>영화 제목</th>
 					<th>내용</th>
 					<th>상태</th>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td><td>[예매취소순번]</td>
+					<td><input type="checkbox" name="checkbox3"></td><td>[예매취소순번]</td>
 					<td>[영화제목]</td>
 					<td>[예매취소일]</td>
 					<td>[환불완료]</td>
 				</tr>
 				<tr>
-					<td><input type="checkbox"></td><td>[예매취소순번]</td>
+					<td><input type="checkbox" name="checkbox3"></td><td>[예매취소순번]</td>
 					<td>[영화제목]</td>
 					<td>[예매취소일]</td>
 					<td>[환불완료]</td>
