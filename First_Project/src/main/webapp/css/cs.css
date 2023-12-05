@@ -146,7 +146,7 @@ th {
 #main_shortcuts>a { /* 바로가기 a태그 */
 	display: inline-block; /* 나란히 배치하기 위해 변경 */
 	margin: 10px; /* 바깥여백주기 */
-	border: 1px solid #9d9d9d;
+	border: 2px solid #9d9d9d;
 	color: #000000;
 	text-decoration: none;
 	width: 200px;
@@ -154,9 +154,9 @@ th {
 }
 
 #main_shortcuts img {
-	width: 140px;
-	height: 140px;
-	margin: 10px;
+	width: 120px;
+	height: 120px;
+	margin: 20px;
 }
 
 #main_faq { /* 자주묻는질문 미리보기 */
@@ -165,7 +165,8 @@ th {
 	float: left; /* 왼쪽에 배치 */
 	width: 46%; /* 45%차지 */
 	padding: 10px;
-	border: 1px solid #9d9d9d;
+	border-top: 2px solid #9d9d9d;
+	border-bottom: 2px solid #9d9d9d;
 	position: relative;	
 }
 
@@ -175,7 +176,8 @@ th {
 	float: right; /* 오른쪽에 배치 */
 	width: 46%; /* 45%차지 */
 	padding: 10px;
-	border: 1px solid #9d9d9d;
+	border-top: 2px solid #9d9d9d;
+	border-bottom: 2px solid #9d9d9d;
 	position: relative;	
 }
 

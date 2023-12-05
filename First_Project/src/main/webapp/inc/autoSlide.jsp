@@ -135,11 +135,12 @@
 
 	<div class="slideshow">
 		<div class="slideshow_slides">
-			<a href=""><img src="img/img1.jpg" alt="slide1"></a>
-			<a href=""><img src="img/img2.jpg" alt="slide2"></a>
-			<a href=""><img src="img/img3.jpg" alt="slide3"></a>
-			<a href=""><img src="img/img4.jpg" alt="slide4"></a>
+			<a href=""><img src="img/img1.jpg" alt="slide1" width="740px" height="400px"></a>
+			<a href=""><img src="img/img2.jpg" alt="slide2" width="740px" height="400px"></a>
+			<a href=""><img src="img/img3.jpg" alt="slide3" width="740px" height="400px"></a>
+			<a href=""><img src="img/img4.jpg" alt="slide4" width="740px" height="400px"></a>
 		</div> <!-- slides -->
+		<div id="shedow"></div>
 		<div class="slideshow_nav">
 			<a href="" class="prev" id="a">prev</a>
 			<a href="" class="next" id="a">next</a>
