@@ -92,18 +92,7 @@
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
 						
-		<div id="menu_nav">
-			<nav>
-				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
-				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
-				<a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
-				<a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
-				<a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
-				<a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
-			</nav>
-		</div>
-		<hr id="top_hr">
-		
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
 		
 		<section id="content"><%--CSS 요청으로 감싼 태그--%>
 			<h1 id="h01">예매하기</h1>

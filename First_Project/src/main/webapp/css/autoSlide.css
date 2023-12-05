@@ -73,20 +73,18 @@
 
 .slideshow_slides img {
 	margin: 10px;
-	position: relative;
 }
 
-#shedow {
-	position: absolute;
-	border-left: 175px solid;
-	border-right: 175px solid;
-	border-top: 10px solid;
-	border-bottom: 50px solid;
-	box-shadow: 5px 5px 10px 10px #000 inset;
-	box-shadow: -5px -5px 10px 10px #000 inset;
-	width: 1090px; height: 465px;
-	left: 0px; top: 0px;
-}
+/* #shedow { */
+/* 	position: absolute; */
+/* 	border-left: 175px solid; */
+/* 	border-right: 175px solid; */
+/* 	border-top: 10px solid; */
+/* 	border-bottom: 50px solid; */
+/* 	box-shadow: 5px 5px 10px 20px #000 inset; */
+/* 	box-shadow: -5px -5px 10px 20px #000 inset; */
+/* 	width: 100%; height: 465px; */
+/* } */
 
 
 

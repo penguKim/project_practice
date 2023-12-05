@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+#content {
+	max-width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
 
 /* 각 카테고리별(베스트, 영화관람권, 스낵)중앙 정렬  */
 #div01 {
@@ -16,6 +21,13 @@
 	padding-top: 50px;
 	text-align: center; /* 각 카테고리별 중앙 정렬 */
 }
+
+.snack_menu {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 20px;
+} 
+
 
 #div02 img, #div03 img {
 	border: 1px solid #000000;

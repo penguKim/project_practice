@@ -13,18 +13,7 @@
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
 						
-		<div id="menu_nav">
-			<nav>
-				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
-				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
-				<a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
-				<a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
-				<a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
-				<a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
-			</nav>
-		</div>
-		<hr id="top_hr">
-		
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>	
 		
 		<div id="content">
 			<div id="div_store_01">
@@ -38,7 +27,7 @@
 						<li><a href="#div01"><input type="button" value="베스트"></a></li>
 						<li><a href="#div02"><input type="button" value="영화관람권"></a></li>
 						<li><a href="#div03"><input type="button" value="스낵음료"></a></li>
-						<li><a href="store_pay.jsp"><input type="button" value="장바구니"></a></li>
+						<li><a href="store_basket.jsp"><input type="button" value="장바구니"></a></li>
 					</ul>
 				</nav>
 				<!-- 가격 이미지로 작업해서 한번에 보이게 할예정 -->

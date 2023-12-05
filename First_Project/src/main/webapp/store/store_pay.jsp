@@ -13,27 +13,17 @@
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
 						
-		<div id="menu_nav">
-			<nav>
-				<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>
-				<a href="${pageContext.request.contextPath}/movie/release.jsp">영화</a>
-				<a href="${pageContext.request.contextPath}/theater/theater.jsp">극장정보</a>
-				<a href="${pageContext.request.contextPath}/store/store_main.jsp">스토어</a>
-				<a href="${pageContext.request.contextPath}/event/event_movie.jsp">이벤트</a>
-				<a href="${pageContext.request.contextPath}/cs/cs_main.jsp">고객센터</a>
-			</nav>
-		</div>
-		<hr id="top_hr">
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>	
 		
 		<section id="content">
-			<!-- 상단 진행도 상태창 -->
-			<!-- 이미지 넣고 싶음 -->
+			<h1 id="h01">결제하기</h1>
+			<hr>
 			<div class="store_progress">
-				<div> <span class="step">STEP 01</span> <br> 장바구니 </div>
+				<div id="prog_img"><img src="../img/cart1.png"></div><div><span class="step">STEP 01</span><br>장바구니</div>
 				<div> <span class="bracket"> > </span>  </div>
-				<div id="progress_red"><span class="step"> STEP 02 </span> <br> 결제하기 </div>
+				<div id="prog_img"><img src="../img/pay2.png"></div><div id="progress_red"><span class="step">STEP 02</span><br>결제하기</div>
 				<div> <span class="bracket"> > </span> </div>
-				<div> <span class="step"> STEP 03</span> <br> 결제완료 </div>
+				<div id="prog_img"><img src="../img/finish1.png"></div><div><span class="step">STEP 03</span><br>결제완료</div>
 			</div>
 			
 			<!-- 구매 상품 정보 테이블 -->		
@@ -49,7 +39,7 @@
 							<th>구매금액</th>
 						</tr>
 						<tr class="store_table_box02">
-							<td><img src="../img/스위트콤보.png" alt="스위트콤보" width="200" height="250"></td>
+							<td><img src="../img/스위트콤보.png" alt="스위트콤보"></td>
 							<td><span>스위트 콤보</span> <br> 
 								<span>오리지날L + 탄산음료M2</span></td>
 							<td>10,000원</td>
