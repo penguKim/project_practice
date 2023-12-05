@@ -20,7 +20,7 @@
 			<hr>
 			<div class="store_progress">
 				<div id="prog_img"><img src="../img/cart1.png"></div><div><span class="step">STEP 01</span><br>장바구니</div>
-				<div> <span class="bracket"> > </span>  </div>
+				<div> <span class="bracket"> > </span></div>
 				<div id="prog_img"><img src="../img/pay2.png"></div><div id="progress_red"><span class="step">STEP 02</span><br>결제하기</div>
 				<div> <span class="bracket"> > </span> </div>
 				<div id="prog_img"><img src="../img/finish1.png"></div><div><span class="step">STEP 03</span><br>결제완료</div>
@@ -38,6 +38,10 @@
 							<th>수량</th>
 							<th>구매금액</th>
 						</tr>
+						<!-- 이미지 가격표 없는 이미지로 편집 -->
+						<!-- 단일 구매 인 경우 바로 결제 페이지에 데이터 입력 -->
+						<!-- 장바구니에서 넘어오는 경우 랑 단일인 경우 판별 -->
+						<!-- 장바구니에서 넘어오는 데이터 테이블화 시켜서 보여줄것 -->
 						<tr class="store_table_box02">
 							<td><img src="../img/스위트콤보.png" alt="스위트콤보"></td>
 							<td><span>스위트 콤보</span> <br> 
@@ -48,7 +52,6 @@
 						</tr>
 					</table>
 					<br>
-					<div class="store_subject">결제금액</div>
 					<table class="store_pay_table">
 						<tr class="store_table_box03">
 							<th>총 상품 금액</th>
@@ -72,6 +75,7 @@
 					<div class="store_subject">주문자 정보확인</div>
 					<div class="store_member_info">	
 						<!-- 이름과 휴대전화 번호는 자동 저장 -->
+						<!-- 이름 중간 *, 번호 중간 네자리 * 처리 -->
 						<section>
 							<span><b>이름</b> <input type="text"></span>
 							<span><b>휴대전화 번호</b> <input type="text"></span>
@@ -92,7 +96,7 @@
 				</div>
 			
 				<div class="store_pay_info">
-					<div><input type="checkbox">주문정보/결제 대행 서비스 약관 모두 동의</div>
+					<div class="store_pay_info_check"><input type="checkbox">주문정보/결제 대행 서비스 약관 모두 동의</div>
 					<div class="store_pay_info_group">
 						<div class="info01"><input type="checkbox">기프트콘 구매 동의
 							<br> <span class="info01_01">&nbsp;&nbsp;&nbsp;기프트콘 발송 및 CS 처리 등을 이해 수신자로부터 영화관에 수신자의 전화번호를 제공하는 것에 대한 적합한 동의를 받습니다.</span>

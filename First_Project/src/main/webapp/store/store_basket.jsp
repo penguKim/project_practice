@@ -88,7 +88,7 @@
 					</table>
 				</div>
 				<div class="paybtn">
-					<a href="store_main.jsp"><input type="button" value="이전화면"></a>
+					<a href="store_basket.jsp"><input type="button" value="이전"></a>
 					<a href="store_pay.jsp"><input type="button" value="결제하기"></a>
 				</div>
 				

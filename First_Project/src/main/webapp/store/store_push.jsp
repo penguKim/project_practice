@@ -61,7 +61,8 @@
 					<div id="sum">총 금액 : <b>10000원</b></div>
 					<br>
 					<div id="btn_buy">
-	                	<a href="store_main.jsp"><button type="button">취소</button></a>
+					<!-- 이미지로 교체 예정 -->
+	                	<a href="store_main.jsp"><button type="button">장바구니</button></a>
 	                	<a href=""><button type="button">구매</button></a>
 	               	</div>
 				</div>	
