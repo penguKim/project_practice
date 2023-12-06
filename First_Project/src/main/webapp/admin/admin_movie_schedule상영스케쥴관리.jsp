@@ -6,19 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<div id="wrapper">
 		<header>
 		<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
-		<div id="wrapper">
-		<section id="content">
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
 		
+		<section id="admin_main">
 		<nav class="schedule_menubar">
 		<jsp:include page="admin_menubar.jsp"></jsp:include>
 		</nav>
-			<form action="" class = "schedule">
+			<form action="" class="schedule">
 			<h1>상영스케쥴 관리페이지</h1>
 				<div id="schedule_serch">
 					<select id="select">
@@ -31,9 +32,8 @@
 					<input type="button" value="조회">&nbsp;&nbsp;&nbsp;&nbsp;
 					<label id="lbl">현재시간(분)</label><input type="text">
 				</div>
-				<section>
 					<br><br>
-						<table border="1" width="1500" height="500" id="tblCtr">
+						<table border="1" width="1000" height="500" id="tblCtr">
 							<tr>
 								<th width="100">상영관명</th>
 								<th>1회차</th>
@@ -145,13 +145,12 @@
 								</td>
 							</tr>
 						</table>
-					</section>
 					<br>
-			</div>
+		</section>
 				<footer>
 				<jsp:include page="../inc/bottom.jsp"></jsp:include>
 				</footer>
+			</div>
 		</form>
-	</section>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 
 <style>
@@ -17,17 +17,18 @@
   transform: translate(-50%, -50%);
 }
 </style>
-
 <body>
+
+	<div id="wrapper">
+	
 	<header>
 		<jsp:include page="../inc/top.jsp"></jsp:include>
 	</header>
-	<div id="wrapper">
-	<nav class="movie_main_mebubar">
+	
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+	<section id="admin_main">
 		<jsp:include page="admin_menubar.jsp"></jsp:include>
-	</nav>
-		<h1>공지사항 관리 페이지</h1>
-			<section id="content">
+			<h1>공지사항 관리 페이지</h1>
 				<form action="" class ="admin_board_notice">
 						<table border="1" id="admin_notice">
 							<tr>
@@ -115,11 +116,11 @@
 							<input type="button" value="3">
 							<input type="button" value="&gt;">
 						</section>
-					</div>
 						<footer>
 						<jsp:include page="../inc/bottom.jsp"></jsp:include>
 						</footer>
 				</form>
-		</section>
+				</section>
+					</div>
 </body>
 </html>

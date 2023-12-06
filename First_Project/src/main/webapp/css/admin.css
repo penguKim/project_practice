@@ -11,7 +11,6 @@
 #wrapper { /* 전체 영역에 */
 width: 1500px;
 margin: auto;
-
 }
 
 h1 { /* 제목영역 */
@@ -40,11 +39,11 @@ h1 { /* 제목영역 */
 /* 	top: 22%; 제목위쪽부터 10% */
 /* } */
 
-.nav_booking_menubar{
-	position: absolute;
-}
+/* .nav_booking_menubar{ */
+/* 	position: absolute; */
+/* } */
 
-form:not(.Profile_form , .admin_member_Profile_form, .admin_board_one_on_one , .one_on_one_form, .payment_detail_form, .schedule, .admin_movie_booking, .admin_member, .admin_board_notice, .admin_movie_update, .booking_modify) { /* 폼태그에 */
+form:not(.Profile_form , .admin_member_Profile_form, .admin_board_one_on_one , .one_on_one_form, .payment_detail_form, .schedule, .admin_movie_booking, .admin_member, .admin_board_notice, .admin_movie_update, .booking_modify, #member_main) { /* 폼태그에 */
 	position: absolute; /* 상대위치지정 */
 	left: 25%; /* 제목에서부터 왼쪽 25% */
 	width: 800px; /* 너비 800지정 */
@@ -85,7 +84,6 @@ table {
 	border-collapse: collapse; /* 칸 사이 간격 없애기 */
 	border-top: 2px solid #9d9d9d; /* 표상단줄 */
 	border-bottom: 2px solid #9d9d9d; /* 표하단줄 */ 
-	width: 1100px; /* 테이블 가로크기 */
 	height: 340px;
 	max-height: 340px; /* 테이블 새로크기 */
 	margin: 0 auto;
@@ -149,7 +147,7 @@ th {
  	border-radius: 3px; /* 모서리 둥글게 */
 /*  	background-color: #ffffff; 배경색 */
 	border: 2px solid rgb(64, 0, 64); /* 테두리 */
-	position: relative;
+	position: absolute;
 } 
 
 #admin_menubar p { /* 메뉴바 제목에 */
@@ -182,7 +180,10 @@ th {
 }
 
 #movie_update{
-	margin-left: 63em; /* */
+	margin-left: 60em; /* */
+	display: inline-block;
+	position: relative;
+	margin-bottom: 5px;
 }
 
 #admin_menubar li:hover { /* 순서없는 목록 각 줄에 마우스 올리면 */
@@ -367,7 +368,7 @@ select, input[type="datetime-local"] { /* 셀렉트박스와 날짜선택창에 
 #admin_writer{/* 공지사항 상세 페이지*/
 	display: inline-block; /* 블록으로 설정 */
 	position: relative;
-	left: 77em; /* 왼쪽으로부터 간격 이동 (센터로)*/
+	left: 74em; /* 왼쪽으로부터 간격 이동 (센터로)*/
 }
 
 #ok {
@@ -381,7 +382,7 @@ background-color: #EB8993} /* 답변완료인글에 색칠 */
 #member_Search {
 	display: inline-block; /* 블록으로 설정 */
 	position: relative; /* 검색창을 그위치에 고정*/
-	left: 66em; /* 검색창 위치 조정*/
+	left: 63em; /* 검색창 위치 조정*/
 	
 }
 
@@ -406,14 +407,13 @@ background-color: #EB8993} /* 답변완료인글에 색칠 */
 }
 
 #admin_member_Profile_table {
-	width: 800px; /* 회원정보 테이블 가로길이 */
-	margin-right: 500em;
+	width:500;
 }
 
 #schedule_serch{
 	display:inline-block; /* 버튼을 나란히 */
 	position: relative;
-	left:30em;
+	left:20em;
 }
 
 #payX{
@@ -421,7 +421,7 @@ background-color: #EB8993} /* 답변완료인글에 색칠 */
 }
 
 #popUpCtr {
-	margin-left: 0;
+	margin: auto;
 }
 
 #admin_notice td a , #dfCtr tr td a{
@@ -505,14 +505,10 @@ background-color: #EB8993} /* 답변완료인글에 색칠 */
 	position: absolute;
 }
 
-.movie_main_mebubar{
-	display: inline-block;
-	position: absolute;
-	
-}
 
 .booking_modify{
-	margin-left: 10em;
+	margin-top: 3em;
+	margin-left: 5em;
 }
 
 #admin_table tr td input[type="button"] {
@@ -526,7 +522,6 @@ background-color: #c90711;
 
 
 #fqa_button {
-	position: relative;
 }
 
 
@@ -561,7 +556,24 @@ background-color: #c90711;
 	border-bottom: 3px solid #000000;
 }
 
-footer{
-	margin-top: 5em;
-	
+
+.movie_main_mebubar{
+	display: inline-block;
+	top: 170px;
+	width: 160px;
+	margin: 10px;
+	vertical-align: top;
+	position: absolute;
+}
+
+#admin_main {
+	width: 1500px;
+	margin: 0 auto;	
+	padding-bottom: 100px;
+}
+
+
+#member_main {
+	width:2000px;
+	margin: auto;
 }

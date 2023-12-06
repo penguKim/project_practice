@@ -6,12 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<form action="" class = payment_detail_form>
 			<h1>결제 상세 페이지</h1>
-			<table border="1" id="popUpCtr">
+			<table border="1" width= "500" id="popUpCtr">
 				<tr>
 					<th width="100">결제 번호</th>
 					<td></td>

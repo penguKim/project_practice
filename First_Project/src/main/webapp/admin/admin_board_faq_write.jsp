@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <style>
 input[type="text"] {
@@ -28,11 +28,11 @@ border: none;
 					<td><input type="text" size="104"></td>
 				</tr>
 				<tr>
-					<th>제목</th>
+					<th width=200>제목</th>
 					<td><input type="text" size="104"></td>
 				</tr>
 				<tr>
-					<th>작성자</th>
+					<th width="200">작성자</th>
 					<td><input type="text" size="104"></td>
 				</tr>
 				<tr>
@@ -40,7 +40,7 @@ border: none;
 					<td><textarea style=border:none;></textarea></td>
 				</tr>
 				<tr>
-					<th>사진첨부</th>
+					<th width=200>사진첨부</th>
 					<td style="text-align: left"><input type="file"></td>
 				</tr>
 			</table>

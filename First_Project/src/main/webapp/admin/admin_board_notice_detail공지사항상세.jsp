@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<form action="" class = "admin_member_Profile_form">
@@ -16,7 +16,7 @@
 			<table border="1" id="admin_member_Profile_table">
 				<tr>
 					<th width=80>번호</th>
-					<td>아이유</td>
+					<td width=400>아이유</td>
 				</tr>
 				<tr>
 					<th>제목</th>

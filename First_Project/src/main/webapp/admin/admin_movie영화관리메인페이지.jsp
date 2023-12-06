@@ -7,28 +7,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
-	
+
 
 <!-- onclick="window.open('admin_movie_메인페이지.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;" -->
 <body>
-	<header>
-	<jsp:include page="../inc/top.jsp"></jsp:include>
-	</header>
-	<div class="admin_main">
-		<div id="wrapper">
-		<nav class="movie_main_mebubar">
+	<div id="wrapper">
+		<header>
+		<jsp:include page="../inc/top.jsp"></jsp:include>
+		</header>
+	
+		<nav id="abc">
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		</nav>
+		<section id="admin_main">
+		<nav class="movie_main_menubar">
 		<jsp:include page="admin_menubar.jsp"></jsp:include>
 		</nav>
 	
 		
-		<section id="content">
+		
+		<h1>영화 관리 페이지</h1>
+			
 		<div id="movie_update">
 			<input type="button" value="상영예정작 등록하기" onclick = "window.open('admin_movie_update영화등록팝업페이지.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;">		
 			<input type="button" value="최신영화 등록하기" onclick = "window.open('admin_movie_update영화등록팝업페이지.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"><br>	
 		</div>
-			<h1>영화 관리 페이지</h1>
+		
 				<table border="1" id="admin_table">
 				<tr>
 					<th>영화코드</th>
@@ -128,10 +134,9 @@
 					<input type="button" value="&gt;" id="page_move">
 				</div>
 		</section>
-	</div>
 		<footer>
 		<jsp:include page="../inc/bottom.jsp"></jsp:include>
 		</footer>
-</div>
+	</div>
 </body>
 </html>

@@ -6,28 +6,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<div id="wrapper">
+	
 		<header>
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
-	<div id="wrapper">
+		
+		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		
+		<section id="admin_main">
 		<nav class="movie_main_mebubar">
 			<jsp:include page="admin_menubar.jsp"></jsp:include>
 		</nav>
 		
-		<section id="content">
+		
 			<form action="" class="admin_member">
 				<h1>회원 정보 관리 페이지</h1>
-					<table border="1" width="1500" id="members">
+					<table border="1" width="1000" id="members">
 						<div id="member_Search">
 						<input type="text" placeholder="Search">
 						<input type="button" value="조회">
 						</div>
 						<tr>
-							<th width="100">이름</th>
-							<th width="500">아이디</th>
+							<th>이름</th>
+							<th>아이디</th>
 							<th>멤버십</th>
 							<th>회원상태</th>
 							<th>계정종류 및 변경</th>
@@ -112,11 +117,11 @@
 						<input type="button" value="3">
 						<input type="button" value="&gt;">
 					</section>
-				</div>
 					<footer>
 					<jsp:include page="../inc/bottom.jsp"></jsp:include>
 					</footer>
-			</form>
-		</section>
+				</form>
+			</section>
+		</div>
 </body>
 </html>

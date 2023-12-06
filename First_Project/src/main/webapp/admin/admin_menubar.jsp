@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <!-- 외부 CSS 파일(css/default.css) 연결하기 -->
-<link href="${pageContext.request.contextPath}/css/cs.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 
 

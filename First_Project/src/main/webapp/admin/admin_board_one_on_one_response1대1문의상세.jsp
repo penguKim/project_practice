@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="admin.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 		<form action="" class="one_on_one_form">
@@ -14,7 +14,7 @@
 			<h1>1대1문의 상세페이지</h1>
 				<tr>
 					<th width="100">번호</th>
-					<td></td>
+					<td width="500"></td>
 				</tr>
 				<tr>
 					<th>문의 제목</th>
