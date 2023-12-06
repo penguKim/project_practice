@@ -9,8 +9,7 @@
 <link href="admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<form action="">
-		<div id="wrapper">
+	<form action="" class = payment_detail_form>
 			<h1>결제 상세 페이지</h1>
 			<table border="1" id="popUpCtr">
 				<tr>
@@ -60,7 +59,6 @@
 				<input type="button" value="결제취소" onclick="confirm('결제 취소하시겠습니까?')">
 				<input type="button" value="뒤로가기" onclick="window.close()">
 			</section>
-		</div>
 	</form>
 </body>
 </html>

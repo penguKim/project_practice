@@ -1,4 +1,4 @@
-<%-- admin_board_faq_write.jsp --%>
+<%-- admin_board_faq_modify.jsp --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ border: none;
 <body>
 	<form action="" class = "admin_member_Profile_form">
 		<div id="admin_member_Profile">
-			<h1>자주 묻는 질문 글 등록</h1> <!-- 회원 아이디 값 -->
+			<h1>자주 묻는 질문 글 수정</h1> <!-- 회원 아이디 값 -->
 			<br>
 			<table border="1" id="admin_member_Profile_table">
 				<tr>
@@ -47,7 +47,7 @@ border: none;
 			<br>
 			<section id="btnCtr"> 
 				<!-- 자바스크립트 사용해 사이즈 조정 후 팝업으로 만들 창이므로 버튼을 미리 가운데 정렬-->
-				<input type="button" value="등록" onclick="confirm('등록하시겠습니까?')">
+				<input type="button" value="수정" onclick="confirm('등록하시겠습니까?')">
 				<input type="button" value="돌아가기" onclick="window.close()">
 				<input type="button" value="삭제" onclick="confirm('삭제하시겠습니까?')">
 			</section>
