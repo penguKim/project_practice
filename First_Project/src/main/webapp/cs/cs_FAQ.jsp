@@ -23,12 +23,15 @@
 				<jsp:include page="cs_menubar.jsp"></jsp:include>
 			</div>
 			
-			<form action="" method="" name="" >
-				<section id="search">
-					<b>빠른 검색</b>
-					<input type="search" placeholder="검색어를 입력해주세요"> <%-- 검색어 입력창 --%>
-					<a href="cs_FAQ.jsp"><input type="button" value="검색"></a>
-				</section>
+			<div id="fqa_main">
+			
+				<form action="" method="" name="" >
+					<section id="search">
+						<b>빠른 검색</b>
+						<input type="search" placeholder="검색어를 입력해주세요"> <%-- 검색어 입력창 --%>
+						<a href="cs_FAQ.jsp"><input type="button" value="검색"></a>
+					</section>
+				</form>
 			
 				<nav id="fqa_button">
 					<ul>
@@ -40,34 +43,58 @@
 					</ul>
 				</nav>
 				
-				<section>
-					<table id="cs_table1">
-						<tr>
-							<th>번호</th>
-							<th>구분</th>
-							<th>제목</th>
-							<th>등록일</th>
-						</tr>
-						<tr>
-							<td>번호-내용넣기</td> <%-- 나중에 내용 집어넣기 --%>
-							<td>구분-내용넣기</td>
-							<td>제목-내용넣기</td>
-							<td>등록일-내용넣기</td>
-						</tr>
-						<tr>
-							<td>번호-내용넣기</td> <%-- 나중에 내용 집어넣기 --%>
-							<td>구분-내용넣기</td>
-							<td>제목-내용넣기</td>
-							<td>등록일-내용넣기</td>
-						</tr>
-						<tr>
-							<td>번호-내용넣기</td> <%-- 나중에 내용 집어넣기 --%>
-							<td>구분-내용넣기</td>
-							<td>제목-내용넣기</td>
-							<td>등록일-내용넣기</td>
-						</tr>
-					</table>
-				</section>
+				<%-- FQA 질문 리스트 --%>
+				<div id="fqa_list">
+					<button class="accordion"><div id="topic">[예매]</div><div id="subject">홈페이지 및 모바일에서 예매 취소는 어떻게 하나요?</div></button>
+					<div class="panel">
+						<p id="writing">■ 홈페이지
+							  [로그인] → [마이] → [예매내역] → [해당 영화 클릭] → [결제취소]
+							
+							■ 모바일 앱
+							  [로그인] → [바로티켓] → 예매 번호 하단 [예매취소] 클릭
+							  [로그인] → [마이] → [결제내역] → 해당 영화 클릭 → [결제취소]
+						</p>
+					</div>
+					<button class="accordion"><div id="topic">[영화관이용]</div><div id="subject">홈페이지 및 모바일에서 예매 취소는 어떻게 하나요?</div></button>
+					<div class="panel">
+						<p id="writing">■ 홈페이지
+							  [로그인] → [마이] → [예매내역] → [해당 영화 클릭] → [결제취소]
+							
+							■ 모바일 앱
+							  [로그인] → [바로티켓] → 예매 번호 하단 [예매취소] 클릭
+							  [로그인] → [마이] → [결제내역] → 해당 영화 클릭 → [결제취소]
+						</p>
+					</div>
+					<button class="accordion"><div id="topic">[할인혜택]</div><div id="subject">홈페이지 및 모바일에서 예매 취소는 어떻게 하나요?</div></button>
+					<div class="panel">
+						<p id="writing">■ 홈페이지
+							  [로그인] → [마이] → [예매내역] → [해당 영화 클릭] → [결제취소]
+							
+							■ 모바일 앱
+							  [로그인] → [바로티켓] → 예매 번호 하단 [예매취소] 클릭
+							  [로그인] → [마이] → [결제내역] → 해당 영화 클릭 → [결제취소]
+						</p>
+					</div>
+				</div>
+				
+
+				<script>
+					var acc = document.getElementsByClassName("accordion");
+					var i;
+					
+					for (i = 0; i < acc.length; i++) {
+					  acc[i].addEventListener("click", function() {
+					    this.classList.toggle("active");
+					    var panel = this.nextElementSibling;
+					    if (panel.style.display == "block") {
+					      panel.style.display = "none";
+					    } else {
+					      panel.style.display = "block";
+					    }
+					  });
+					}
+				</script>
+				
 
 				<div class="pagination">
 					<a href="#">&laquo;</a>
@@ -78,7 +105,7 @@
 					<a href="#">5</a>
 					<a href="#">&raquo;</a>
 				</div>
-			</form>
+			</div>
 		</section>
 		<footer>
 			<jsp:include page="../inc/bottom.jsp"></jsp:include>

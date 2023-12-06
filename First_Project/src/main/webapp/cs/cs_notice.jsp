@@ -45,21 +45,22 @@
 						<tr>
 							<td>번호-내용넣기</td> <%-- 내용 넣기 --%>
 							<td>지점-이름넣기</td>
-							<td>제목-내용넣기</td>
+							<td><a href="cs_notice_detail.jsp" id="notice_tit">제목-내용넣기</a></td>
 							<td>등록일-내용넣기</td>
 						</tr>
 						<tr>
 							<td>번호-내용넣기</td> <%-- 내용 넣기 --%>
 							<td>지점-이름넣기</td>
-							<td>제목-내용넣기</td>
+							<td><a href="cs_notice_detail.jsp" id="notice_tit">제목-내용넣기</a></td>
 							<td>등록일-내용넣기</td>
 						</tr>
 						<tr>
 							<td>번호-내용넣기</td> <%-- 내용 넣기 --%>
 							<td>지점-이름넣기</td>
-							<td>제목-내용넣기</td>
+							<td><a href="cs_notice_detail.jsp" id="notice_tit">제목-내용넣기</a></td>
 							<td>등록일-내용넣기</td>
 						</tr>
+						
 					</table>
 				</section>
 				

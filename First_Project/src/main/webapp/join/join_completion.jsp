@@ -33,8 +33,8 @@
 				로그인을 하시면 포인트 적립, 쿠폰 등 <br>
 				다양한 혜택을 누리실 수 있습니다. </p>
 				<section id="join_button">
-					<a href=""> <input type="button" value="로그인"></a> <!-- 로그인 페이지로 바로 이동 -->
-					<a href=""><input type="button" value="메인페이지"></a> <!-- 메인 페이지로 바로 이동 -->
+					<a href="../login/login.jsp"> <input type="button" value="로그인"></a> <!-- 로그인 페이지로 바로 이동 -->
+					<a href="../main.jsp"><input type="button" value="메인페이지"></a> <!-- 메인 페이지로 바로 이동 -->
 				</section>
 				<hr>
 			</form>

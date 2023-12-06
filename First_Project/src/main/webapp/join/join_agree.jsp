@@ -7,7 +7,7 @@
 <title>회원가입</title>
 <!-- 외부 CSS 파일(css/default.css) 연결하기 -->
 <link href="${pageContext.request.contextPath }/css/join.css" rel="stylesheet" type="text/css">
-<script src="../js/jquery-3.7.1.js"></script>
+<script src="${pageContext.request.contextPath }/js/jquery-3.7.1.js"></script>
 <script type="text/javascript">
 	$(function() {
 		
@@ -35,17 +35,6 @@
 		
 		
 	});
-// 	window.onload = function() {
-		<%-- "전체동의" 체크박스 체크 시 취미 항목 모두 체크, 
-			 "전체동의" 해제 시 취미 항목 모두 체크 해제하기 --%>
-// 		document.querySelector("#agreeAll").onclick = function() {
-		
-// 			for(let i = 0; i < document.joinAgree.agree.length; i++) {
-// 				document.joinAgree.agree[i].checked = document.querySelector("#agreeAll").checked;
-// 			}
-// 		};
-		
-// 	}; // window.onload 이벤트 끝
 </script>
 </head>
 <body>
@@ -87,7 +76,7 @@
 				</section>
 				<div class="joinbtn">
 					<a href="join_certification.jsp"><input type="button" value="이전"></a>
-					<a href="join_form.jsp" ><input type="button" value="다음"></a>
+					<a href="join_form.jsp" ><input type="submit" value="다음"></a>
 				</div>
 				<hr>
 				<p id="notice">선택약관에 동의하지 않으셔도 가입이 가능합니다.</p>

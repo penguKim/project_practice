@@ -63,8 +63,8 @@
 						
 						<!-- 회원 가입, 아이디 찾기, 비밀번호 찾기 주소 연결 -->
 						<a href="${pageContext.request.contextPath}/join/join_certification.jsp">회원가입</a> |
-						<a href="${pageContext.request.contextPath}/join/id_find.jsp">아이디찾기</a> |
-						<a href="${pageContext.request.contextPath}/join/pw_find.jsp">비밀번호찾기</a>
+						<a href="${pageContext.request.contextPath}/login/id_find.jsp">아이디찾기</a> |
+						<a href="${pageContext.request.contextPath}/login/pw_find.jsp">비밀번호찾기</a>
 					</div><br>
 					<!-- 간편로그인 기능 API 참고  -->
 					<section id="api">
