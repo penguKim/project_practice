@@ -1,532 +1,190 @@
 @charset "UTF-8";
 
-/* ======== 전체 영역에 적용할 css ======== */
+/* ============= 전체 게시판에 적용할 css ============== */
 
-
-
-#theater_member_Profile {
-	text-align: center;
+#admin_nav { /* 내비게이션바에 */
+	display: inline-block;
+	top: 170px;
+	width: 160px;
+	margin: 10px;
+	vertical-align: top;
 }
 
-#wrapper { /* 전체 영역에 */
-width: 1500px;
-margin: auto;
-}
-
-h1 { /* 제목영역 */
-	margin-top: 20px; /* 위 띄우기 */
-	margin-bottom: 42px; /* 아래 띄우기 */
-	text-align: center; /* 가운데정렬 */
-	position: relative; /* 포지션 기준 잡기 */
-}
-
-/* a { 하이퍼링크에 */
-/* 	text-decoration: none; 밑줄 없애기	 */
-/* 	color: #292929; 글씨 색깔 변경 */
-/* } */
-
-.nav_main_menubar { /* 영화관리메인페이지 네비바 */
-	margin:auto;
-	position: absolute; /* 상대위치지정 */
-	left: 7%; /* 제목에서부터 왼쪽 10% */
-	top: 22%; /* 제목위쪽부터 10% */
-	
-}
-
-/* .nav_menubar_schedule { 영화관리메인페이지 네비바 */
-/* 	position: absolute; 상대위치지정 */
-/* 	left: 7%; 제목에서부터 왼쪽 10% */
-/* 	top: 22%; 제목위쪽부터 10% */
-/* } */
-
-/* .nav_booking_menubar{ */
-/* 	position: absolute; */
-/* } */
-
-form:not(.Profile_form , .admin_member_Profile_form, .admin_board_one_on_one , .one_on_one_form, .payment_detail_form, .schedule, .admin_movie_booking, .admin_member, .admin_board_notice, .admin_movie_update, .booking_modify, #member_main) { /* 폼태그에 */
-	position: absolute; /* 상대위치지정 */
-	left: 25%; /* 제목에서부터 왼쪽 25% */
+#admin_main {
+	vertical-align: top;
+	display: inline-block;
 	width: 800px; /* 너비 800지정 */
+	margin: 10px;	
 }
 
-textarea { /* 텍스트박스 */
-	resize: none; /* 크기고정 */
-	width: 650px; /* 너비지정 */
-	height: 300px; /* 높이지정 */
-	border: 1.5px solid #AFAFB2; /* 테두리 */
-	margin: 5px;
+form {
+	margin-bottom: 20px;
 }
 
-hr { /* 위아래선 */
-	border: 1px solid #9d9d9d; /* 1.5px 회색 */
-	margin: 10px -5px; /* 위아래 띄우고 양옆 줄임 */
+a {
+	color: #000;
+	text-decoration: none;
 }
 
-input[type="button"], input[type="submit"] { /* 모든 버튼에 */
-	padding: 6px 15px; /* 안쪽 여백 */
-    background-color:#eeeeee; /* 배경색 빨간색 */
-    color: black; /* 글씨색 흰색*/
-    border: none; /* 테두리 없음 */
-    cursor: pointer; /* 커서 변경 */
+#admin_main th, #admin_main td {
+	height: 30px;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover {  /* 모든 버튼에 마우스오버 시 */
-	background-color: #ce0912;
-}	
-
-input[type="submit"] { /* 등록 버튼에 */
-	text-align: center;
+/* ============ 네비바에 적용할 css ============= */
+#menubar p>a {
+	text-decoration: none; /* 밑줄 없애기 */	
+	color: gray; /* 글씨 색깔 변경 */	
+	font-size: 20px;
 }
+
+#menubar a { /* 하이퍼링크에 */
+	text-decoration: none; /* 밑줄 없애기 */	
+	color: #000000; /* 글씨 색깔 변경 */
+}
+
+#menubar { /* 메뉴바 전체에 */
+	text-align: center; /* 가운데정렬 */
+	width: 160px; /* 넓이지정 */
+	height: 700px; /* 높이지정 */
+ 	border-radius: 3px; /* 모서리 둥글게 */
+ 	background-color: #ffffff; /* 배경색 */
+	border: 2px solid #6c6c6c; /* 테두리 */
+	margin-bottom: 40px;
+} 
+
+#menubar p { /* 메뉴바 제목에 */
+	font-size: 18px; /* 글자크기 */
+	font-weight: bold; /* 글자두껍게 */
+	padding: 15px 0;  /* 안쪽여백 */
+	margin: 0;
+}
+
+#menubar ul { /* 순서없는 목록 전체에 */
+	text-align: center; /* 가운데정렬 */
+	list-style: none; /* 앞 표시 없애기 */
+	font-size: 16px; /* 글자크기 */
+	padding-left: 5px; /* 왼쪽여백 */
+	margin: 0; /* 바깥여백 없애기 */
+}
+
+#menubar li input[type="button"] { /* 순서없는 목록 각 줄에 */
+	width: 135px;
+	height: 35px;
+	margin: 7px;
+	background-color:#505050;
+	color: white;
+	font-weight: bold;
+}
+
+#menubar li input[type="button"]:hover { /* 순서없는 목록 각 줄에 마우스 올리면 */
+	color: black;
+	background-color: #bebebe; /* 배경색 회색 */
+}
+
 
 /* ======== 전체 영역 테이블에 적용할 css ======== */
 
 table {
 	border-collapse: collapse; /* 칸 사이 간격 없애기 */
-	border-top: 2px solid #9d9d9d; /* 표상단줄 */
-	border-bottom: 2px solid #9d9d9d; /* 표하단줄 */ 
-	height: 340px;
-	max-height: 340px; /* 테이블 새로크기 */
+	border: 2px solid #6c6c6c; /* 표 줄 */ 
+	width: 800px;
 	margin: 0 auto;
-	text-align:center;} /*  */
-
-th {
-	border-bottom: 2px solid #9d9d9d; /* 제목하단줄 */	}
-
-#cs_table1 tr:nth-child(odd) { /* 홀수줄에만 */
-	background-color: #eeeeee; /* 배경색 넣기 */
-}
-
-#cs_table1 th { /* 자주묻는질문, 공지사항 테이블 제목에 */
-	color: #000000;
-	background-color: #f2f2f2; /* 제목 배경색 지정 */
-	padding: 5px 10px; /* 안쪽 여백 지정 */
-}
-
-#cs_table1 td { /* 자주묻는질문, 공지사항 테이블 내용에 */
-	padding: 5px 10px; /* 안쪽 여백 지정 */
-	border: none;
-}
-
-#cs_table2 th { /* 분실물문의, 1대1질문 테이블 제목에 */
-	background-color: #f2f2f2; /* 제목 배경색 지정 */
-	padding: 5px 10px; /* 안쪽 여백 지정 */
-	border-bottom: 1px solid #9d9d9d;
 	text-align: center;
 }
 
-#cs_table2 td { /* 분실물문의, 1대1질문 테이블에 */
-	padding: 5px 10px; /* 안쪽 여백 지정 */
-	border-bottom: 1px solid #9d9d9d;
-/* 	width: 36%; */
+th {
+	background-color: #dfdfdf;
+	border-bottom: 2px solid #6c6c6c; /* 제목하단줄 */	
 }
 
-#cs_table2  b { /* 제목 옆 필수항목 *표시 */
-	color: #ff0000; /* 글자 빨간색 */
+.post_name {
+	text-align: left;
 }
 
-
-/* ======== 메뉴바 영역에 적용할 css ======== */
-
-
-
-#admin_menubar>p>a {
-	text-decoration: none; /* 밑줄 없애기 */	
-	color: gray ;  /* 글씨 색깔 변경 */
-	font-size: 20px;
+/* ======== 전체 영역 입력상자에 적용할 css ======== */
+input[type="date"], input[type="text"], select {
+	height: 25px;
 }
 
-#admin_menubar a { /* 하이퍼링크에 */
-	text-decoration: none; /* 밑줄 없애기 */	
-	color: #000000; /* 글씨 색깔 변경 */
+/* ============= 전체 버튼에 적용할 css ================== */
+input[type="button"], input[type="submit"] { /* 모든 버튼에 */
+	padding: 6px 15px; /* 안쪽 여백 */
+    background-color: #505050; /* 배경색 빨간색 */
+    color: white; /* 글씨색 흰색*/
+    border: none; /* 테두리 없음 */
+    cursor: pointer; /* 커서 변경 */
 }
 
-#admin_menubar { /* 메뉴바 전체에 */
-	text-align: center; /* 가운데정렬 */
-	width: 160px; /* 넓이지정 */
-	height: 550px; /* 높이지정 */
- 	border-radius: 3px; /* 모서리 둥글게 */
-/*  	background-color: #ffffff; 배경색 */
-	border: 2px solid rgb(64, 0, 64); /* 테두리 */
-	position: absolute;
-} 
-
-#admin_menubar p { /* 메뉴바 제목에 */
-	font-size: 18px; /* 글자크기 */
-	font-weight: bold; /* 글자두껍게 */
-	padding: 25px 0;  /* 안쪽여백 */
-	background-color: white; /* 배경색 빨강 */
-	margin: 0; /* 주위 여백 다 없앰*/
-}
-
-#admin_menubar ul { /* 순서없는 목록 전체에 */
-	text-align: center; /* 가운데정렬 */
-	list-style: none; /* 앞 표시 없애기 */
-	font-size: 16px; /* 글자크기 */
-	padding-left: 5px;  /*왼쪽여백*/ 
-	margin: 0;  /*바깥여백 없애기 */ 
-}
-
-#admin_table th, #members th , #admin_notice th, #admin_member_Profile th, #dfCtr th, #one_on_one_form th, #popUpCtr th{
-	background-color: #eeeeee;
-}
-
-#admin_menubar li { /* 순서없는 목록 각 줄에 */
-	padding: 15px 15px; /* 안쪽여백 */
-	width: 130px; /* 너비지정 */
-	font-weight: bold; /* 글자 두껍게 */
-	position: relative;
-	left: -5px; top: 2px;
-	margin: 0px;
-}
-
-#movie_update{
-	margin-left: 60em; /* */
-	display: inline-block;
-	position: relative;
-	margin-bottom: 5px;
-}
-
-#admin_menubar li:hover { /* 순서없는 목록 각 줄에 마우스 올리면 */
-	background-color: #eeeeee; /* 배경색 회색 */
-}
-
-
-/* ======== 고객센터 메인과 자주묻는 질문, 공지사항에 적용할 css ======== */
-
-#main_shortcuts { /* 바로가기 영역 */
-	margin: 30px 0; /* 상하단 여백 */
-	text-align: center; /* 가운데정렬 */
-}
-
-#main_shortcuts>a { /* 바로가기 a태그 */
-	display: inline-block; /* 나란히 배치하기 위해 변경 */
-	margin: 10px; /* 바깥여백주기 */
-	border: 1px solid #9d9d9d;
-	color: #000000;
-	text-decoration: none;
-}
-
-#main_faq { /* 자주묻는질문 미리보기 */
-	margin-top: 20px; /* 상단여백 */
-	float: left; /* 왼쪽에 배치 */
-	width: 46%; /* 45%차지 */
-	padding: 10px;
-	border: 1px solid #9d9d9d;
-	position: relative;	
-}
-
-#main_notice { /* 공지사항 미리보기 */
-	margin-top: 20px; /* 상단여백 */
-	float: right; /* 오른쪽에 배치 */
-	width: 46%; /* 45%차지 */
-	padding: 10px;
-	border: 1px solid #9d9d9d;
-	position: relative;	
-}
-
-#main_faq a, #main_notice a {
-	color: #000000;
-	text-decoration: none;
-}
-
-#main_faq>h3, #main_notice>h3 { /* 미리보기 제목 */
-	display: inline-block; /* 더보기 버튼과 나란히 배치하기 위해 속성변경 */
-/* 	margin-left: 30px; */
-	font-size: 20px;
-	margin: 10px 0 0 10px;
-}
-
-#main_faq>a { /* 더보기 버튼 */
-/* 	text-align: right; 오른쪽에 배치 */
-	position: absolute;
-	right: 5%; top: 10%;
-}
-
-#main_notice>a { /* 더보기 버튼 */
-/* 	text-align: right; 오른쪽에 배치 */
-	position: absolute;
-	right: 5%; top: 10%;
-}
-
-#main_faq li, #main_notice li {
-	margin: 10px 0;
-}
-
-#search { /* 빠른검색 */
-	text-align: center; /* 가운데정렬 */
-	background-color: #ffffff; /* 배경색 */
-	padding: 10px 0; /* 안쪽상하단 여백 */
-	border-radius: 3px; /* 모서리 둥글게 */
- 	background-color: #eeeeee; /* 배경색 */
-	border: none; /* 테두리 없애기 */
-}
-
-input[type="search"] {
-	border: none; /* 테두리 없애기 */
-	margin: 10px; /* 여백 */
-	height: 30px; /* 높이지정 */
-	width: 350px; /* 넓이지정 */
-}
-
-#search>select { /* 검색창 셀렉트박스에 */
-	border: none; /* 테두리 없애기 */
-	margin: 10px; /* 여백 */
-	height: 30px; /* 높이지정 */
-	width: 150px; /* 넓이지정 */
-}
-
-#fqa_button { /* 분류 버튼 영역 */
-	text-align: center;	/* 가운데정렬 */
-	margin: 10px;
-}
-
-#fqa_button>input { /* 분류 버튼 개별로 */
-	margin: 20px 10px 0;  /* 위20 좌우10 아래0 px */
-	padding: 10px; /* 안쪽여백 지정 */
-	width: 90px; /* 너비지정 */
-}
-
-
-#pageNum { /* 페이지번호 전체 영역 */
-	 text-align: center; /* 가운데정렬 */
-	 margin: 5px auto; /* 여백 */
-}
-
-#pageNum>input[type="button"] { /* 공지사항과 자주묻는 페이지번호 */
-	 width: 20px; /* 버튼 너비 지정 */
-	 padding: 5px 0;
-}
-
-#pageNum>a {
-	color: #000000;
-	text-decoration: none;
-	font-size: 18px;
-	margin: 5px 8px;
-}
-
-
-/* ======== 1 : 1 문의와 분실물 문의에 적용할 css ======== */
-
-p { /* 1대1문의, 분실물문의 최상단 안내문 */
-	font-size: 15px; /* 글자크기 지정 */
-	margin-top: 0;
-}
-
-#agree_msg { /* 동의문 영역의 */
-	padding: 10px; /* 안쪽여백지정 */
-	border-radius: 3px; /* 모서리 둥글게 */
- 	background-color: #ffffff; /* 배경색 */
-	border: 2px solid #9d9d9d; /* 테두리 */
-}
-
-.warning { /* 주의사항 영역 */
-	float: right; /* 오른쪽 정렬 */
-	color: #ff0000; /* 빨간색 */
-	font-size: 13px; /* 글자작게 */
-}
-
-#input_table { /* 문의 입력창 테이블 전체 */
-	margin-top: 20px; /* 상단여백 */
-	border: 0; /* 테두리 없음 */
-}
-
-#id { /* 아이디 입력창에 */
-	border: none; /* 테두리 없애기 */
-	border-bottom: 1.5px solid #9d9d9d; /* 밑줄 */
-	margin: 10px; /* 여백 */
-	height: 30px; /* 높이지정 */
-	width: 250px; /* 넓이지정 */
-}
-
-#title, #file { /* 제목, 파일등록창에 */
-	border: none; /* 테두리 없애기 */
-	border-bottom: 1.5px solid #9d9d9d; /* 밑줄 */
-	margin: 10px; /* 여백 */
-	height: 30px; /* 높이지정 */
-	width: 550px; /* 넓이지정 */
-}
-
-select, input[type="datetime-local"] { /* 셀렉트박스와 날짜선택창에 */
-	border: none; /* 테두리 없애기 */
-	border-bottom: 1.5px solid #9d9d9d; /* 밑줄 */
-	margin: 10px; /* 여백 */
-	height: 30px; /* 높이지정 */
-	width: 250px; /* 넓이지정 */
-}	
-
-#cs_button { /* 모든 버튼 */
-	margin: 30px; /* 주변 띄우고 */
-	text-align: center; /* 가운데정렬 */
-}
-	
-#pageBtn, #admin_writer_pageNum{
-  margin: 20px; /* 간격 띄움 */
-  position: relative;
-  margin-left: 40em;
-}
-
-#admin_writer{/* 공지사항 상세 페이지*/
-	display: inline-block; /* 블록으로 설정 */
-	position: relative;
-	left: 74em; /* 왼쪽으로부터 간격 이동 (센터로)*/
-}
-
-#ok {
-background-color: #EB8993} /* 답변완료인글에 색칠 */
-
-#Search {
-	display: inline-block; /* 블록으로 설정 */
-	margin-left: 86em; 
-}
-
-#member_Search {
-	display: inline-block; /* 블록으로 설정 */
-	position: relative; /* 검색창을 그위치에 고정*/
-	left: 63em; /* 검색창 위치 조정*/
-	
-}
-
-#pay_Search {
-	display: inline-block; /* 블록으로 설정 */
-	position: relative;
-	margin-left: 1065px;/* 검색창 위치 조절 */
-	
-}
-#members tr td input {
-	width:80px;   /* 버튼 크기 고정*/
+input[type="button"]:hover, input[type="submit"]:hover {  /* 모든 버튼에 마우스오버 시 */
+	background-color: #bebebe;
 }
 
 #admin_member{
+	color: black;
 	background-color: #FFCCCC; /* 회원일때 색깔 */
 }
 #admin_Bmember{
+	color: black;
 	background-color: #E0E0E0; /* 비회원일때 색깔 */
 }
 #admin_Cmember{
+	color: black;
 	background-color: #CCCCFF; /* 탈퇴 일때 색깔 */
 }
 
-#admin_member_Profile_table {
-	width:500;
+
+#movie_update, #schedule_serch, #pay_Search, #member_Search {
+	text-align: right;
+	margin-bottom: 20px;
 }
 
-#schedule_serch{
-	display:inline-block; /* 버튼을 나란히 */
-	position: relative;
-	left:20em;
+#admin_writer {
+	text-align: right;
+	margin-top: 20px;
 }
 
-#payX{
-	margin-left: 40%; /* 버튼을 가운데로 */
-}
+/* ============ 전체 페이지번호에 적용할 css ============ */
 
-#popUpCtr {
-	margin: auto;
-}
-
-#admin_notice td a , #dfCtr tr td a{
-	text-decoration: none; /* 공지사항 a태그 밑줄 제거 */
-	color : black; /* 글자색 검정색으로 */
-}
-
-#btnCtr {
-	margin-left: 40% /* 버튼 위치 가운데로 조정 */
-}
-
-#btnCtr2 {
-	margin-left: 28% /* 버튼 위치 가운데로 조정 */
-}
-
-#admin_member_modify_btnCtr {
-	margin-left: 44% /* 버튼 위치 가운데로 조정 */
-}
-
-#divCtr { /* 가운데 정렬해야할 div 태그 영역 */
-	text-align: center;	 /* 가운데 정렬 */
-}
-
-
-
-#grayBlock { /* 정보 표시할 회색 블럭 */
-	background-color: #ccc; /* 배경색 회색 */
-	width: 300px; /* 너비 */
-	height: 100px; /* 높이 */
-	border: none; /* 테두리 없애기 */ 
-	border-radius: 10px; /* 모서리 둥글게 */
-	display: inline-block; /* 한 줄에 배치 */
-	margin-bottom: 10px; /* 여백 */
-	
-}
-
-#grayBlock>input[type="text"] { /* 회색 블럭 내 input type="text" 영역 */
-	border:none; /* 테두리 없애기 */
-	background-color: #ccc;
-	text-align: center;
-	font-weight : bold;
-	/* => 텍스트 출력창 표시하기 위해 임시로 색상 설정 X */
-	height: 65px; /* 높이 */
-	width: 250px; /* 너비 */
-}
-
-#grayBlock>input[type="date"] { /* 회색 블럭 내 input type="text" 영역 */
-	border:none; /* 테두리 없애기 */
-	background-color: #ccc;
-	text-align: center;
-	/* => 텍스트 출력창 표시하기 위해 임시로 색상 설정 X */
-	height: 65px; /* 높이 */
-	width: 250px; /* 너비 */
-	font-weight: bold;
-}
-
-#grayBlockWide { /* 정보 표시할 넓은 회색 블럭*/
-	background-color: #ccc; /* 배경색 회색 */
-	width: 620px; /* 너비 */
-	height: 100px; /* 높이 */
-	border: none; /* 테두리 없애기 */ 
-	border-radius: 10px; /* 모서리 둥글게 */
-	margin-bottom: 10px; /* 여백 */
-	display: inline-block; /* 가운데 정렬을 위함 */
-	
-}
-
-#grayBlockWide>input[type="text"] { /* 넓은 회색 블럭 내 input type="text" 영역 */
-	border:none; /* 테두리 없애기 */
-	/* background-color: #ccc; */
-	/* => 텍스트 출력창 표시하기 위해 임시로 색상 설정 X */
-	height: 65px; /* 높이 */
-	width: 600px; /* 너비 */
-	background-color: #ccc;
+/* Pagination links */
+.pagination {
+	padding:20px 0 100px 250px;
 	text-align: center;
 }
 
 
-.schedule_menubar{
-	display: inline-block;	
-	position: absolute;
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
 }
 
-
-.booking_modify{
-	margin-top: 3em;
-	margin-left: 5em;
+/* Style the active/current link */
+.pagination a.active {
+  background-color: #505050;
+  color: white;
 }
 
-#admin_table tr td input[type="button"] {
-background-color: #e50914;
-color: white;
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+/* =============== 상영일정관리 ==================== */
+.schedule {
+	margin-bottom: 100px;
 }
 
-#admin_table tr td input[type="button"]:hover {
-background-color: #c90711;
-}
-
+/* =============== 자주묻는질문 ==================== */
 
 #fqa_button {
+	position: relative;
 }
 
 
 #fqa_button ul {
 	text-align: center;
+	margin: 0;
 }
 
 #fqa_button {
@@ -546,7 +204,7 @@ background-color: #c90711;
 	border-bottom: 3px solid #e50914;
 	color: #000000; /* 글자 색상 */
 	padding: 10px 40px; /* 영역의 상하 좌우 크기 */
-	margin-top: 10px;
+/* 	margin-top: 10px; */
 	background-color: #ffffff;
 	cursor: pointer; /* 커서 변경 */
 }
@@ -554,26 +212,4 @@ background-color: #c90711;
 #fqa_button input:hover {
 	background-color: #eeeeee;
 	border-bottom: 3px solid #000000;
-}
-
-
-.movie_main_mebubar{
-	display: inline-block;
-	top: 170px;
-	width: 160px;
-	margin: 10px;
-	vertical-align: top;
-	position: absolute;
-}
-
-#admin_main {
-	width: 1500px;
-	margin: 0 auto;	
-	padding-bottom: 100px;
-}
-
-
-#member_main {
-	width:2000px;
-	margin: auto;
 }

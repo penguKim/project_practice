@@ -10,25 +10,25 @@
 </head>
 <body>
 	<div id="wrapper">
-	
 		<header>
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
-		
+	
 		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
 		
-		<section id="admin_main">
-		<nav class="movie_main_mebubar">
-			<jsp:include page="admin_menubar.jsp"></jsp:include>
-		</nav>
-		
-		
-			<form action="" class="admin_member">
-				<h1>회원 정보 관리 페이지</h1>
+		<section id="content">
+			<h1 id="h01">회원정보관리</h1>
+			<hr>
+			<div id="admin_nav">
+				<jsp:include page="admin_menubar.jsp"></jsp:include>
+			</div>
+			
+			<div id="admin_main">
+				<form action="" class="admin_member">
 					<table border="1" width="1000" id="members">
 						<div id="member_Search">
-						<input type="text" placeholder="Search">
-						<input type="button" value="조회">
+							<input type="text" placeholder="조회할 회원정보 입력">
+							<input type="button" value="조회">
 						</div>
 						<tr>
 							<th>이름</th>
@@ -109,19 +109,21 @@
 							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 					</table>
-					<br>
-					<section id="pageBtn">
-						<input type="button" value="&lt;">
-						<input type="button" value="1">
-						<input type="button" value="2">
-						<input type="button" value="3">
-						<input type="button" value="&gt;">
-					</section>
-					<footer>
-					<jsp:include page="../inc/bottom.jsp"></jsp:include>
-					</footer>
+					<div class="pagination">
+						<a href="#">&laquo;</a>
+						<a href="#">1</a>
+						<a class="active" href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">&raquo;</a>
+					</div>
 				</form>
-			</section>
-		</div>
+			</div>
+			<footer>
+				<jsp:include page="../inc/bottom.jsp"></jsp:include>
+			</footer>
+		</section>
+	</div>
 </body>
 </html>

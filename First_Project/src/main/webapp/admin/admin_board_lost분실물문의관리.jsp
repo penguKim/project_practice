@@ -19,7 +19,7 @@
 		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
 		
 		<section id="content">
-			<h1 id="h01">1대1문의관리</h1>
+			<h1 id="h01">분실물문의관리</h1>
 			<hr>
 			<div id="admin_nav">
 				<jsp:include page="admin_menubar.jsp"></jsp:include>
@@ -29,8 +29,8 @@
 				<form action="" class="admin_board_one_on_one">
 					<table border="1" id="dfCtr">
 						<tr>
-							<th width="60">번호</th>
-							<th width="120">유형</th>
+							<th width="100">번호</th>
+							<th width="120">분실장소</th>
 							<th>제목</th>
 							<th width="100">작성자</th>
 							<th width="120">등록일</th>
@@ -38,7 +38,7 @@
 						</tr>
 						<tr>
 							<td>번호</td>
-							<td>칭찬/불만/제안</td>
+							<td>지점명A</td>
 							<td class="post_name"><a href="admin_board_one_on_one_response1대1문의상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800 ,left=550,top=100'); return false;">클릭시 1대1 문의 상세 내용으로이동</a></td>
 							<td>작성자</td>
 							<td>등록일</td>
@@ -84,15 +84,6 @@
 							<td>등록일</td>
 							<td><input type="button" value="답변완료" id="ok"></td>
 						</tr>
-						<tr>
-							<td>번호</td>
-							<td>유형</td>
-							<td class="post_name"><a href="admin_board_one_on_one_response1대1문의상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800 ,left=550,top=100'); return false;">클릭시 1대1 문의 상세 내용으로이동</a></td>
-							<td>작성자</td>
-							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok"></td>
-						</tr>
-						
 					</table>
 					<div class="pagination">
 						<a href="#">&laquo;</a>
