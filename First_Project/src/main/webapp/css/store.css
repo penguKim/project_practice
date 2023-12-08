@@ -81,6 +81,17 @@
 	margin-bottom: 100px;
 }
 
+#snack_detail{
+	font-size: 13px;
+	color:gray;
+}
+
+#won{
+	font-size: 13px;
+}
+
+
+
 .snack_menu {
 	position: relative;
 }
@@ -88,6 +99,8 @@
 .snack_menu:hover .cart_btn,
 .snack_menu:hover .pay_btn {
 	opacity: 1;
+	margin-left: 30px;
+	margin-top: 30px;
 }
 
 .snack_menu:hover img {
@@ -494,4 +507,9 @@
 
 .store_basket input[type="button"], .store_basket input[type="submit"]:hover {
 	background-color: #ce0912;
+}
+a{
+ text-decoration-line: none;
+ font-weight: bold;
+ color: black;
 }

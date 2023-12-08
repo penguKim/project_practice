@@ -4,8 +4,18 @@
 
 #img_div {
 	text-align: center;
+	width:986px;
+	height:430px;
+	max-width:986px;
+	max-height:430px;
 }
 
+#img_div img {
+	width:986px;
+	height:430px;
+	max-width:986px;
+	max-height:430px;
+}
 
 
 .menu{
