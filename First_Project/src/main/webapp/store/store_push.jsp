@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>스토어 상세페이지</title>
+<title>상품정보</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath }/css/store.css" rel="stylesheet" type="text/css">
 </head>
 <body>

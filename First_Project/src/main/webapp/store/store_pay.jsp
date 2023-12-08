@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>스토어 결제 페이지</title>
+<title>결제하기</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath }/css/store.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -51,7 +53,6 @@
 							<td>10,000원</td>
 						</tr>
 					</table>
-					<br>
 					<table class="store_pay_table">
 						<tr class="store_table_box03">
 							<th>총 상품 금액</th>

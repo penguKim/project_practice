@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<!-- 외부 CSS 파일(css/default.css) 연결하기 -->
-<link href="${pageContext.request.contextPath}/css/join.css" rel="stylesheet" type="text/css">
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/join.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	window.onload = function() {
 		<%-- 인증번호를 확인한 후 다음 페이지로 넘어가기 --%>
@@ -22,7 +23,6 @@
 </script>
 </head>
 <body>
-	<!-- div 태그로 전체를 감싼 후 가운데에 정렬하기 -->
 	<div id="wrapper">
 		<header>
 			<jsp:include page="../inc/top.jsp"></jsp:include>
@@ -31,8 +31,8 @@
 		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
 		
 		<section id="content">
-			<h1 id="h01">회원가입</h1> <!-- 제목영역 -->
-			<section id="join_top"> <!-- 회원가입 진행상황 -->
+			<h1 id="h01">회원가입</h1>
+			<section id="join_top">
 				<span id="this">본인인증</span>
 				<span>약관동의</span>
 				<span>정보입력</span>
@@ -41,22 +41,22 @@
 			
 			<form action="join_agree.jsp" method="post" name="joinCertification">
 				<hr>		
-				<h3 id="join_top">회원가입을 위해 본인 인증을 해주세요.</h3> <!-- 소제목 -->
-				<section id="api"> <!-- API 적용할 버튼 이미지 -->
+				<h3 id="join_top">회원가입을 위해 본인 인증을 해주세요.</h3>
+				<section id="api">
 					<a href=""><img src="${pageContext.request.contextPath}/img/카카오버튼.png" width="140px" height="40px"></a>
 					<a href=""><img src="${pageContext.request.contextPath}/img/네이버버튼.png" width="140px" height="40px"></a>
 				</section>
 				<hr>
 					
 				<section id="email1">
-					<span id="email2"> <!-- 이메일 아이콘 -->
+					<span id="email2">
 						<img src="" alt="메일 이미지"> <br>
 						이메일인증</span>
-					<span id="email3"> <!-- 이메일 입력창 -->
+					<span id="email3">
 						<input type="text" placeholder="이메일주소">
-						<input type="button" value="인증번호발송"> <br> <!-- 이메일 인증 API 적용하기 -->
+						<input type="button" value="인증번호발송"> <br>
 						<input type="text" placeholder="인증번호" name="cNum">
-						<input type="submit" value="인증번호확인"> <!-- 인증번호가 맞으면 동의 페이지로 이동 -->
+						<input type="submit" value="인증번호확인">
 					</span>
 				 </section>
 				

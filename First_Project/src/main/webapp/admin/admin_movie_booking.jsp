@@ -1,14 +1,14 @@
-<%-- admin_movie_booking.jsp --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
+<title>영화예매관리</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
 </head>
-<!-- onclick="window.open('admin_movie_메인페이지.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;" -->
 <body>
 	<div id="wrapper">
 		<header>

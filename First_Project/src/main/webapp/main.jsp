@@ -7,7 +7,9 @@
 <meta charset="UTF-8">
 <title>영화관</title>
 <%-- 외부 CSS 파일 연결하기 --%>
+<link href="css/default.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/autoSlide.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.7.1.js"></script>
 </head>
 <body>
@@ -18,7 +20,7 @@
 	
 		<jsp:include page="inc/menu_nav.jsp"></jsp:include>
 		
-		<!-- 오토슬라이드 인클루드 -->
+		<%-- 오토슬라이드 인클루드 --%>
 		<jsp:include page="inc/autoSlide.jsp"></jsp:include>
 		
 			
@@ -65,7 +67,7 @@
 			
 			 <div class="container">
 				 <hr>
-		        <h1>진행 중인 이벤트</h1>
+		        <h2>진행 중인 이벤트</h2>
 		        <div class="event-grid">
 		        <c:forEach begin="1" end="4">
 		            <div class="event">
@@ -80,7 +82,7 @@
 		                </a>
 		            </div>
 	            </c:forEach>
-		            <!-- 이벤트 항목을 추가로 작성 -->
+		            <%-- 이벤트 항목을 추가로 작성 --%>
 		        </div>
 	     	</div>
 		</div>

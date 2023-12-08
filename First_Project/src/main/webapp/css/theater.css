@@ -58,12 +58,13 @@ ul>li>a{
 
 
 .price_table{
+	vertical-align: top;
+	display: inline-block;
 	position: relative;
-	width: 1020px;
+	width: 550px;
 }
 
 #price_table {
-	display: inline-block;
 	width: 550px;
 	height: 500px;
 	margin-bottom: 100px;
@@ -77,16 +78,26 @@ ul>li>a{
 	border-bottom: 1px solid #b2b2b2;
 	
 }
- 
-.notice{
+
+.theater_right {
+	vertical-align: top;
 	display: inline-block;
 	width: 450px;
+	
+}
+ 
+.notice{
+	width: 450px;
 	height: 180px;
-	vertical-align: top;
 	border-collapse: collapse; /* 칸 사이 간격 없애기 */
 	border-top: 1px solid #b2b2b2;
 	border-bottom: 1px solid #b2b2b2;
 	 /* 공지사항 위치 조정 */
+}
+
+.notice a {
+/* 	text-decoration: none; */
+	color: #000;
 }
 
 .notice th {
@@ -95,8 +106,6 @@ ul>li>a{
 }
 
 #map {
-	display: inline-block;
-	position: absolute;
-	left: 580px; top: 200px;
+	margin: 20px 20px 20px 30px;
 } /* 지도 위치 */
 

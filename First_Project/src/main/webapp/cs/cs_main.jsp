@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>고객센터</title>
-<%-- 외부 CSS 파일(css/default.css) 연결하기 --%>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/cs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -18,7 +19,7 @@
 		
 		<section id="content">
 			
-			<h1 id="h01">고객센터 홈</h1>
+			<h1 id="h01">고객센터</h1>
 			<hr>
 			<div id="cs_nav"> <%-- 사이드 메뉴바 --%>
 				<jsp:include page="cs_menubar.jsp"></jsp:include>

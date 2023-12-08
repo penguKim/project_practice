@@ -1,20 +1,13 @@
-<%-- admin_board_notice.jsp --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
-<style>
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-</style>
+<title>공지사항관리</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="wrapper">

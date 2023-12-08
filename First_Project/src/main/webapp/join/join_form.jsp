@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<%-- 외부 CSS 파일(css/default.css) 연결하기 --%>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath }/css/join.css" rel="stylesheet" type="text/css">
 <script src="${pageContext.request.contextPath}/js/jquery-3.7.1.js"></script>
 <script type="text/javascript">

@@ -1,9 +1,11 @@
 @charset "UTF-8";
 
-#content {
-	max-width: 1000px;
-	text-align: center;
-	margin: 0 auto;
+
+.store_subject { /* 스토어 테이블명 */
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-align: left;
 }
 
 /* ------------------------스토어 메인 페이지--------------------------- */
@@ -29,8 +31,8 @@
 } 
 
 #div01 img, #div02 img, #div03 img {
-	border: 1px solid #000000;
-	box-shadow: 1px 1px 1px 1px;
+/* 	border: 1px solid #000000; */
+/* 	box-shadow: 1px 1px 1px 1px; */
 	text-decoration: none;
 	color: #000000;
 }
@@ -78,6 +80,40 @@
 	text-align: center; /* 알림 중앙정렬 */
 	margin-bottom: 100px;
 }
+
+.snack_menu {
+	position: relative;
+}
+
+.snack_menu:hover .cart_btn,
+.snack_menu:hover .pay_btn {
+	opacity: 1;
+}
+
+.snack_menu:hover img {
+	opacity: 0.4;
+}
+
+.cart_btn {
+	position: absolute;
+	top: 60px; left: 35px;
+	opacity: 0;
+	padding: 10px;
+	border-radius: 30%;
+	background-color: #ececec;
+	
+	
+}
+
+.pay_btn {
+	position: absolute;
+	top: 60px; left: 140px;
+	opacity: 0;
+	padding: 10px;
+	border-radius: 30%;
+	background-color: #ececec;
+}
+
 
 /* ----------------------------------------스토어 상세 페이지 css  */
 
@@ -169,7 +205,7 @@
 	font-size: 30px; 	/* 폰트사이즈 조정 */
 	color: #888; 		/* 폰트 색상 회색 */
 	font-weight: 500;   /* 폰트 굵기 조정 */
-	margin: 10px;	/* 텍스트 사이 오른쪽으로 마진 설정 */
+	margin: 10px 10px 30px 10px;	/* 텍스트 사이 오른쪽으로 마진 설정 */
 	display: inline-block; /* 텍스트 정렬 */
 }
 
@@ -181,7 +217,6 @@
 #prog_img img {
 	width: 50px;
 	height: 50px;
-	padding-top: 60px;
 }
 
 /* 상단 진행도 상태창 STEP 폰트 조절 */
@@ -195,8 +230,8 @@
 }
 
 /* 구매 상품 정보 테이블 윗 간격 */
-.store_pay {
-	margin-top: 50px; /* 상단 진행도 상태창과 테이블 사이 간격   */
+.store_basket, .store_pay {
+	margin-top: 20px; /* 상단 진행도 상태창과 테이블 사이 간격   */
 	width: 1000px;	/* 화면 가로 길이 조정 */
 	padding-bottom: 50px;
 }
@@ -381,79 +416,82 @@
 
 
 /* -------------스토어 장바구니  */
-.store_subject {
-	font-weight: bold;
-	font-size: 20px;
-	margin-bottom: 10px;
-}
-
-.store_basket_table {
+/* 장바구니 테이블에 */
+.store_basket_table, .store_sum_table {
 	border-top: 2px solid #9d9d9d; /* 표상단줄 */
 	border-bottom: 2px solid #9d9d9d; /* 표하단줄 */ 
 	width: 1000px;
-	margin: 0px auto 20px auto;
+	margin: 10px auto;
 	border-collapse: collapse; /* 칸 사이 간격 없애기 */
 }
 
-.basket_table_box01 {
-	text-align: center; /* 중앙 고정 */
-	width: 250px; 	
-} 
-
 /* 상품명, 판매금액, 수량, 구매금액 칸 배경 색 및 높이 조정 */
-.basket_table_box01{
+.store_basket_table th, .store_sum_table th {
+	text-align: center; /* 중앙 고정 */
 	background-color: #ccc; /* 테이블 1번 행 배경 회색 */
 	height: 40px; 			/* 테이블 1번 행 높이 조정 */
-}
+	font-size: 20px;
+} 
 
-/* 상품명  */
-.basket_table_box_td {
-	text-align: center; /* 중앙 고정 */
-	width: 250px; 		/* 상품명 가로 길이 조정 */
-}
 /* 상품 및 가격 칸 위치, 높이 조정 */
-.basket_table_box02  {
+.store_basket_table td {
 	text-align: center;  /* 테이블 2번 행 중앙 고정  */
 	height: 100px;		 /* 테이블 2번 행 높이 조정 */
 	border-top: 1px solid #000;
-}
-
-.basket_table_box02>td {
 	font-size: 20px;
 }
 
+.store_sum_table td {
+	text-align: center;  /* 테이블 2번 행 중앙 고정  */
+	height: 100px;		 /* 테이블 2번 행 높이 조정 */
+	border-top: 1px solid #000;
+	font-size: 40px;
+}
+
 /* 상품이미지와 상품명 사이 마진 */
-.basket_table_box02 img {
-	width: 50px;
-	height: 50px;
+.store_basket_table img {
+	width: 70px;
+	height: 70px;
 	margin: 10px; /* 마진 10픽셀  */
 }
 
-.basket_table_box02 input[type="text"] {
-	width: 15px;
+.store_basket_table input[type="number"] {
+	width: 50px;
+	height: 25px;
 }
 
-.basketbtn {
-	margin: 20px;
+/* 장바구니 30일 문구 */
+#msg {
+	float: left;
+	padding-left: 10px;
+}
+
+/* 삭제버튼 */
+#del_btn {
+	float: right;
+	padding-right: 10px;
+}
+
+/* 밀고 올라온 요소 정리 */
+#clear {
+	clear: both;
+}
+
+/* 결제하기 버튼 영역에 */
+#store_submit {
 	text-align: center;
 }
 
-.basketbtn input {
+/* 장바구니 모든 버튼에 */
+.store_basket input[type="button"], .store_basket input[type="submit"] {
 	padding: 6px 15px; /* 안쪽 여백 */
     background-color: #e50914; /* 배경색 빨간색 */
     color: white; /* 글씨색 흰색*/
     border: none; /* 테두리 없음 */
     cursor: pointer; /* 커서 변경 */
-    width: 150px;
-    height: 50px;
+	height: 30px;
 }
 
-.basketbtn input:hover {
+.store_basket input[type="button"], .store_basket input[type="submit"]:hover {
 	background-color: #ce0912;
 }
-
-
-
-
-
-

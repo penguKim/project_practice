@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
-
 <div id="menu_nav">
 	<nav>
 		<a href="${pageContext.request.contextPath}/reserve/movie_select.jsp">예매</a>

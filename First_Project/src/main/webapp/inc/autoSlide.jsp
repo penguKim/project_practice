@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-<head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="css/autoSlide.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery-3.7.1.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -130,30 +126,23 @@
 		});
 	});
 </script>
-</head>
-<body>
 
-	<div class="slideshow">
-		<div class="slideshow_slides">
-			<a href=""><img src="img/img1.jpg" alt="slide1" width="740px" height="400px"></a>
-			<a href=""><img src="img/img2.jpg" alt="slide2" width="740px" height="400px"></a>
-			<a href=""><img src="img/img3.jpg" alt="slide3" width="740px" height="400px"></a>
-			<a href=""><img src="img/img4.jpg" alt="slide4" width="740px" height="400px"></a>
-		</div> <!-- slides -->
-		<div id="shedow"></div>
-		<div class="slideshow_nav">
-			<a href="" class="prev" id="a">prev</a>
-			<a href="" class="next" id="a">next</a>
-		</div> <!-- slideshow_nav -->
-		<div class="indicator">
+<div class="slideshow">
+	<div class="slideshow_slides">
+		<a href=""><img src="img/img1.jpg" alt="slide1" width="740px" height="400px"></a>
+		<a href=""><img src="img/img2.jpg" alt="slide2" width="740px" height="400px"></a>
+		<a href=""><img src="img/img3.jpg" alt="slide3" width="740px" height="400px"></a>
+		<a href=""><img src="img/img4.jpg" alt="slide4" width="740px" height="400px"></a>
+	</div> <!-- slides -->
+	<div id="shedow"></div>
+	<div class="slideshow_nav">
+		<a href="" class="prev" id="a">prev</a>
+		<a href="" class="next" id="a">next</a>
+	</div> <!-- slideshow_nav -->
+	<div class="indicator">
 <!-- 			<a href="">1</a> -->
 <!-- 			<a href="" class="active">2</a> -->
 <!-- 			<a href="">3</a> -->
 <!-- 			<a href="">4</a> -->
-		</div> <!-- indicator -->
-	</div> <!-- slideshow -->
-	
-
-
-</body>
-</html>
+	</div> <!-- indicator -->
+</div> <!-- slideshow -->

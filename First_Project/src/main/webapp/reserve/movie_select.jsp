@@ -5,10 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>영화 예매</title>
-    <link href="${pageContext.request.contextPath }/css/reserve.css" rel="stylesheet" type="text/css">
-<%--     <link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css"> --%>
+<meta charset="UTF-8">
+<title>예매하기</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/reserve.css" rel="stylesheet" type="text/css">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script type="text/javascript">
     //영화 선택시 1개만 선택 가능하게 하는 기능
@@ -80,14 +81,10 @@
 	    document.querySelector('input[name="date"]').value = selectedValues.date || '';
 	    document.querySelector('input[name="time"]').value = selectedValues.time || '';
 	}
-
-
-
 </script>
 </head>
 <body>
 	<div id="wrapper"><%--CSS 요청으로 감싼 태그--%>
-	
 		<header>
 			<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
@@ -99,7 +96,7 @@
 			<hr>
 			<article>
 				<div id = "reserve_parameter">
-						<div class="overflow movie"><b>영화</b><br>
+						<div class="overflow movie"><b>영화</b>
 							<input type ="button" value="서울의 봄" onclick="toggleMovie(this)"><br>
 							<input type ="button" value="싱글 인 서울" onclick="toggleMovie(this)"><br>
 							<input type ="button" value="괴물" onclick="toggleMovie(this)"><br>
@@ -112,7 +109,7 @@
 							<input type ="button" value="아이언맨" onclick="toggleMovie(this)"><br>
 							<input type ="button" value="어벤져스" onclick="toggleMovie(this)"><br>
 						</div> 
-						<div class="overflow theater"><b>극장</b onclick="toggleTheater(this)"><br>
+						<div class="overflow theater"><b>극장</b onclick="toggleTheater(this)">
 							<input type="button" value="CGV 부산 서면점" onclick="toggleTheater(this)"><br>
 							<input type="button" value="CGV 부산 센텀시티점" onclick="toggleTheater(this)"><br>
 							<input type="button" value="CGV 부산 롯데백화점 서면점" onclick="toggleTheater(this)"><br>
@@ -124,7 +121,7 @@
 							<input type="button" value="CGV 부산 수영점" onclick="toggleTheater(this)"><br>
 							<input type="button" value="CGV 부산 금정점" onclick="toggleTheater(this)"><br>
 						</div>
-						<div class="overflow date"><b>날짜</b><br>
+						<div class="overflow date"><b>날짜</b>
 							2023<br>11<br>
 							<input type="button" value="수 29" onclick="toggleDate(this)"><br>
 							<input type="button" value="목 30" onclick="toggleDate(this)"><br>
@@ -138,7 +135,7 @@
 								<input type="button" value="${i}일 ${dayOfWeek}요일" onclick="toggleDate(this)"><br>
 							</c:forEach>
 						</div> 
-						<div class="overflow time"><b>시간</b><br> 
+						<div class="overflow time"><b>시간</b> 
 							1관 11층<br>
 							<input type="button" value="10:00" onclick="toggleTime(this)">
 							<input type="button" value="12:00" onclick="toggleTime(this)">

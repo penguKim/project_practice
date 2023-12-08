@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!-- 외부 CSS 파일(css/default.css) 연결하기 -->
-<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <div id ="top_area">
 	<div id="member_area">
 		<div id="logo">

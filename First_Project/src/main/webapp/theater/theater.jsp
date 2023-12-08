@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="${pageContext.request.contextPath }/css/theater.css" rel="stylesheet" type="text/css">
+<title>극장정보</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/theater.css" rel="stylesheet" type="text/css">
 <head>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -55,9 +57,7 @@
 					<input type="button" id="CGV대구한일" value="CGV대구한일">
 				</nav>
 			</div>
-			
-			
-			
+				
 			<div class="price_table">
 				<table id="price_table">
 					<tr>
@@ -113,30 +113,31 @@
 						<td>9,000</td>
 					</tr>
 				</table>
-			
-			<table class="notice">
-				<tr>
-					<th>공지사항 <a href="https://www.daum.net" target = "_Blank">더보기</a></th>
-				</tr>
-				<tr>
-					<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=700,top=100' ); return false;">&#9917; [GS&POINT] 시스템 정기 정검 안내(3/9)</a></td>
-				</tr>
-				<tr>
-					<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; 회원등급 조정 및 VIP쿠폰북 관련 안내</a></td>
-				</tr>
-				<tr>
-					<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; 동백씨네마 시스템 점검 안내(2/21)</a></td>
-				</tr>
-				<tr>
-					<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; [라이브뷰잉]아이유 콘서트 안내</a></td>
-				</tr>
-				<tr>
-					<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; SKT 휴대폰본인확인 서비스 일시 중단 발생 안내(2/9)</a></td>
-				</tr>
-			</table>
+			</div>
+			<div class="theater_right">
+				<table class="notice">
+					<tr>
+						<th>공지사항 <a href="https://www.daum.net" target = "_Blank">더보기</a></th>
+					</tr>
+					<tr>
+						<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=700,top=100' ); return false;">&#9917; [GS&POINT] 시스템 정기 정검 안내(3/9)</a></td>
+					</tr>
+					<tr>
+						<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; 회원등급 조정 및 VIP쿠폰북 관련 안내</a></td>
+					</tr>
+					<tr>
+						<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; 동백씨네마 시스템 점검 안내(2/21)</a></td>
+					</tr>
+					<tr>
+						<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; [라이브뷰잉]아이유 콘서트 안내</a></td>
+					</tr>
+					<tr>
+						<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; SKT 휴대폰본인확인 서비스 일시 중단 발생 안내(2/9)</a></td>
+					</tr>
+				</table>
 				
 					
-			<div id="map" style="width:400px;height:300px;">
+				<div id="map" style="width:400px;height:300px;">
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9f6c3bc1e6871394d3b26ee55215784"></script>
 					<script>
 						var container = document.getElementById('map');
@@ -660,8 +661,8 @@
 						  container.onclick = changeImage20;
 					 </script>
 				</div>
-				</div>
 			</div>
+		</div>
 		<footer>
 			<jsp:include page="/inc/bottom.jsp"></jsp:include>
 		</footer>

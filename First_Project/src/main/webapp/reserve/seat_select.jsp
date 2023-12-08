@@ -2,76 +2,74 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-	<title>좌석 선택</title>
-    <link href="${pageContext.request.contextPath }/css/reserve.css" rel="stylesheet" type="text/css">
+<title>좌석 선택</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath }/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/css/reserve.css" rel="stylesheet" type="text/css">
 
- 	<style>
- 		.seat {
-		    width: 30px;
-		    height: 30px;
- 		    background-color: #ccc; 
- 		    margin: 5px; 
-		    display: inline-block;
-		    cursor: pointer;
-	    }
-	    .selected {
-	    	background-color: #de1010;
-	    }
- 	</style>
- 	<script>
-	    function toggleSeat(seat) {
-	        seat.classList.toggle("selected");
-	        displaySelectedSeats(); // 좌석 선택 시 선택된 좌석을 출력하는 함수 호출
-	    }
-	    
-	    function toggleNum(num){
-	        // 클릭된 요소가 속한 행을 찾음
-	        var row = num.parentNode.parentNode;
+<style>
+	.seat {
+    width: 30px;
+    height: 30px;
+	    background-color: #ccc; 
+	    margin: 5px; 
+    display: inline-block;
+    cursor: pointer;
+   }
+   .selected {
+   	background-color: #de1010;
+   }
+</style>
+<script>
+   function toggleSeat(seat) {
+       seat.classList.toggle("selected");
+       displaySelectedSeats(); // 좌석 선택 시 선택된 좌석을 출력하는 함수 호출
+   }
+   
+   function toggleNum(num){
+       // 클릭된 요소가 속한 행을 찾음
+       var row = num.parentNode.parentNode;
 
-	        // 해당 행의 모든 .NumOfPeo 요소를 찾음
-	        var elements = row.querySelectorAll('.NumOfPeo');
+       // 해당 행의 모든 .NumOfPeo 요소를 찾음
+       var elements = row.querySelectorAll('.NumOfPeo');
 
-	        // 모든 .NumOfPeo 요소에서 'selected' 클래스를 제거
-	        elements.forEach(function(element) {
-	            element.classList.remove('selected');
-	        });
+       // 모든 .NumOfPeo 요소에서 'selected' 클래스를 제거
+       elements.forEach(function(element) {
+           element.classList.remove('selected');
+       });
 
-	        // 클릭된 요소에만 'selected' 클래스를 추가
-	        num.classList.add('selected');
-	        displaySelectedSeats(); // 인원 선택 시 선택된 인원을 출력하는 함수 호출
-	    }
-	    
-	    function displaySelectedSeats() {
-	        var selectedSeats = document.getElementsByClassName("selected");
-	        var selectedSeatValues = [];
-	        
-	        for (var i = 0; i < selectedSeats.length; i++) {
-	            selectedSeatValues.push(selectedSeats[i].getAttribute("value"));
-	        }
-	        
-	        var selectedSeatsElement = document.getElementById("selected_seats");
-	        selectedSeatsElement.textContent = selectedSeatValues.join(", ") + " 선택됨";
-	        
-	        // 선택된 좌석 값을 숨겨진 input 요소에 할당
-	        document.getElementById("select_seat").value = selectedSeatValues.join(",");
-	    }
-	    
-	    function back(){
-	    	history.back();
-	    }
- 	
- 	
- 	</script>
+       // 클릭된 요소에만 'selected' 클래스를 추가
+       num.classList.add('selected');
+       displaySelectedSeats(); // 인원 선택 시 선택된 인원을 출력하는 함수 호출
+   }
+   
+   function displaySelectedSeats() {
+       var selectedSeats = document.getElementsByClassName("selected");
+       var selectedSeatValues = [];
+       
+       for (var i = 0; i < selectedSeats.length; i++) {
+           selectedSeatValues.push(selectedSeats[i].getAttribute("value"));
+       }
+       
+       var selectedSeatsElement = document.getElementById("selected_seats");
+       selectedSeatsElement.textContent = selectedSeatValues.join(", ") + " 선택됨";
+       
+       // 선택된 좌석 값을 숨겨진 input 요소에 할당
+       document.getElementById("select_seat").value = selectedSeatValues.join(",");
+   }
+   
+   function back(){
+   	history.back();
+   }
+</script>
 </head>
 <body>
 <%request.setCharacterEncoding("UTF-8"); %> 
 	<div id="wrapper"><%--CSS 요청으로 감싼 태그--%>
-	
 		<header>
 				<jsp:include page="../inc/top.jsp"></jsp:include>
 		</header>
@@ -160,15 +158,6 @@
 		<footer>
 				<jsp:include page="../inc/bottom.jsp"></jsp:include>
 		</footer>
-
 	</div> <%--CSS 요청으로 감싼 태그--%>
 </body>
 </html>
-
-
-
-
-
-
-
-

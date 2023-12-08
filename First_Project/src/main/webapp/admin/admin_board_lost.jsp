@@ -1,15 +1,14 @@
-<%-- admin_board_one_on_one.jsp --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
+<title>분실물문의관리</title>
+<%-- 외부 CSS 파일 연결하기 --%>
+<link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
 </head>
-<style>
-</style>
 <body>
 	<div id="wrapper">
 		<header>
