@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항관리</title>
+<title>공지사항 관리</title>
 <%-- 외부 CSS 파일 연결하기 --%>
 <link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
@@ -12,13 +12,13 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<jsp:include page="../inc/top.jsp"></jsp:include>
+			<jsp:include page="../inc/top_admin.jsp"></jsp:include>
 		</header>
 	
-		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		<jsp:include page="../inc/menu_nav_admin.jsp"></jsp:include>
 		
 		<section id="content">
-			<h1 id="h01">공지사항관리</h1>
+			<h1 id="h01">공지사항 관리</h1>
 			<hr>
 			<div id="admin_nav">
 				<jsp:include page="admin_menubar.jsp"></jsp:include>
@@ -35,74 +35,74 @@
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800 ,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td class="post_name"><a href="admin_board_notice_detail공지사항상세.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100'); return false;">클릭시 공지사항 내용 팝업</a></td>
+							<td class="post_name"><a href="admin_board_notice_detail.jsp">클릭시 공지사항 내용 팝업</a></td>
 							<td>아이유</td>
 							<td>2023-11-16</td>
 						</tr>
 					</table>
 					<div id="admin_writer">
-						<input type="submit" value="글쓰기" 
-						onclick = "window.open('admin_board_notice_write공지사항글쓰기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;">
+						<input type="button" value="글쓰기" 
+						onclick = "location.href='admin_board_faq_write.jsp'">
 					</div>
 					<div class="pagination">
 						<a href="#">&laquo;</a>
@@ -116,7 +116,7 @@
 				</form>
 			</div>
 			<footer>
-				<jsp:include page="../inc/bottom.jsp"></jsp:include>
+				<jsp:include page="../inc/bottom_admin.jsp"></jsp:include>
 			</footer>
 		</section>
 	</div>

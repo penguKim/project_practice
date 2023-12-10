@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
+<title>영화 수정 팝업</title>
+<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <style>
 input[type="text"], input[type="date"]{
@@ -73,7 +73,7 @@ font-size: 20px;}
 				</div>
 				<br>
 				<input type="submit" value="수정" onclick="confirm('수정하시겠습니까?')">
-				<input type="submit" value="돌아가기" onclick="window.close()">
+				<input type="submit" value="창닫기" onclick="window.close()">
 			</div>
 		</form>
 </body>

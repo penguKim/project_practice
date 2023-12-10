@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>영화 예매 상세 페이지</title>
 <link href="${pageContext.request.contextPath }/css/admin.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -53,7 +53,7 @@
 			<br><br>
 			<section id="btnCtr2">
 				<!-- 자바스크립트 사용해 사이즈 조정 후 팝업으로 만들 창이므로 버튼을 미리 가운데 정렬-->
-				<input type="button" value="뒤로가기" onclick="window.close()">
+				<input type="button" value="창닫기" onclick="window.close()">
 				<input type="submit" value="수정" onclick="confirm('수정하시겠습니까?')">
 				<input type="button" value="삭제" onclick="confirm('삭제하시겠습니까?')">
 			</section>

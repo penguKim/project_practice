@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>영화예매관리</title>
+<title>영화 예매 관리</title>
 <%-- 외부 CSS 파일 연결하기 --%>
 <link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
@@ -12,13 +12,13 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<jsp:include page="../inc/top.jsp"></jsp:include>
+			<jsp:include page="../inc/top_admin.jsp"></jsp:include>
 		</header>
 	
-		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		<jsp:include page="../inc/menu_nav_admin.jsp"></jsp:include>
 		
 		<section id="content">
-			<h1 id="h01">영화예매관리</h1>
+			<h1 id="h01">영화 예매 관리</h1>
 			<hr>
 			<div id="admin_nav">
 				<jsp:include page="admin_menubar.jsp"></jsp:include>
@@ -46,7 +46,7 @@
 							<td>A3, B4</td>
 							<td>비정상인사람</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 						<tr>
 							<td>13251245</td>
@@ -57,7 +57,7 @@
 							<td>01:01</td>
 							<td>2023-06-06</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 						<tr>
 							<td>13251245</td>
@@ -68,7 +68,7 @@
 							<td>01:01</td>
 							<td>2023-06-06</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 						<tr>
 							<td>13251245</td>
@@ -79,7 +79,7 @@
 							<td>01:01</td>
 							<td>2023-06-06</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 						<tr>
 							<td>13251245</td>
@@ -90,7 +90,7 @@
 							<td>01:01</td>
 							<td>2023-06-06</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 						<tr>
 							<td>13251245</td>
@@ -101,7 +101,7 @@
 							<td>01:01</td>
 							<td>2023-06-06</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 						<tr>
 							<td>13251245</td>
@@ -112,7 +112,7 @@
 							<td>01:01</td>
 							<td>2023-06-06</td>
 							<td><input type="button" value="MORE" 
-							onclick = "window.open('admin_movie_booking_modify예매내역.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+							onclick = "window.open('admin_movie_booking_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 						</tr>
 					</table>
 					<div class="pagination">
@@ -127,7 +127,7 @@
 				</form>
 			</div>
 			<footer>
-				<jsp:include page="../inc/bottom.jsp"></jsp:include>
+				<jsp:include page="../inc/bottom_admin.jsp"></jsp:include>
 			</footer>
 		</section>
 	</div>

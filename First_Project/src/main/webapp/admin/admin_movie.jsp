@@ -12,10 +12,10 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<jsp:include page="../inc/top.jsp"></jsp:include>
+			<jsp:include page="../inc/top_admin.jsp"></jsp:include>
 		</header>
 	
-		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		<jsp:include page="../inc/menu_nav_admin.jsp"></jsp:include>
 		
 		<section id="content">
 			<h1 id="h01">영화관리</h1>
@@ -26,11 +26,11 @@
 			
 			<div id="admin_main">
 				<div id="movie_update">
-					<input type="button" value="상영예정작 등록하기" onclick = "window.open('admin_movie_update영화등록팝업페이지.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;">		
-					<input type="button" value="최신영화 등록하기" onclick = "window.open('admin_movie_update영화등록팝업페이지.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"><br>	
+					<input type="button" value="상영예정작 등록하기" onclick = "window.open('admin_movie_update.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;">		
+					<input type="button" value="최신영화 등록하기" onclick = "window.open('admin_movie_update.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"><br>	
 				</div>
 			
-				<table border="1" id="admin_table">
+				<table border="1">
 					<tr>
 						<th>영화코드</th>
 						<th>영화제목</th>
@@ -49,7 +49,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -59,7 +59,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -69,7 +69,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -79,7 +79,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -89,7 +89,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -99,7 +99,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -109,7 +109,7 @@
 						<td>01:01</td>
 						<td>2023-06-06</td>
 						<td>2023-44-44</td>
-						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify영화정보수정.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						<td><input type="button" value="MORE" onclick = "window.open('admin_movie_modify.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
 					</tr>
 				</table>
 				<div class="pagination">
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<footer>
-				<jsp:include page="../inc/bottom.jsp"></jsp:include>
+				<jsp:include page="../inc/bottom_admin.jsp"></jsp:include>
 			</footer>
 		</section>
 	</div>

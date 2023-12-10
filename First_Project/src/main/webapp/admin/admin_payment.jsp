@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>스토어결제관리</title>
+<title>스토어 결제 관리</title>
 <%-- 외부 CSS 파일 연결하기 --%>
 <link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
@@ -12,13 +12,13 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<jsp:include page="../inc/top.jsp"></jsp:include>
+			<jsp:include page="../inc/top_admin.jsp"></jsp:include>
 		</header>
 	
-		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		<jsp:include page="../inc/menu_nav_admin.jsp"></jsp:include>
 		
 		<section id="content">
-			<h1 id="h01">스토어결제관리</h1>
+			<h1 id="h01">스토어 결제 관리</h1>
 			<hr>
 			<div id="admin_nav">
 				<jsp:include page="admin_menubar.jsp"></jsp:include>
@@ -43,7 +43,7 @@
 						<td>결제일시다</td>
 						<td>결제다</td>
 						<td><input type="button" value="상세보기" 
-						onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -51,7 +51,7 @@
 						<td>결제일시다</td>
 						<td>결제다</td>
 						<td><input type="button" value="상세보기" 
-						onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -59,7 +59,7 @@
 						<td>결제일시다</td>
 						<td>결제다</td>
 						<td><input type="button" value="상세보기" 
-						onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -67,7 +67,7 @@
 						<td>결제일시다</td>
 						<td>결제다</td>
 						<td><input type="button" value="상세보기" 
-						onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -75,7 +75,7 @@
 						<td>결제일시다</td>
 						<td>결제다</td>
 						<td><input type="button" value="상세보기"
-						 onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						 onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -83,7 +83,7 @@
 						<td>결제일시다</td>
 						<td>결제다</td>
 						<td><input type="button" value="상세보기"
-						 onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						 onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 					<tr>
 						<td>13251245</td>
@@ -91,7 +91,7 @@
 						<td>coming</td>
 						<td>결제다결제다결제다결제다결제다결결제다</td>
 						<td><input type="button" value="상세보기"
-						 onclick = "window.open('admin_payment_detail결제상세보기.jsp', '_blank', 'width=800, height=800,left=550,top=100' ); return false;"></td>
+						 onclick = "location.href='admin_payment_detail.jsp'"></td>
 					</tr>
 				</table>
 				<div class="pagination">
@@ -105,7 +105,7 @@
 				</div>
 			</div>
 			<footer>
-				<jsp:include page="../inc/bottom.jsp"></jsp:include>
+				<jsp:include page="../inc/bottom_admin.jsp"></jsp:include>
 			</footer>
 		</section>
 	</div>

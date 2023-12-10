@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>1 : 1 문의 관리</title>
+<title>분실물 문의 관리</title>
 <%-- 외부 CSS 파일 연결하기 --%>
 <link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
@@ -18,18 +18,18 @@
 		<jsp:include page="../inc/menu_nav_admin.jsp"></jsp:include>
 		
 		<section id="content">
-			<h1 id="h01">1 : 1 문의 관리</h1>
+			<h1 id="h01">분실물 문의 관리</h1>
 			<hr>
 			<div id="admin_nav">
 				<jsp:include page="admin_menubar.jsp"></jsp:include>
 			</div>
 			
 			<div id="admin_main">
-				<form action="" class="admin_board_one_on_one">
+				<form action="" class="admin_board_lostnfound">
 					<table border="1">
 						<tr>
-							<th width="60">번호</th>
-							<th width="120">유형</th>
+							<th width="70">번호</th>
+							<th width="120">분실장소</th>
 							<th>제목</th>
 							<th width="100">작성자</th>
 							<th width="120">등록일</th>
@@ -37,60 +37,52 @@
 						</tr>
 						<tr>
 							<td>번호</td>
-							<td>칭찬/불만/제안</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지</td>
+							<td>지점명A</td>
+							<td class="post_name">버튼클릭시 분실물문의상세로이동</td>
 							<td>작성자</td>
 							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
+							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_lostnfound_response.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호</td>
 							<td>유형</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지</td>
+							<td class="post_name">버튼클릭시 분실물문의상세로이동</td>
 							<td>작성자</td>
 							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
+							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_lostnfound_response.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호</td>
 							<td>유형</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지></td>							<td>작성자</td>
+							<td class="post_name">버튼클릭시 분실물문의상세로이동</td>
+							<td>작성자</td>
 							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
+							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_lostnfound_response.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호</td>
 							<td>유형</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지</td>
+							<td class="post_name">버튼클릭시 분실물문의상세로이동</td>
 							<td>작성자</td>
 							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
+							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_lostnfound_response.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호</td>
 							<td>유형</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지</td>
+							<td class="post_name">버튼클릭시 분실물문의상세로이동</td>
 							<td>작성자</td>
 							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
+							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_lostnfound_response.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호</td>
 							<td>유형</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지</td>
+							<td class="post_name">버튼클릭시 분실물문의상세로이동</td>
 							<td>작성자</td>
 							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
+							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_lostnfound_response.jsp'"></td>
 						</tr>
-						<tr>
-							<td>번호</td>
-							<td>유형</td>
-							<td class="post_name">버튼 클릭시 1대1 문의 상세 페이지</td>
-							<td>작성자</td>
-							<td>등록일</td>
-							<td><input type="button" value="답변완료" id="ok" onclick = "location.href='admin_board_one_on_one_response.jsp'"></td>
-						</tr>
-						
 					</table>
 					<div class="pagination">
 						<a href="#">&laquo;</a>

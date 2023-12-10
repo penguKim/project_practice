@@ -31,7 +31,7 @@
 		<a href="admin_board_faq.jsp">자주묻는질문관리</a>
 		<a href="admin_board_notice.jsp">공지사항관리</a>
 		<a href="admin_board_one_on_one.jsp">1대1문의관리</a>
-		<a href="admin_board_lost.jsp">분실물문의관리</a>
+		<a href="admin_board_lostnfound.jsp">분실물문의관리</a>
 	</div>
 </div>
 

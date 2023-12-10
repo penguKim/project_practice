@@ -4,10 +4,9 @@
 
 #img_div {
 	text-align: center;
-	width:986px;
+	width:1024px;
 	height:430px;
-	max-width:986px;
-	max-height:430px;
+	margin: 0 atuo;
 }
 
 #img_div img {

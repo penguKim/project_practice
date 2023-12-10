@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원정보관리</title>
+<title>회원정보 관리</title>
 <%-- 외부 CSS 파일 연결하기 --%>
 <link href="${pageContext.request.contextPath}/css/default.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet" type="text/css">
@@ -12,10 +12,10 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<jsp:include page="../inc/top.jsp"></jsp:include>
+			<jsp:include page="../inc/top_admin.jsp"></jsp:include>
 		</header>
 	
-		<jsp:include page="../inc/menu_nav.jsp"></jsp:include>
+		<jsp:include page="../inc/menu_nav_admin.jsp"></jsp:include>
 		
 		<section id="content">
 			<h1 id="h01">회원정보관리</h1>
@@ -44,7 +44,7 @@
 							<td>제목입니다</td>
 							<td>작성자입니다</td>
 							<td><input type="button" value="회원" id="admin_member" 
-							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
+							onclick="location.href='admin_member_modify.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호입니다</td>
@@ -52,7 +52,7 @@
 							<td>제목입니다</td>
 							<td>작성자입니다</td>
 							<td><input type="button" value="회원" id="admin_member" 
-							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
+							onclick="location.href='admin_member_modify.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호입니다</td>
@@ -76,7 +76,7 @@
 							<td>제목입니다</td>
 							<td>작성자입니다</td>
 							<td><input type="button" value="회원" id="admin_member" 
-							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
+							onclick="location.href='admin_member_modify.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호입니다</td>
@@ -91,7 +91,7 @@
 							<td>제목입니다</td>
 							<td>작성자입니다</td>
 							<td><input type="button" value="회원" id="admin_member"
-							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
+							onclick="location.href='admin_member_modify.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호입니다</td>
@@ -99,7 +99,7 @@
 							<td>제목입니다</td>
 							<td>작성자입니다</td>
 							<td><input type="button" value="회원" id="admin_member"
-							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
+							onclick="location.href='admin_member_modify.jsp'"></td>
 						</tr>
 						<tr>
 							<td>번호입니다</td>
@@ -107,7 +107,7 @@
 							<td>제목입니다</td>
 							<td>작성자입니다</td>
 							<td><input type="button" value="회원" id="admin_member"
-							onclick="window.open('admin_member_modify회원정보수정.jsp', '_blank', 'width=1000, height=800,left=550,top=100' ); return false;"></td>
+							onclick="location.href='admin_member_modify.jsp'"></td>
 						</tr>
 					</table>
 					<div class="pagination">
@@ -122,7 +122,7 @@
 				</form>
 			</div>
 			<footer>
-				<jsp:include page="../inc/bottom.jsp"></jsp:include>
+				<jsp:include page="../inc/bottom_admin.jsp"></jsp:include>
 			</footer>
 		</section>
 	</div>
