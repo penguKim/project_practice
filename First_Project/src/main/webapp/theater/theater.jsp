@@ -57,8 +57,23 @@
 					<input type="button" id="CGV대구한일" value="CGV대구한일">
 				</nav>
 			</div>
-				
+			<hr>
+			<div id="theater_event">
+				<a href="../event/event_detail.jsp">
+				<img src="../img/이벤트.jpg" alt="cgv" id="image">
+				</a>
+			</div>
+			
+			<ul class="tab-menu" id="menu">
+		        <li class="on"><a href="../reserve/movie_select.jsp" title="현재 선택됨">예매하기</a></li>
+		        <li class="last" onclick=""><a href="theater_parking.jsp#sec01">위치/주차안내</a></li>
+		    </ul>
+		    
+		<section id="sec07">
+	    <div class="sub_content">
+		    
 			<div class="price_table">
+			
 				<table id="price_table">
 					<tr>
 						<th colspan="4" id="table_name">일반 2D</th>
@@ -135,7 +150,11 @@
 						<td><a href="공지사항.jsp" onclick="window.open(this.href, '_blank', 'width=800, height=800,left=550,top=100' ); return false;">&#9917; SKT 휴대폰본인확인 서비스 일시 중단 발생 안내(2/9)</a></td>
 					</tr>
 				</table>
+			<script>
+			function change12() {
 				
+			}
+			</script>
 					
 				<div id="map" style="width:400px;height:300px;">
 				<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b9f6c3bc1e6871394d3b26ee55215784"></script>
@@ -660,8 +679,10 @@
 						  var container = document.getElementById("CGV대구한일");
 						  container.onclick = changeImage20;
 					 </script>
+					 </div>
 				</div>
 			</div>
+	 </section>
 		</div>
 		<footer>
 			<jsp:include page="/inc/bottom.jsp"></jsp:include>
